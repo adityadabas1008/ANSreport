@@ -1,0 +1,62 @@
+GIT WORKFLOW: QUARTO ANS REPORT
+====================================
+
+This cheat sheet helps you update and sync your shared Quarto lab report repository with your team.
+
+---
+
+✅ Before Starting: Sync with Others
+--------------------------------
+Run this before you start working to get the latest updates from GitHub:
+
+    git pull
+
+
+---
+
+🛑 IMPORTANT: Always `git pull` before `git push`
+-------------------------------------------------
+This ensures your changes are in sync with others on the team and prevents conflicts.
+---
+
+✅ AFTER MAKING CHANGES
+-----------------------
+Run these steps after you've edited any files (Quarto, README, etc.):
+
+    git status
+    git add .
+    git commit -m "Update: short description of your changes"
+    git push
+
+---
+
+🧹 OPTIONAL CLEANUP COMMANDS
+----------------------------
+Undo unstaged changes to a specific file:
+
+    git restore filename.qmd
+
+See brief commit history:
+
+    git log --oneline
+
+---
+
+📌 FIRST-TIME SETUP
+----------------------------------
+Only needed when setting up the repo for the first time:
+
+    git clone git@github.com:yourname/quarto-lab-report.git
+    cd quarto-lab-report
+
+---
+
+
+✅ SUMMARY: DAILY WORKFLOW
+--------------------------
+    cd path/to/quarto-lab-report
+    git pull
+    # make your changes
+    git add .
+    git commit -m "Update: your message here"
+    git push
