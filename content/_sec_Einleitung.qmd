@@ -1,0 +1,9 @@
+# Einleitung
+
+Ziel dieses Versuchs ist es, ein universelles analoges Biquad-Filter zu entwerfen, zu simulieren, aufzubauen und anschließend in ein  professionelles Leiterplattendesign zu überführen. Die Grundlage bildet der Versuch 4 des ASLK PRO Manuals von Texas Instruments, in dem ein zweistufiges aktives Filter mit Operationsverstärkern realisiert wird. Dabei wird das Verhalten typischer Filtertypen – darunter Tiefpass, Hochpass, Bandpass und Bandsperre – mithilfe einer sogenannten Biquad-Schaltung untersucht.
+
+Zu Beginn wird die Filter-Schaltung aus dem Manual (S. 32) in KiCad simuliert, um das Frequenzverhalten theoretisch zu analysieren. Anschließend wird die gleiche Schaltung praktisch auf dem ASLK PRO Board mit Jumperkabeln aufgebaut und gemessen. Ziel dieser Gegenüberstellung ist es, die Übereinstimmung von Simulation und Realität zu überprüfen.
+
+Im dritten Schritt wird das entworfene Filter als PCB mit KiCad umgesetzt, inklusive Layout, Netzliste und Bauteilplatzierung. Nach erfolgreichem Design wird die Platine gefertigt, bestückt und erneut gemessen. Durch diesen vollständigen Designzyklus wird ein praxisnahes Verständnis für den analogen Schaltungsentwurf, die Simulation sowie die Herausforderungen im PCB-Layout vermittelt.
+
+
