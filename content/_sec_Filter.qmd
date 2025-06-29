@@ -9,12 +9,15 @@ Hier dann Bi-quad filter schaltung aus ASLK Pro Experiment-4
 ## Herleitung der Übertragungsfunktion bes Biquad Filters
 Hier die Herleitung der Übertragungsfunktionen schreiben
 
+## Güte Faktor Q
+Quality Faktor hier kurz beschrieben
+
 ## Filter Spezifikation und Aufbau
 Hier müssen wir die filter speizifikation aus Experiment-4 schreiben.
 
 ### Simulation der Schaltung
 Hier zeigen wir die Simulation von der Schaltung und die Plots
 
-### Entuwrf der Schaltung auf ASLK Lab-Kit
-Aufbau von der Schaltung auf ASLK Lab-Board mit jumper Wires
+### Entuwrf der Schaltung auf ASLK 
+Aufbau von der Schaltung auf ASLK Board mit jumper Wires
 

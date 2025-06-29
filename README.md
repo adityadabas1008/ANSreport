@@ -7,5 +7,7 @@ I recommend you to read the GIT_WORKFLOW.txt file to understand the basic steps 
 
 I will be updating the contents of this repository soon.
 
+---
+
 ### Update 29.06.2025
 -> Structure and contents of the report have been updated, git pull to check.

@@ -150,10 +150,11 @@ div.csl-indent {
   <li><a href="#second-order-universal-active-filter" id="toc-second-order-universal-active-filter" class="nav-link" data-scroll-target="#second-order-universal-active-filter"><span class="header-section-number">2.1.1</span> Second Order Universal Active Filter</a></li>
   </ul></li>
   <li><a href="#herleitung-der-übertragungsfunktion-bes-biquad-filters" id="toc-herleitung-der-übertragungsfunktion-bes-biquad-filters" class="nav-link" data-scroll-target="#herleitung-der-übertragungsfunktion-bes-biquad-filters"><span class="header-section-number">2.2</span> Herleitung der Übertragungsfunktion bes Biquad Filters</a></li>
-  <li><a href="#filter-spezifikation-und-aufbau" id="toc-filter-spezifikation-und-aufbau" class="nav-link" data-scroll-target="#filter-spezifikation-und-aufbau"><span class="header-section-number">2.3</span> Filter Spezifikation und Aufbau</a>
+  <li><a href="#güte-faktor-q" id="toc-güte-faktor-q" class="nav-link" data-scroll-target="#güte-faktor-q"><span class="header-section-number">2.3</span> Güte Faktor Q</a></li>
+  <li><a href="#filter-spezifikation-und-aufbau" id="toc-filter-spezifikation-und-aufbau" class="nav-link" data-scroll-target="#filter-spezifikation-und-aufbau"><span class="header-section-number">2.4</span> Filter Spezifikation und Aufbau</a>
   <ul class="collapse">
-  <li><a href="#simulation-der-schaltung" id="toc-simulation-der-schaltung" class="nav-link" data-scroll-target="#simulation-der-schaltung"><span class="header-section-number">2.3.1</span> Simulation der Schaltung</a></li>
-  <li><a href="#entuwrf-der-schaltung-auf-aslk-lab-kit" id="toc-entuwrf-der-schaltung-auf-aslk-lab-kit" class="nav-link" data-scroll-target="#entuwrf-der-schaltung-auf-aslk-lab-kit"><span class="header-section-number">2.3.2</span> Entuwrf der Schaltung auf ASLK Lab-Kit</a></li>
+  <li><a href="#simulation-der-schaltung" id="toc-simulation-der-schaltung" class="nav-link" data-scroll-target="#simulation-der-schaltung"><span class="header-section-number">2.4.1</span> Simulation der Schaltung</a></li>
+  <li><a href="#entuwrf-der-schaltung-auf-aslk-lab-kit" id="toc-entuwrf-der-schaltung-auf-aslk-lab-kit" class="nav-link" data-scroll-target="#entuwrf-der-schaltung-auf-aslk-lab-kit"><span class="header-section-number">2.4.2</span> Entuwrf der Schaltung auf ASLK Lab-Kit</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#charakterisierung" id="toc-charakterisierung" class="nav-link" data-scroll-target="#charakterisierung"><span class="header-section-number">3</span> Charakterisierung</a></li>
@@ -185,9 +186,11 @@ div.csl-indent {
 
 <section id="einleitung" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Einleitung</h1>
-<p>Ziel dieses Versuchs ist es, ein universelles analoges Biquad-Filter zu entwerfen, zu simulieren, aufzubauen und anschließend in ein professionelles Leiterplattendesign zu überführen. Die Grundlage bildet der Versuch 4 des ASLK PRO Manuals von Texas Instruments, in dem ein zweistufiges aktives Filter mit Operationsverstärkern realisiert wird. Dabei wird das Verhalten typischer Filtertypen – darunter Tiefpass, Hochpass, Bandpass und Bandsperre – mithilfe einer sogenannten Biquad-Schaltung untersucht.</p>
-<p>Zu Beginn wird die Filter-Schaltung aus dem Manual (S. 32) in KiCad simuliert, um das Frequenzverhalten theoretisch zu analysieren. Anschließend wird die gleiche Schaltung praktisch auf dem ASLK PRO Board mit Jumperkabeln aufgebaut und gemessen. Ziel dieser Gegenüberstellung ist es, die Übereinstimmung von Simulation und Realität zu überprüfen.</p>
-<p>Im dritten Schritt wird das entworfene Filter als PCB mit KiCad umgesetzt, inklusive Layout, Netzliste und Bauteilplatzierung. Nach erfolgreichem Design wird die Platine gefertigt, bestückt und erneut gemessen. Durch diesen vollständigen Designzyklus wird ein praxisnahes Verständnis für den analogen Schaltungsentwurf, die Simulation sowie die Herausforderungen im PCB-Layout vermittelt.</p>
+<p>Ziel dieses Versuchs ist es, ein universelles analoges Biquad-Filter zu entwerfen, zu simulieren, praktisch aufzubauen und in ein professionelles Leiterplattendesign zu überführen. Die Grundlage bildet der Versuch 4 des ASLK PRO Manuals von Texas Instruments, in dem eine zweistufige aktive Filterstruktur mithilfe von Operationsverstärkern realisiert wird. Dabei wird das Verhalten typischer Filtertypen – darunter Tiefpass, Hochpass, Bandpass und Bandsperre – auf Basis einer sogenannten Biquad-Schaltung untersucht.</p>
+<p>Zu Beginn wird die im Manual auf Seite 32 dargestellte Schaltung in der Simulationsumgebung KiCad modelliert, um ihr Frequenzverhalten zu analysieren und theoretisch zu validieren. Anschließend wird dieselbe Schaltung auf dem ASLK PRO Board unter Verwendung von Jumperkabeln praktisch realisiert und vermessen. Durch den Vergleich der simulierten und gemessenen Ergebnisse wird die Übereinstimmung zwischen Theorie und Praxis überprüft.</p>
+<p>Nach erfolgreicher Realisierung der Grundschaltung wird das Filter um ein weiteres Modul ergänzt: Um einen Butterworth-Tiefpass dritter Ordnung zu erhalten, wird das Ausgangssignal der Tiefpass-Stufe (LPF) der Biquad-Schaltung genutzt, um einen zusätzlichen Integrator anzusteuern. Diese Kaskadierung dient der Erzeugung eines glatten Übergangs im Frequenzgang mit typischem Butterworth-Verhalten und stellt eine praxisrelevante Anwendung dar.</p>
+<p>Im dritten Schritt wird die gesamte Schaltung – bestehend aus der ursprünglichen Biquad-Konfiguration sowie dem optionalen Butterworth-Modul – in KiCad als Leiterplattenlayout umgesetzt. Dabei wird darauf geachtet, die Filtercharakteristik durch gezielte Auswahl von Jumperverbindungen flexibel messbar zu gestalten und sowohl die Basis- als auch die Erweiterungsstruktur (Butterworth) in die Platine zu integrieren. Nach erfolgreichem Design wird die Platine gefertigt, bestückt und abschließend vermessen.</p>
+<p>Durch diesen vollständigen Designzyklus wird ein praxisnahes Verständnis für den analogen Schaltungsentwurf, die Simulation sowie die Herausforderungen beim Layout und der Umsetzung eines funktionsfähigen Leiterplattenprototyps vermittelt.</p>
 </section>
 <section id="filter-entwurf" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Filter-Entwurf</h1>
@@ -203,15 +206,19 @@ div.csl-indent {
 <h2 data-number="2.2" class="anchored" data-anchor-id="herleitung-der-übertragungsfunktion-bes-biquad-filters"><span class="header-section-number">2.2</span> Herleitung der Übertragungsfunktion bes Biquad Filters</h2>
 <p>Hier die Herleitung der Übertragungsfunktionen schreiben</p>
 </section>
-<section id="filter-spezifikation-und-aufbau" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="filter-spezifikation-und-aufbau"><span class="header-section-number">2.3</span> Filter Spezifikation und Aufbau</h2>
+<section id="güte-faktor-q" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="güte-faktor-q"><span class="header-section-number">2.3</span> Güte Faktor Q</h2>
+<p>Quality Faktor hier kurz beschrieben</p>
+</section>
+<section id="filter-spezifikation-und-aufbau" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="filter-spezifikation-und-aufbau"><span class="header-section-number">2.4</span> Filter Spezifikation und Aufbau</h2>
 <p>Hier müssen wir die filter speizifikation aus Experiment-4 schreiben.</p>
-<section id="simulation-der-schaltung" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="simulation-der-schaltung"><span class="header-section-number">2.3.1</span> Simulation der Schaltung</h3>
+<section id="simulation-der-schaltung" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="simulation-der-schaltung"><span class="header-section-number">2.4.1</span> Simulation der Schaltung</h3>
 <p>Hier zeigen wir die Simulation von der Schaltung und die Plots</p>
 </section>
-<section id="entuwrf-der-schaltung-auf-aslk-lab-kit" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="entuwrf-der-schaltung-auf-aslk-lab-kit"><span class="header-section-number">2.3.2</span> Entuwrf der Schaltung auf ASLK Lab-Kit</h3>
+<section id="entuwrf-der-schaltung-auf-aslk-lab-kit" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="entuwrf-der-schaltung-auf-aslk-lab-kit"><span class="header-section-number">2.4.2</span> Entuwrf der Schaltung auf ASLK Lab-Kit</h3>
 <p>Aufbau von der Schaltung auf ASLK Lab-Board mit jumper Wires</p>
 </section>
 </section>

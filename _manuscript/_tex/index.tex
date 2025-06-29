@@ -169,7 +169,8 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Entwurf und PCD Design eines universellen Biquad Filters},
+  pdftitle={Entwurf und PCB Design eines universellen Biquad Filters},
+  pdfauthor={Aditya Dabas (5230565); Mohamad Wehbi; Adrian Jauch},
   pdflang={de},
   colorlinks=true,
   linkcolor={blue},
@@ -179,9 +180,9 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\title{Entwurf und PCD Design eines universellen Biquad Filters}
-\author{}
-\date{2025-05-25}
+\title{Entwurf und PCB Design eines universellen Biquad Filters}
+\author{Aditya Dabas (5230565) \and Mohamad Wehbi \and Adrian Jauch}
+\date{2025-06-29}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -197,11 +198,113 @@ Lorem ipsum
 
 \chapter{Einleitung}\label{einleitung}
 
-Das ist eine einleitung.
+Ziel dieses Versuchs ist es, ein universelles analoges Biquad-Filter zu
+entwerfen, zu simulieren, praktisch aufzubauen und in ein
+professionelles Leiterplattendesign zu überführen. Die Grundlage bildet
+der Versuch 4 des ASLK PRO Manuals von Texas Instruments, in dem eine
+zweistufige aktive Filterstruktur mithilfe von Operationsverstärkern
+realisiert wird. Dabei wird das Verhalten typischer Filtertypen --
+darunter Tiefpass, Hochpass, Bandpass und Bandsperre -- auf Basis einer
+sogenannten Biquad-Schaltung untersucht.
+
+Zu Beginn wird die im Manual auf Seite 32 dargestellte Schaltung in der
+Simulationsumgebung KiCad modelliert, um ihr Frequenzverhalten zu
+analysieren und theoretisch zu validieren. Anschließend wird dieselbe
+Schaltung auf dem ASLK PRO Board unter Verwendung von Jumperkabeln
+praktisch realisiert und vermessen. Durch den Vergleich der simulierten
+und gemessenen Ergebnisse wird die Übereinstimmung zwischen Theorie und
+Praxis überprüft.
+
+Nach erfolgreicher Realisierung der Grundschaltung wird das Filter um
+ein weiteres Modul ergänzt: Um einen Butterworth-Tiefpass dritter
+Ordnung zu erhalten, wird das Ausgangssignal der Tiefpass-Stufe (LPF)
+der Biquad-Schaltung genutzt, um einen zusätzlichen Integrator
+anzusteuern. Diese Kaskadierung dient der Erzeugung eines glatten
+Übergangs im Frequenzgang mit typischem Butterworth-Verhalten und stellt
+eine praxisrelevante Anwendung dar.
+
+Im dritten Schritt wird die gesamte Schaltung -- bestehend aus der
+ursprünglichen Biquad-Konfiguration sowie dem optionalen
+Butterworth-Modul -- in KiCad als Leiterplattenlayout umgesetzt. Dabei
+wird darauf geachtet, die Filtercharakteristik durch gezielte Auswahl
+von Jumperverbindungen flexibel messbar zu gestalten und sowohl die
+Basis- als auch die Erweiterungsstruktur (Butterworth) in die Platine zu
+integrieren. Nach erfolgreichem Design wird die Platine gefertigt,
+bestückt und abschließend vermessen.
+
+Durch diesen vollständigen Designzyklus wird ein praxisnahes Verständnis
+für den analogen Schaltungsentwurf, die Simulation sowie die
+Herausforderungen beim Layout und der Umsetzung eines funktionsfähigen
+Leiterplattenprototyps vermittelt.
 
 \chapter{Filter-Entwurf}\label{filter-entwurf}
 
+\section{Bi-quad Filters}\label{bi-quad-filters}
+
+Hier Bi-quad filters beschreiben (allgemein)
+
+\subsection{Second Order Universal Active
+Filter}\label{second-order-universal-active-filter}
+
+Hier dann Bi-quad filter schaltung aus ASLK Pro Experiment-4
+
+\section{Herleitung der Übertragungsfunktion bes Biquad
+Filters}\label{herleitung-der-uxfcbertragungsfunktion-bes-biquad-filters}
+
+Hier die Herleitung der Übertragungsfunktionen schreiben
+
+\section{Filter Spezifikation und
+Aufbau}\label{filter-spezifikation-und-aufbau}
+
+Hier müssen wir die filter speizifikation aus Experiment-4 schreiben.
+
+\subsection{Simulation der Schaltung}\label{simulation-der-schaltung}
+
+Hier zeigen wir die Simulation von der Schaltung und die Plots
+
+\subsection{Entuwrf der Schaltung auf ASLK
+Lab-Kit}\label{entuwrf-der-schaltung-auf-aslk-lab-kit}
+
+Aufbau von der Schaltung auf ASLK Lab-Board mit jumper Wires
+
 \chapter{Charakterisierung}\label{charakterisierung}
+
+\chapter{Messauswertung}\label{messauswertung}
+
+\section{Messungen und Darstellung}\label{messungen-und-darstellung}
+
+Hier schreiben wir das Vorgehen und was wir gemessen haben in der
+diskrete Schaltung auf ASLK Lab-board und die Plots dazu
+
+\section{Vergleich Simulation
+vs.~Diskret}\label{vergleich-simulation-vs.-diskret}
+
+hier machen wir ein vergleich zwischen Simulation und die auf dem Board
+aufgebaute Schaltung mit Plots
+
+\section{Diskussion der Messwerte}\label{diskussion-der-messwerte}
+
+Hier erklären wir die Unterschiede zwischen Simulation und echte
+Messwerte
+
+\chapter{Entwurf des PCB-Designs}\label{entwurf-des-pcb-designs}
+
+\section{Vorgehen}\label{vorgehen}
+
+hier beschreiben wir das Vorgehen
+
+\section{Messung der PCB-Schaltung}\label{messung-der-pcb-schaltung}
+
+hier zeigen wir Plots von der PCB-Schaltung
+
+\section{Diskret vs.~Integriert}\label{diskret-vs.-integriert}
+
+hier vergleichen wir zwischen der Schaltung auf dem ASLK-Board und der
+auf dem PCB
+
+\chapter{Fazit}\label{fazit}
+
+Hier schreiben wir Fazit von dem Experiment
 
 \chapter*{Literaturverzeichnis}\label{literaturverzeichnis}
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}

@@ -1,9 +1,15 @@
 # Einleitung
 
-Ziel dieses Versuchs ist es, ein universelles analoges Biquad-Filter zu entwerfen, zu simulieren, aufzubauen und anschließend in ein  professionelles Leiterplattendesign zu überführen. Die Grundlage bildet der Versuch 4 des ASLK PRO Manuals von Texas Instruments, in dem ein zweistufiges aktives Filter mit Operationsverstärkern realisiert wird. Dabei wird das Verhalten typischer Filtertypen – darunter Tiefpass, Hochpass, Bandpass und Bandsperre – mithilfe einer sogenannten Biquad-Schaltung untersucht.
 
-Zu Beginn wird die Filter-Schaltung aus dem Manual (S. 32) in KiCad simuliert, um das Frequenzverhalten theoretisch zu analysieren. Anschließend wird die gleiche Schaltung praktisch auf dem ASLK PRO Board mit Jumperkabeln aufgebaut und gemessen. Ziel dieser Gegenüberstellung ist es, die Übereinstimmung von Simulation und Realität zu überprüfen.
+Ziel dieses Versuchs ist es, ein universelles analoges Biquad-Filter zu entwerfen, zu simulieren, praktisch aufzubauen und in ein professionelles Leiterplattendesign zu überführen. Die Grundlage bildet der Versuch 4 des ASLK PRO Manuals von Texas Instruments, in dem eine zweistufige aktive Filterstruktur mithilfe von Operationsverstärkern realisiert wird. Dabei wird das Verhalten typischer Filtertypen – darunter Tiefpass, Hochpass, Bandpass und Bandsperre – auf Basis einer sogenannten Biquad-Schaltung untersucht.
 
-Im dritten Schritt wird das entworfene Filter als PCB mit KiCad umgesetzt, inklusive Layout, Netzliste und Bauteilplatzierung. Nach erfolgreichem Design wird die Platine gefertigt, bestückt und erneut gemessen. Durch diesen vollständigen Designzyklus wird ein praxisnahes Verständnis für den analogen Schaltungsentwurf, die Simulation sowie die Herausforderungen im PCB-Layout vermittelt.
+Zu Beginn wird die im Manual auf Seite 32 dargestellte Schaltung in der Simulationsumgebung KiCad modelliert, um ihr Frequenzverhalten zu analysieren und theoretisch zu validieren. Anschließend wird dieselbe Schaltung auf dem ASLK PRO Board unter Verwendung von Jumperkabeln praktisch realisiert und vermessen. Durch den Vergleich der simulierten und gemessenen Ergebnisse wird die Übereinstimmung zwischen Theorie und Praxis überprüft.
+
+Nach erfolgreicher Realisierung der Grundschaltung wird das Filter um ein weiteres Modul ergänzt: Um einen Butterworth-Tiefpass dritter Ordnung zu erhalten, wird das Ausgangssignal der Tiefpass-Stufe (LPF) der Biquad-Schaltung genutzt, um einen zusätzlichen Integrator anzusteuern. Diese Kaskadierung dient der Erzeugung eines glatten Übergangs im Frequenzgang mit typischem Butterworth-Verhalten und stellt eine praxisrelevante Anwendung dar.
+
+Im dritten Schritt wird die gesamte Schaltung – bestehend aus der ursprünglichen Biquad-Konfiguration sowie dem optionalen Butterworth-Modul – in KiCad als Leiterplattenlayout umgesetzt. Dabei wird darauf geachtet, die Filtercharakteristik durch gezielte Auswahl von Jumperverbindungen flexibel messbar zu gestalten und sowohl die Basis- als auch die Erweiterungsstruktur (Butterworth) in die Platine zu integrieren. Nach erfolgreichem Design wird die Platine gefertigt, bestückt und abschließend vermessen.
+
+Durch diesen vollständigen Designzyklus wird ein praxisnahes Verständnis für den analogen Schaltungsentwurf, die Simulation sowie die Herausforderungen beim Layout und der Umsetzung eines funktionsfähigen Leiterplattenprototyps vermittelt.
+
 
 
