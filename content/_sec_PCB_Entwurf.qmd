@@ -1,0 +1,10 @@
+# Entwurf des PCB-Designs
+
+## Vorgehen
+hier beschreiben wir das Vorgehen 
+
+## Messung der PCB-Schaltung 
+hier zeigen wir Plots von der PCB-Schaltung 
+
+## Diskret vs. Integriert
+hier vergleichen wir zwischen der Schaltung auf dem ASLK-Board und der auf dem PCB

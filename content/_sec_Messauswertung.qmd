@@ -1,0 +1,10 @@
+# Messauswertung
+
+## Messungen und Darstellung
+Hier schreiben wir das Vorgehen und was wir gemessen haben in der diskrete Schaltung auf ASLK Lab-board und die Plots dazu
+
+## Vergleich Simulation vs. Diskret
+hier machen wir ein vergleich zwischen Simulation und die auf dem Board aufgebaute Schaltung mit Plots 
+
+## Diskussion der Messwerte
+Hier erklären wir die Unterschiede zwischen Simulation und echte Messwerte

@@ -1,3 +1,20 @@
 # Filter-Entwurf
-Biquad filter design
+
+## Bi-quad Filters
+Hier Bi-quad filters beschreiben (allgemein)
+
+### Second Order Universal Active Filter
+Hier dann Bi-quad filter schaltung aus ASLK Pro Experiment-4
+
+## Herleitung der Übertragungsfunktion bes Biquad Filters
+Hier die Herleitung der Übertragungsfunktionen schreiben
+
+## Filter Spezifikation und Aufbau
+Hier müssen wir die filter speizifikation aus Experiment-4 schreiben.
+
+### Simulation der Schaltung
+Hier zeigen wir die Simulation von der Schaltung und die Plots
+
+### Entuwrf der Schaltung auf ASLK Lab-Kit
+Aufbau von der Schaltung auf ASLK Lab-Board mit jumper Wires
 
