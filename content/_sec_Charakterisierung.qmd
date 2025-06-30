@@ -1,3 +1,16 @@
-# Charakterisierung
+# Charakterisierung der Filterausgänge
+
+Hier beschreiben wir alle filter ausgänge und die Integration des butterworth Filters danach.
+
+## Bandpass-Filter (BPF)
+
+## Tiefpass-Filter (TPF)
+
+## Hochpass-Filter (HPF)
+
+## Bandstop-Filter (BSF)
+
+## Butterworth-Tiefpass 3. Ordnung
+
 
 

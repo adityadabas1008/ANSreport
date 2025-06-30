@@ -1,10 +1,10 @@
-# Entwurf des PCB-Designs
+# Umsetzung als Leiterplatte
 
-## Vorgehen
+## Vorgehensweise im Layoutprozess
 hier beschreiben wir das Vorgehen 
 
-## Messung der PCB-Schaltung 
+## Messungen an der PCB-Schaltung
 hier zeigen wir Plots von der PCB-Schaltung 
 
-## Diskret vs. Integriert
+## Vergleich: Realaufbau vs. PCB
 hier vergleichen wir zwischen der Schaltung auf dem ASLK-Board und der auf dem PCB

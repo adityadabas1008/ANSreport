@@ -27,6 +27,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -57,6 +58,35 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-6e5ff12f349f7d7ee99023e5a7f49be9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta name="citation_title" content="Entwurf und PCB Design eines universellen Biquad Filters">
 <meta name="citation_abstract" content="Lorem ipsum
@@ -64,10 +94,10 @@ div.csl-indent {
 <meta name="citation_author" content="Aditya Dabas (5230565)">
 <meta name="citation_author" content="Mohamad Wehbi">
 <meta name="citation_author" content="Adrian Jauch">
-<meta name="citation_publication_date" content="2025-06-29">
-<meta name="citation_cover_date" content="2025-06-29">
+<meta name="citation_publication_date" content="2025-06-30">
+<meta name="citation_cover_date" content="2025-06-30">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-06-29">
+<meta name="citation_online_date" content="2025-06-30">
 <meta name="citation_language" content="de">
 <meta name="citation_reference" content="citation_title=CMOS: Circuit design, layout, and simulation;,citation_author=R. Jacob Baker;,citation_publication_date=2010-10;,citation_cover_date=2010-10;,citation_year=2010;,citation_doi=10.1002/9780470891179;,citation_isbn=9780470891179;">
 <meta name="citation_reference" content="citation_title=CMOSedu;,citation_author=R. Jacob Baker;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_fulltext_html_url=http://www.cmosedu.com;,citation_publisher=Website;">
@@ -87,6 +117,7 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_issue=2;,citation_doi=10.1109/mssc.2024.3400568;,citation_issn=1943-0590;,citation_volume=16;,citation_journal_title=IEEE Solid-State Circuits Magazine;,citation_publisher=Institute of Electrical; Electronics Engineers (IEEE);">
 <meta name="citation_reference" content="citation_title=Analog building blocks of dc-dc converters: Examining fundamental concepts;,citation_author=Bernhard Wicht;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_issue=3;,citation_doi=10.1109/mssc.2020.3002141;,citation_volume=12;,citation_journal_title=IEEE Solid-State Circuits Magazine;,citation_publisher=institution of Electrical; Electronics Engineers (IEEE);">
 <meta name="citation_reference" content="citation_title=Design of power management integrated circuits;,citation_author=Bernhard Wicht;,citation_publication_date=2024-05;,citation_cover_date=2024-05;,citation_year=2024;,citation_doi=10.1002/9781119123095;,citation_isbn=9781119123095;">
+<meta name="citation_reference" content="citation_title=Introduction to digital filters with audio applications;,citation_author=Julius O. Smith;,citation_publication_date=2007;,citation_cover_date=2007;,citation_year=2007;,citation_isbn=978-0-9745607-1-7;">
 </head>
 
 <body class="quarto-light">
@@ -115,7 +146,7 @@ div.csl-indent {
                 <div>
             <div class="quarto-title-meta-heading">Veröffentlichungsdatum</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">29. Juni 2025</p>
+              <p class="date">30. Juni 2025</p>
             </div>
           </div>
           
@@ -143,32 +174,39 @@ div.csl-indent {
    
   <ul>
   <li><a href="#einleitung" id="toc-einleitung" class="nav-link active" data-scroll-target="#einleitung"><span class="header-section-number">1</span> Einleitung</a></li>
-  <li><a href="#filter-entwurf" id="toc-filter-entwurf" class="nav-link" data-scroll-target="#filter-entwurf"><span class="header-section-number">2</span> Filter-Entwurf</a>
+  <li><a href="#entwurf-des-biquad-filters" id="toc-entwurf-des-biquad-filters" class="nav-link" data-scroll-target="#entwurf-des-biquad-filters"><span class="header-section-number">2</span> Entwurf des Biquad-Filters</a>
   <ul class="collapse">
-  <li><a href="#bi-quad-filters" id="toc-bi-quad-filters" class="nav-link" data-scroll-target="#bi-quad-filters"><span class="header-section-number">2.1</span> Bi-quad Filters</a>
+  <li><a href="#grundlagen-biquad-filter" id="toc-grundlagen-biquad-filter" class="nav-link" data-scroll-target="#grundlagen-biquad-filter"><span class="header-section-number">2.1</span> Grundlagen Biquad-Filter</a>
   <ul class="collapse">
-  <li><a href="#second-order-universal-active-filter" id="toc-second-order-universal-active-filter" class="nav-link" data-scroll-target="#second-order-universal-active-filter"><span class="header-section-number">2.1.1</span> Second Order Universal Active Filter</a></li>
+  <li><a href="#universeller-aktiver-filter-2.-ordnung" id="toc-universeller-aktiver-filter-2.-ordnung" class="nav-link" data-scroll-target="#universeller-aktiver-filter-2.-ordnung"><span class="header-section-number">2.1.1</span> Universeller aktiver Filter 2. Ordnung</a></li>
   </ul></li>
-  <li><a href="#herleitung-der-übertragungsfunktion-bes-biquad-filters" id="toc-herleitung-der-übertragungsfunktion-bes-biquad-filters" class="nav-link" data-scroll-target="#herleitung-der-übertragungsfunktion-bes-biquad-filters"><span class="header-section-number">2.2</span> Herleitung der Übertragungsfunktion bes Biquad Filters</a></li>
-  <li><a href="#güte-faktor-q" id="toc-güte-faktor-q" class="nav-link" data-scroll-target="#güte-faktor-q"><span class="header-section-number">2.3</span> Güte Faktor Q</a></li>
-  <li><a href="#filter-spezifikation-und-aufbau" id="toc-filter-spezifikation-und-aufbau" class="nav-link" data-scroll-target="#filter-spezifikation-und-aufbau"><span class="header-section-number">2.4</span> Filter Spezifikation und Aufbau</a>
+  <li><a href="#herleitung-der-übertragungsfunktion" id="toc-herleitung-der-übertragungsfunktion" class="nav-link" data-scroll-target="#herleitung-der-übertragungsfunktion"><span class="header-section-number">2.2</span> Herleitung der Übertragungsfunktion</a></li>
+  <li><a href="#gütefaktor-q-und-einfluss" id="toc-gütefaktor-q-und-einfluss" class="nav-link" data-scroll-target="#gütefaktor-q-und-einfluss"><span class="header-section-number">2.3</span> Gütefaktor Q und Einfluss</a></li>
+  <li><a href="#simulation-und-aufbau" id="toc-simulation-und-aufbau" class="nav-link" data-scroll-target="#simulation-und-aufbau"><span class="header-section-number">2.4</span> Simulation und Aufbau</a>
   <ul class="collapse">
-  <li><a href="#simulation-der-schaltung" id="toc-simulation-der-schaltung" class="nav-link" data-scroll-target="#simulation-der-schaltung"><span class="header-section-number">2.4.1</span> Simulation der Schaltung</a></li>
-  <li><a href="#entuwrf-der-schaltung-auf-aslk-lab-kit" id="toc-entuwrf-der-schaltung-auf-aslk-lab-kit" class="nav-link" data-scroll-target="#entuwrf-der-schaltung-auf-aslk-lab-kit"><span class="header-section-number">2.4.2</span> Entuwrf der Schaltung auf ASLK Lab-Kit</a></li>
+  <li><a href="#simulation-der-schaltung-kicad" id="toc-simulation-der-schaltung-kicad" class="nav-link" data-scroll-target="#simulation-der-schaltung-kicad"><span class="header-section-number">2.4.1</span> Simulation der Schaltung (KiCad)</a></li>
+  <li><a href="#aufbau-auf-dem-aslk-pro-board" id="toc-aufbau-auf-dem-aslk-pro-board" class="nav-link" data-scroll-target="#aufbau-auf-dem-aslk-pro-board"><span class="header-section-number">2.4.2</span> Aufbau auf dem ASLK PRO Board</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#charakterisierung" id="toc-charakterisierung" class="nav-link" data-scroll-target="#charakterisierung"><span class="header-section-number">3</span> Charakterisierung</a></li>
-  <li><a href="#messauswertung" id="toc-messauswertung" class="nav-link" data-scroll-target="#messauswertung"><span class="header-section-number">4</span> Messauswertung</a>
+  <li><a href="#charakterisierung-der-filterausgänge" id="toc-charakterisierung-der-filterausgänge" class="nav-link" data-scroll-target="#charakterisierung-der-filterausgänge"><span class="header-section-number">3</span> Charakterisierung der Filterausgänge</a>
   <ul class="collapse">
-  <li><a href="#messungen-und-darstellung" id="toc-messungen-und-darstellung" class="nav-link" data-scroll-target="#messungen-und-darstellung"><span class="header-section-number">4.1</span> Messungen und Darstellung</a></li>
-  <li><a href="#vergleich-simulation-vs.-diskret" id="toc-vergleich-simulation-vs.-diskret" class="nav-link" data-scroll-target="#vergleich-simulation-vs.-diskret"><span class="header-section-number">4.2</span> Vergleich Simulation vs.&nbsp;Diskret</a></li>
-  <li><a href="#diskussion-der-messwerte" id="toc-diskussion-der-messwerte" class="nav-link" data-scroll-target="#diskussion-der-messwerte"><span class="header-section-number">4.3</span> Diskussion der Messwerte</a></li>
+  <li><a href="#bandpass-filter-bpf" id="toc-bandpass-filter-bpf" class="nav-link" data-scroll-target="#bandpass-filter-bpf"><span class="header-section-number">3.1</span> Bandpass-Filter (BPF)</a></li>
+  <li><a href="#tiefpass-filter-tpf" id="toc-tiefpass-filter-tpf" class="nav-link" data-scroll-target="#tiefpass-filter-tpf"><span class="header-section-number">3.2</span> Tiefpass-Filter (TPF)</a></li>
+  <li><a href="#hochpass-filter-hpf" id="toc-hochpass-filter-hpf" class="nav-link" data-scroll-target="#hochpass-filter-hpf"><span class="header-section-number">3.3</span> Hochpass-Filter (HPF)</a></li>
+  <li><a href="#bandstop-filter-bsf" id="toc-bandstop-filter-bsf" class="nav-link" data-scroll-target="#bandstop-filter-bsf"><span class="header-section-number">3.4</span> Bandstop-Filter (BSF)</a></li>
+  <li><a href="#butterworth-tiefpass-3.-ordnung" id="toc-butterworth-tiefpass-3.-ordnung" class="nav-link" data-scroll-target="#butterworth-tiefpass-3.-ordnung"><span class="header-section-number">3.5</span> Butterworth-Tiefpass 3. Ordnung</a></li>
   </ul></li>
-  <li><a href="#entwurf-des-pcb-designs" id="toc-entwurf-des-pcb-designs" class="nav-link" data-scroll-target="#entwurf-des-pcb-designs"><span class="header-section-number">5</span> Entwurf des PCB-Designs</a>
+  <li><a href="#messung-und-analyse" id="toc-messung-und-analyse" class="nav-link" data-scroll-target="#messung-und-analyse"><span class="header-section-number">4</span> Messung und Analyse</a>
   <ul class="collapse">
-  <li><a href="#vorgehen" id="toc-vorgehen" class="nav-link" data-scroll-target="#vorgehen"><span class="header-section-number">5.1</span> Vorgehen</a></li>
-  <li><a href="#messung-der-pcb-schaltung" id="toc-messung-der-pcb-schaltung" class="nav-link" data-scroll-target="#messung-der-pcb-schaltung"><span class="header-section-number">5.2</span> Messung der PCB-Schaltung</a></li>
-  <li><a href="#diskret-vs.-integriert" id="toc-diskret-vs.-integriert" class="nav-link" data-scroll-target="#diskret-vs.-integriert"><span class="header-section-number">5.3</span> Diskret vs.&nbsp;Integriert</a></li>
+  <li><a href="#durchführung-der-messungen" id="toc-durchführung-der-messungen" class="nav-link" data-scroll-target="#durchführung-der-messungen"><span class="header-section-number">4.1</span> Durchführung der Messungen</a></li>
+  <li><a href="#vergleich-simulation-vs.-realaufbau" id="toc-vergleich-simulation-vs.-realaufbau" class="nav-link" data-scroll-target="#vergleich-simulation-vs.-realaufbau"><span class="header-section-number">4.2</span> Vergleich Simulation vs.&nbsp;Realaufbau</a></li>
+  <li><a href="#interpretation-der-messergebnisse" id="toc-interpretation-der-messergebnisse" class="nav-link" data-scroll-target="#interpretation-der-messergebnisse"><span class="header-section-number">4.3</span> Interpretation der Messergebnisse</a></li>
+  </ul></li>
+  <li><a href="#umsetzung-als-leiterplatte" id="toc-umsetzung-als-leiterplatte" class="nav-link" data-scroll-target="#umsetzung-als-leiterplatte"><span class="header-section-number">5</span> Umsetzung als Leiterplatte</a>
+  <ul class="collapse">
+  <li><a href="#vorgehensweise-im-layoutprozess" id="toc-vorgehensweise-im-layoutprozess" class="nav-link" data-scroll-target="#vorgehensweise-im-layoutprozess"><span class="header-section-number">5.1</span> Vorgehensweise im Layoutprozess</a></li>
+  <li><a href="#messungen-an-der-pcb-schaltung" id="toc-messungen-an-der-pcb-schaltung" class="nav-link" data-scroll-target="#messungen-an-der-pcb-schaltung"><span class="header-section-number">5.2</span> Messungen an der PCB-Schaltung</a></li>
+  <li><a href="#vergleich-realaufbau-vs.-pcb" id="toc-vergleich-realaufbau-vs.-pcb" class="nav-link" data-scroll-target="#vergleich-realaufbau-vs.-pcb"><span class="header-section-number">5.3</span> Vergleich: Realaufbau vs.&nbsp;PCB</a></li>
   </ul></li>
   <li><a href="#fazit" id="toc-fazit" class="nav-link" data-scroll-target="#fazit"><span class="header-section-number">6</span> Fazit</a></li>
   <li><a href="#literaturverzeichnis" id="toc-literaturverzeichnis" class="nav-link" data-scroll-target="#literaturverzeichnis">Literaturverzeichnis</a></li>
@@ -192,67 +230,90 @@ div.csl-indent {
 <p>Im dritten Schritt wird die gesamte Schaltung – bestehend aus der ursprünglichen Biquad-Konfiguration sowie dem optionalen Butterworth-Modul – in KiCad als Leiterplattenlayout umgesetzt. Dabei wird darauf geachtet, die Filtercharakteristik durch gezielte Auswahl von Jumperverbindungen flexibel messbar zu gestalten und sowohl die Basis- als auch die Erweiterungsstruktur (Butterworth) in die Platine zu integrieren. Nach erfolgreichem Design wird die Platine gefertigt, bestückt und abschließend vermessen.</p>
 <p>Durch diesen vollständigen Designzyklus wird ein praxisnahes Verständnis für den analogen Schaltungsentwurf, die Simulation sowie die Herausforderungen beim Layout und der Umsetzung eines funktionsfähigen Leiterplattenprototyps vermittelt.</p>
 </section>
-<section id="filter-entwurf" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Filter-Entwurf</h1>
-<section id="bi-quad-filters" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="bi-quad-filters"><span class="header-section-number">2.1</span> Bi-quad Filters</h2>
-<p>Hier Bi-quad filters beschreiben (allgemein)</p>
-<section id="second-order-universal-active-filter" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="second-order-universal-active-filter"><span class="header-section-number">2.1.1</span> Second Order Universal Active Filter</h3>
+<section id="entwurf-des-biquad-filters" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Entwurf des Biquad-Filters</h1>
+<section id="grundlagen-biquad-filter" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="grundlagen-biquad-filter"><span class="header-section-number">2.1</span> Grundlagen Biquad-Filter</h2>
+<p>Ein Biquad-Filter (zweites Ordnungsglied) ist eine universelle, aktive Filterstruktur, die in nahezu allen Standard-Filterkonfigurationen (Tiefpass, Hochpass, Bandpass, Bandsperre) eingesetzt werden kann. Die Bezeichnung „Biquad“ leitet sich dabei vom englischen „biquadratic“ ab und verweist auf die quadratische (zweite) Ordnung der Nennerpolynomfunktion der Übertragungsfunktion.</p>
+<p>Im Kern besteht ein Biquad-Filter aus zwei gepaarten Operationsverstärker­stufen, die durch Rückkopplungs- und Durchkopplungszweige miteinander verbunden sind. Diese Zweistufigkeit erlaubt die Realisierung eines Übertragungs­verhaltens zweiter Ordnung bereits mit minimalem Bauteilaufwand. Durch gezielte Dimensionierung der Widerstände und Kondensatoren in den Rückkopplungspfaden lassen sich Frequenzgangleitungen und Dämpfungs­verhalten exakt einstellen, sodass beliebige Filtercharakteristiken – etwa Butterworth (maximale Flachheit im Durchlassbereich), Tschebyscheff (Welligkeit im Durchlass bei steiler Flanke) oder Bessel (maximale Linearität der Gruppenlaufzeit) – erzeugt werden können.</p>
+<p>Mathematisch wird die Übertragungsfunktion eines Biquad-Filters allgemein dargestellt als</p>
+<p><span class="math display">\[
+H(s) \;=\; \frac{b_0 + b_1 s + b_2 s^2}{a_0 + a_1 s + a_2 s^2}\,,
+\]</span></p>
+<p>wobei die Koeffizienten <span class="math inline">\(b_i\)</span> und <span class="math inline">\(a_i\)</span> aus den gewählten Widerstands- und Kondensatorwerten resultieren. Die zulässigen Filtertypen unterscheiden sich lediglich in der Wahl dieser Koeffizienten, während die Grundstruktur des Schaltbilds unverändert bleibt. So entsteht beispielsweise durch <span class="math inline">\(b_0=b_2=0\)</span>, <span class="math inline">\(b_1\neq0\)</span> ein reiner Bandpass, während bei <span class="math inline">\(b_1=0\)</span>, <span class="math inline">\(b_0=b_2\neq0\)</span> eine Bandsperre resultiert.</p>
+<p>Ein wesentlicher Vorteil des Biquad-Aufbaus liegt in seiner Modularität: Durch Parallelschaltung mehrerer identischer Biquad-Stufen können höher­ordnungs Filter realisiert werden, ohne die Komplexität je Stufe zu erhöhen. Zudem lässt sich jede Stufe einzeln kalibrieren, um Fertigungstoleranzen auszugleichen und präzise Filter­güte (Q-Faktor) sowie Grenzfrequenz einzustellen. Diese Flexibilität macht den Biquad zum De-facto-Standard für integrierte Filterlösungen in der Audiotechnik, Messtechnik und industriellen Signal­verarbeitung. <span class="citation" data-cites="FILTERS07">(<a href="#ref-FILTERS07" role="doc-biblioref">Smith 2007</a>)</span></p>
+<section id="universeller-aktiver-filter-2.-ordnung" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="universeller-aktiver-filter-2.-ordnung"><span class="header-section-number">2.1.1</span> Universeller aktiver Filter 2. Ordnung</h3>
 <p>Hier dann Bi-quad filter schaltung aus ASLK Pro Experiment-4</p>
 </section>
 </section>
-<section id="herleitung-der-übertragungsfunktion-bes-biquad-filters" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="herleitung-der-übertragungsfunktion-bes-biquad-filters"><span class="header-section-number">2.2</span> Herleitung der Übertragungsfunktion bes Biquad Filters</h2>
+<section id="herleitung-der-übertragungsfunktion" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="herleitung-der-übertragungsfunktion"><span class="header-section-number">2.2</span> Herleitung der Übertragungsfunktion</h2>
 <p>Hier die Herleitung der Übertragungsfunktionen schreiben</p>
 </section>
-<section id="güte-faktor-q" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="güte-faktor-q"><span class="header-section-number">2.3</span> Güte Faktor Q</h2>
+<section id="gütefaktor-q-und-einfluss" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="gütefaktor-q-und-einfluss"><span class="header-section-number">2.3</span> Gütefaktor Q und Einfluss</h2>
 <p>Quality Faktor hier kurz beschrieben</p>
 </section>
-<section id="filter-spezifikation-und-aufbau" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="filter-spezifikation-und-aufbau"><span class="header-section-number">2.4</span> Filter Spezifikation und Aufbau</h2>
+<section id="simulation-und-aufbau" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="simulation-und-aufbau"><span class="header-section-number">2.4</span> Simulation und Aufbau</h2>
 <p>Hier müssen wir die filter speizifikation aus Experiment-4 schreiben.</p>
-<section id="simulation-der-schaltung" class="level3" data-number="2.4.1">
-<h3 data-number="2.4.1" class="anchored" data-anchor-id="simulation-der-schaltung"><span class="header-section-number">2.4.1</span> Simulation der Schaltung</h3>
+<section id="simulation-der-schaltung-kicad" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="simulation-der-schaltung-kicad"><span class="header-section-number">2.4.1</span> Simulation der Schaltung (KiCad)</h3>
 <p>Hier zeigen wir die Simulation von der Schaltung und die Plots</p>
 </section>
-<section id="entuwrf-der-schaltung-auf-aslk-lab-kit" class="level3" data-number="2.4.2">
-<h3 data-number="2.4.2" class="anchored" data-anchor-id="entuwrf-der-schaltung-auf-aslk-lab-kit"><span class="header-section-number">2.4.2</span> Entuwrf der Schaltung auf ASLK Lab-Kit</h3>
-<p>Aufbau von der Schaltung auf ASLK Lab-Board mit jumper Wires</p>
+<section id="aufbau-auf-dem-aslk-pro-board" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="aufbau-auf-dem-aslk-pro-board"><span class="header-section-number">2.4.2</span> Aufbau auf dem ASLK PRO Board</h3>
+<p>Aufbau von der Schaltung auf ASLK Board mit jumper Wires</p>
 </section>
 </section>
 </section>
-<section id="charakterisierung" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Charakterisierung</h1>
+<section id="charakterisierung-der-filterausgänge" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Charakterisierung der Filterausgänge</h1>
+<p>Hier beschreiben wir alle filter ausgänge und die Integration des butterworth Filters danach.</p>
+<section id="bandpass-filter-bpf" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="bandpass-filter-bpf"><span class="header-section-number">3.1</span> Bandpass-Filter (BPF)</h2>
 </section>
-<section id="messauswertung" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Messauswertung</h1>
-<section id="messungen-und-darstellung" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="messungen-und-darstellung"><span class="header-section-number">4.1</span> Messungen und Darstellung</h2>
+<section id="tiefpass-filter-tpf" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="tiefpass-filter-tpf"><span class="header-section-number">3.2</span> Tiefpass-Filter (TPF)</h2>
+</section>
+<section id="hochpass-filter-hpf" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="hochpass-filter-hpf"><span class="header-section-number">3.3</span> Hochpass-Filter (HPF)</h2>
+</section>
+<section id="bandstop-filter-bsf" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="bandstop-filter-bsf"><span class="header-section-number">3.4</span> Bandstop-Filter (BSF)</h2>
+</section>
+<section id="butterworth-tiefpass-3.-ordnung" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="butterworth-tiefpass-3.-ordnung"><span class="header-section-number">3.5</span> Butterworth-Tiefpass 3. Ordnung</h2>
+</section>
+</section>
+<section id="messung-und-analyse" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Messung und Analyse</h1>
+<section id="durchführung-der-messungen" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="durchführung-der-messungen"><span class="header-section-number">4.1</span> Durchführung der Messungen</h2>
 <p>Hier schreiben wir das Vorgehen und was wir gemessen haben in der diskrete Schaltung auf ASLK Lab-board und die Plots dazu</p>
 </section>
-<section id="vergleich-simulation-vs.-diskret" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="vergleich-simulation-vs.-diskret"><span class="header-section-number">4.2</span> Vergleich Simulation vs.&nbsp;Diskret</h2>
+<section id="vergleich-simulation-vs.-realaufbau" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="vergleich-simulation-vs.-realaufbau"><span class="header-section-number">4.2</span> Vergleich Simulation vs.&nbsp;Realaufbau</h2>
 <p>hier machen wir ein vergleich zwischen Simulation und die auf dem Board aufgebaute Schaltung mit Plots</p>
 </section>
-<section id="diskussion-der-messwerte" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="diskussion-der-messwerte"><span class="header-section-number">4.3</span> Diskussion der Messwerte</h2>
+<section id="interpretation-der-messergebnisse" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="interpretation-der-messergebnisse"><span class="header-section-number">4.3</span> Interpretation der Messergebnisse</h2>
 <p>Hier erklären wir die Unterschiede zwischen Simulation und echte Messwerte</p>
 </section>
 </section>
-<section id="entwurf-des-pcb-designs" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Entwurf des PCB-Designs</h1>
-<section id="vorgehen" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="vorgehen"><span class="header-section-number">5.1</span> Vorgehen</h2>
+<section id="umsetzung-als-leiterplatte" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Umsetzung als Leiterplatte</h1>
+<section id="vorgehensweise-im-layoutprozess" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="vorgehensweise-im-layoutprozess"><span class="header-section-number">5.1</span> Vorgehensweise im Layoutprozess</h2>
 <p>hier beschreiben wir das Vorgehen</p>
 </section>
-<section id="messung-der-pcb-schaltung" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="messung-der-pcb-schaltung"><span class="header-section-number">5.2</span> Messung der PCB-Schaltung</h2>
+<section id="messungen-an-der-pcb-schaltung" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="messungen-an-der-pcb-schaltung"><span class="header-section-number">5.2</span> Messungen an der PCB-Schaltung</h2>
 <p>hier zeigen wir Plots von der PCB-Schaltung</p>
 </section>
-<section id="diskret-vs.-integriert" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="diskret-vs.-integriert"><span class="header-section-number">5.3</span> Diskret vs.&nbsp;Integriert</h2>
+<section id="vergleich-realaufbau-vs.-pcb" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="vergleich-realaufbau-vs.-pcb"><span class="header-section-number">5.3</span> Vergleich: Realaufbau vs.&nbsp;PCB</h2>
 <p>hier vergleichen wir zwischen der Schaltung auf dem ASLK-Board und der auf dem PCB</p>
 </section>
 </section>
@@ -262,9 +323,12 @@ div.csl-indent {
 </section>
 <section id="literaturverzeichnis" class="level1 unnumbered">
 <h1 class="unnumbered">Literaturverzeichnis</h1>
-<div id="refs" role="list">
-
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-FILTERS07" class="csl-entry" role="listitem">
+Smith, Julius O. 2007. <em>Introduction to Digital Filters with Audio Applications</em>. : W3K Publishing.
 </div>
+</div>
+<p><span class="citation" data-cites="FILTERS07">(<a href="#ref-FILTERS07" role="doc-biblioref">Smith 2007</a>)</span></p>
 </section>
 
 </main>
