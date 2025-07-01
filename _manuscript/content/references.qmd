@@ -1,4 +1,6 @@
-# References {.unnumbered}
+# Literaturverzeichnis {.unnumbered}
 
 ::: {#refs}
 :::
+[@FILTERS07]
+
