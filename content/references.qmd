@@ -2,5 +2,5 @@
 
 ::: {#refs}
 :::
-[@FILTERS07]
+@FILTERS07
 

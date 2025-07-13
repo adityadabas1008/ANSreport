@@ -1,5 +1,17 @@
-# Einleitung
+# Motivation
 
+@Adi
+
+"Hier Kommt eine Frage.."
+ 
+Das Projekt erklären anhand der Antwort von der Frage.
+
+Welche vorherige Module wir hier als Motivation für Grundkentnisse nehmen..
+
+
+## Einleitung
+
+to be decided, use the text below
 
 Ziel dieses Versuchs ist es, ein universelles analoges Biquad-Filter zu entwerfen, zu simulieren, praktisch aufzubauen und in ein professionelles Leiterplattendesign zu überführen. Die Grundlage bildet der Versuch 4 des ASLK PRO Manuals von Texas Instruments, in dem eine zweistufige aktive Filterstruktur mithilfe von Operationsverstärkern realisiert wird. Dabei wird das Verhalten typischer Filtertypen – darunter Tiefpass, Hochpass, Bandpass und Bandsperre – auf Basis einer sogenannten Biquad-Schaltung untersucht.
 
@@ -10,6 +22,3 @@ Nach erfolgreicher Realisierung der Grundschaltung wird das Filter um ein weiter
 Im dritten Schritt wird die gesamte Schaltung – bestehend aus der ursprünglichen Biquad-Konfiguration sowie dem optionalen Butterworth-Modul – in KiCad als Leiterplattenlayout umgesetzt. Dabei wird darauf geachtet, die Filtercharakteristik durch gezielte Auswahl von Jumperverbindungen flexibel messbar zu gestalten und sowohl die Basis- als auch die Erweiterungsstruktur (Butterworth) in die Platine zu integrieren. Nach erfolgreichem Design wird die Platine gefertigt, bestückt und abschließend vermessen.
 
 Durch diesen vollständigen Designzyklus wird ein praxisnahes Verständnis für den analogen Schaltungsentwurf, die Simulation sowie die Herausforderungen beim Layout und der Umsetzung eines funktionsfähigen Leiterplattenprototyps vermittelt.
-
-
-

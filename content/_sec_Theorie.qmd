@@ -1,0 +1,42 @@
+# Theoretischer Hintergrund
+
+@Adrian
+
+Hier Theorie erklären, aber locker schreiben 
+
+wie
+
+1. Anti Aliasing Fliter
+2. Filter entwurf mit RLC Glied, TP, HP, BP --nicht berichten
+3. Einführung in die Biquads
+4. Güte Faktor
+
+## Anti Aliasiing Filter
+
+Analog zu Digital usw
+
+
+@mohamad 
+
+## Grundlagen Biquad-Filter 
+
+Ein Biquad-Filter (zweites Ordnungsglied) ist eine universelle, aktive Filterstruktur, die in nahezu allen Standard-Filterkonfigurationen (Tiefpass, Hochpass, Bandpass, Bandsperre) eingesetzt werden kann. Die Bezeichnung „Biquad“ leitet sich dabei vom englischen „biquadratic“ ab und verweist auf die quadratische (zweite) Ordnung der Nennerpolynomfunktion der Übertragungsfunktion.
+
+Im Kern besteht ein Biquad-Filter aus zwei gepaarten Operationsverstärker­stufen, die durch Rückkopplungs- und Durchkopplungszweige miteinander verbunden sind. Diese Zweistufigkeit erlaubt die Realisierung eines Übertragungs­verhaltens zweiter Ordnung bereits mit minimalem Bauteilaufwand. Durch gezielte Dimensionierung der Widerstände und Kondensatoren in den Rückkopplungspfaden lassen sich Frequenzgangleitungen und Dämpfungs­verhalten exakt einstellen, sodass beliebige Filtercharakteristiken – etwa Butterworth (maximale Flachheit im Durchlassbereich), Tschebyscheff (Welligkeit im Durchlass bei steiler Flanke) oder Bessel (maximale Linearität der Gruppenlaufzeit) – erzeugt werden können.
+
+Mathematisch wird die Übertragungsfunktion eines Biquad-Filters allgemein dargestellt als
+
+$$
+H(s) \;=\; \frac{b_0 + b_1 s + b_2 s^2}{a_0 + a_1 s + a_2 s^2}\,,
+$$
+
+wobei die Koeffizienten $b_i$ und $a_i$ aus den gewählten Widerstands- und Kondensatorwerten resultieren. Die zulässigen Filtertypen unterscheiden sich lediglich in der Wahl dieser Koeffizienten, während die Grundstruktur des Schaltbilds unverändert bleibt. So entsteht beispielsweise durch $b_0=b_2=0$, $b_1\neq0$ ein reiner Bandpass, während bei $b_1=0$, $b_0=b_2\neq0$ eine Bandsperre resultiert.
+
+Ein wesentlicher Vorteil des Biquad-Aufbaus liegt in seiner Modularität: Durch Parallelschaltung mehrerer identischer Biquad-Stufen können höher­ordnungs Filter realisiert werden, ohne die Komplexität je Stufe zu erhöhen. Zudem lässt sich jede Stufe einzeln kalibrieren, um Fertigungstoleranzen auszugleichen und präzise Filter­güte (Q-Faktor) sowie Grenzfrequenz einzustellen. Diese Flexibilität macht den Biquad zum De-facto-Standard für integrierte Filterlösungen in der Audiotechnik, Messtechnik und industriellen Signal­verarbeitung.
+[@FILTERS07]
+
+
+@adi
+
+## Gütefaktor Q und Einfluss
+Quality Faktor hier kurz beschrieben
