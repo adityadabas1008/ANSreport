@@ -7,13 +7,13 @@ author:
     corresponding: true
     roles: "Lead author"
 
-  - name: Mohamad Wehbi
+  - name: Mohamad Wehbi (5235487)
     orcid: 
     email: mwehbi@stud.hs-bremen.de
     corresponding: true
     roles: "Lead author"
 
-  - name: Adrian Jauch
+  - name: Adrian Jauch (5178618)
     orcid: 
     email: ajauch@stud.hs-bremen.de
     corresponding: true
@@ -37,7 +37,9 @@ number-sections: true
 bibliography: references.bib
 ---
 
-{{< include content/_sec_Einleitung.qmd >}}
+{{< include content/_sec_Vorgehen.qmd >}}
+{{< include content/_sec_Motivation.qmd >}}
+{{< include content/_sec_Theorie.qmd >}}
 {{< include content/_sec_Filter.qmd >}}
 {{< include content/_sec_Charakterisierung.qmd >}}
 {{< include content/_sec_Messauswertung.qmd >}}

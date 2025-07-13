@@ -1,5 +1,9 @@
 # Umsetzung als Leiterplatte
 
+@Adi
+
+Those cables were boring, we need a PCB
+
 ## Vorgehensweise im Layoutprozess
 hier beschreiben wir das Vorgehen 
 
@@ -8,3 +12,10 @@ hier zeigen wir Plots von der PCB-Schaltung
 
 ## Vergleich: Realaufbau vs. PCB
 hier vergleichen wir zwischen der Schaltung auf dem ASLK-Board und der auf dem PCB
+
+
+23. Schaltung war jetzt bereit für ein Leiterplattendesign
+24. 3 Variante von PCB design mit Verbesserungen in jeder Transition
+25. PCB Design erwitert für 2 Schaltungmöglichkeiten
+26. Design Überprüfen lassen vom LaborING und dann die Platine bestellt
+27. Platine gefertigt, gemessen, Messwerte für den Vergleich mit Redpitaya aufgenommen

@@ -1,0 +1,31 @@
+# Vorgehen
+
+Was haben wir von anfang an bis jetzt gemacht ?
+
+1. Anti Aliasing Fliter
+2. Filter entwurf mit RLC Glied, TP, HP, BP
+3. Einführung in die Biquads
+4. ASLK Lab Manual - Labor 4 gelesen, Spezifikation gelesen, Schaltung gesehen, Ziel des Projekts festgelegt
+5. Spezifikation für die Schaltung: Durch Kreisfrequenzen R , C werte und Kreisfrequenz f berechnet, Güte Faktor miteinbezogen 
+6. Simulation auf KiCAD durchgeführt, Plots mit dem Manual verglichen
+7. Schaltungsaufbau auf dem ASLK Board mit Kabeln
+8. RedPitaya integriert für Messung und Auswertung der Schaltung (Bode-Plot und Messwerte)
+9. Schaltungsverhalten unerwartet, dann die Schaltung überprüft (gemerkt: Kabelnstecken ist eine Fehlerquelle)
+10. Messung erneut düchgeführt, mussten nochmal schaltüng überprüfen
+11. Das Problem war ASLK Board und nicht der Aufbau, rausgefunden indem: die Schaltung vom Laboring überprüfen lassen
+12. Die Schaltung neu aufbaut, mit dem neuen Board und ohne Kabeln zu verlängern (keine 2 Kabeln zusammengesteckt)
+13. Nochmal gemessen und erwartete Ergebnisse bekommen. (Bestätigt - Board war das Problem)
+14. Messwerte aufgenommen mit adäquat Datenmanagement und entsprechende Spezifikationen
+15. Nach ASLK Manual Aufgaben gemacht und die Messwerte aufgenommen, leichte änderung an der Schaltung je nach Aufgabenstellung
+16. Bode Plot analysiert um Verhalten von Filtern zu überprüfen, -20dB Dämpfung in der Amplitude rausgefunden
+17. Fehler Suche: Wiederstände überprüft und die auf dem Board gemessen mit Multimeter, festgestellt: R6 war 10k Ohm anstatt 1k Ohm
+18. RedPitaya auf HV gestellt, um Peak Messwerte richtig zu bekommen
+19. Messungen erneut aufgenommen, Fehler beseitigt
+20. Schaltung mit einer weiteren Ordnung Erweitert: Butterworth Filter in der Schaltung eingebaut, Übertragungsfunktionen hergeleitet
+21. Die erweiterte Schaltung simuliert: Erwartete Ergebnisse bekommen
+22. Schaltung auf dem Steckbrett entsprechend der Simulation erweitert und gemessen: Auch gute Ergebnisse bekommen
+23. Schaltung war jetzt bereit für ein Leiterplattendesign
+24. 3 Variante von PCB design mit Verbesserungen in jeder Transition
+25. PCB Design erwitert für 2 Schaltungmöglichkeiten
+26. Design Überprüfen lassen vom LaborING und dann die Platine bestellt
+27. Platine gefertigt, gemessen, Messwerte für den Vergleich mit Redpitaya aufgenommen
