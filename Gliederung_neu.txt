@@ -10,11 +10,11 @@ Anti-Aliasing-Filter: Wozu braucht man die?
 Der Gütefaktor Q – was ist das und warum ist er wichtig?
 Biquad-Filter: Aufbau, Funktion, Herleitung
 Butterworth-Filter: Besonderheiten
-Kurzer Vergleich der verschiedenen Filterordnungen
+Kurzer Vergleich der verschiedenen Filterordnungen**** braucht man nicht
 
 # Filterentwurf
-Auswahl und Berechnung der Bauteile
 Biquad-Filter (2. Ordnung): Entwurfsschritte
+Auswahl und Berechnung der Bauteile,
 Butterworth-Filter (3. Ordnung): Entwurf und Erweiterung
 Simulationsergebnisse und theoretische Plots
 Welche Bauteiltoleranzen und Fehlerquellen gibt es?
