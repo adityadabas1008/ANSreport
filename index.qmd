@@ -20,10 +20,10 @@ author:
     roles: "Lead author"
 
 affiliation:
-  - name: Hochschule Bremen - City University of Applied Sciences (HSB)
-    city: Bremen
-    state: Germany
-    url: https://www.hs-bremen.de  
+  -  name: Hochschule Bremen - City University of Applied Sciences (HSB)
+     city: Bremen
+     state: Germany
+     url: https://www.hs-bremen.de  
 
 keyword:
   - Filter Design 
