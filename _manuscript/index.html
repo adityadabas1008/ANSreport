@@ -61,6 +61,35 @@ div.csl-indent {
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta name="citation_title" content="Entwurf und PCB Design eines universellen Biquad Filters">
 <meta name="citation_abstract" content="Lorem ipsum
@@ -167,7 +196,7 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#übertragungsfunktionen-und-verschiedene-filtertypen" id="toc-übertragungsfunktionen-und-verschiedene-filtertypen" class="nav-link" data-scroll-target="#übertragungsfunktionen-und-verschiedene-filtertypen">Übertragungsfunktionen und verschiedene Filtertypen</a></li>
   </ul></li>
-  <li><a href="#anti-aliasiing-filter" id="toc-anti-aliasiing-filter" class="nav-link" data-scroll-target="#anti-aliasiing-filter"><span class="header-section-number">2.2</span> Anti Aliasiing Filter</a></li>
+  <li><a href="#anti-aliasing-filter" id="toc-anti-aliasing-filter" class="nav-link" data-scroll-target="#anti-aliasing-filter"><span class="header-section-number">2.2</span> Anti Aliasing Filter</a></li>
   <li><a href="#grundlagen-biquad-filter" id="toc-grundlagen-biquad-filter" class="nav-link" data-scroll-target="#grundlagen-biquad-filter"><span class="header-section-number">2.3</span> Grundlagen Biquad-Filter</a></li>
   <li><a href="#gütefaktor-q-und-einfluss" id="toc-gütefaktor-q-und-einfluss" class="nav-link" data-scroll-target="#gütefaktor-q-und-einfluss"><span class="header-section-number">2.4</span> Gütefaktor Q und Einfluss</a></li>
   </ul></li>
@@ -256,30 +285,24 @@ div.csl-indent {
 <h3 class="unnumbered anchored" data-anchor-id="übertragungsfunktionen-und-verschiedene-filtertypen">Übertragungsfunktionen und verschiedene Filtertypen</h3>
 </section>
 </section>
-<section id="anti-aliasiing-filter" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="anti-aliasiing-filter"><span class="header-section-number">2.2</span> Anti Aliasiing Filter</h2>
-<p>Analog zu Digital usw Anti-Aliasing-Filter: Wozu braucht man die?</p>
-<p><span class="citation" data-cites="mohamad">(<a href="#ref-mohamad" role="doc-biblioref"><strong>mohamad?</strong></a>)</span></p>
+<section id="anti-aliasing-filter" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="anti-aliasing-filter"><span class="header-section-number">2.2</span> Anti Aliasing Filter</h2>
+<p>Bei allen Messungen im Rahmen dieses Projekts wurde das Messsystem <strong>RedPitaya</strong> eingesetzt. Da RedPitaya ein digitales Oszilloskop ist und die Signale zur weiteren Verarbeitung digitalisiert, spielt der sogenannte <strong>Anti-Aliasing-Filter</strong> eine wichtige Rolle.</p>
+<p>Ein <strong>Anti-Aliasing-Filter</strong> ist ein analoger Tiefpassfilter, der direkt vor dem Analog-Digital-Wandler (ADC) platziert wird. Seine Aufgabe ist es, alle Frequenzanteile oberhalb der halben Abtastfrequenz (Nyquist-Frequenz) ausreichend zu dämpfen. Ohne einen solchen Filter würden hohe Frequenzanteile im Eingangssignal beim Digitalisieren als niedrigere Frequenzen (“Aliasing-Effekte”) erscheinen und die Messung verfälschen.</p>
+<p><strong>Aber was bedeutet das für uns?</strong></p>
+<p>Bevor das Signal von RedPitaya digitalisiert und aufgezeichnet wird, sorgt ein vorgeschalteter Tiefpass (Anti-Aliasing-Filter) dafür, dass nur Signalanteile im relevanten Frequenzbereich erfasst werden. Das schützt vor Messfehlern und stellt sicher, dass die Analyse der Filter (z.B. Biquad, Butterworth) korrekt durchgeführt werden kann.</p>
 </section>
 <section id="grundlagen-biquad-filter" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="grundlagen-biquad-filter"><span class="header-section-number">2.3</span> Grundlagen Biquad-Filter</h2>
-<!--
-
-Ein Biquad-Filter (zweites Ordnungsglied) ist eine universelle, aktive Filterstruktur, die in nahezu allen Standard-Filterkonfigurationen (Tiefpass, Hochpass, Bandpass, Bandsperre) eingesetzt werden kann. Die Bezeichnung „Biquad“ leitet sich dabei vom englischen „biquadratic“ ab und verweist auf die quadratische (zweite) Ordnung der Nennerpolynomfunktion der Übertragungsfunktion.
-
-Im Kern besteht ein Biquad-Filter aus zwei gepaarten Operationsverstärker­stufen, die durch Rückkopplungs- und Durchkopplungszweige miteinander verbunden sind. Diese Zweistufigkeit erlaubt die Realisierung eines Übertragungs­verhaltens zweiter Ordnung bereits mit minimalem Bauteilaufwand. Durch gezielte Dimensionierung der Widerstände und Kondensatoren in den Rückkopplungspfaden lassen sich Frequenzgangleitungen und Dämpfungs­verhalten exakt einstellen, sodass beliebige Filtercharakteristiken – etwa Butterworth (maximale Flachheit im Durchlassbereich), Tschebyscheff (Welligkeit im Durchlass bei steiler Flanke) oder Bessel (maximale Linearität der Gruppenlaufzeit) – erzeugt werden können.
-
-Mathematisch wird die Übertragungsfunktion eines Biquad-Filters allgemein dargestellt als
-
-$$
-H(s) \;=\; \frac{b_0 + b_1 s + b_2 s^2}{a_0 + a_1 s + a_2 s^2}\,,
-$$
-
-wobei die Koeffizienten $b_i$ und $a_i$ aus den gewählten Widerstands- und Kondensatorwerten resultieren. Die zulässigen Filtertypen unterscheiden sich lediglich in der Wahl dieser Koeffizienten, während die Grundstruktur des Schaltbilds unverändert bleibt. So entsteht beispielsweise durch $b_0=b_2=0$, $b_1\neq0$ ein reiner Bandpass, während bei $b_1=0$, $b_0=b_2\neq0$ eine Bandsperre resultiert.
-
-Ein wesentlicher Vorteil des Biquad-Aufbaus liegt in seiner Modularität: Durch Parallelschaltung mehrerer identischer Biquad-Stufen können höher­ordnungs Filter realisiert werden, ohne die Komplexität je Stufe zu erhöhen. Zudem lässt sich jede Stufe einzeln kalibrieren, um Fertigungstoleranzen auszugleichen und präzise Filter­güte (Q-Faktor) sowie Grenzfrequenz einzustellen. Diese Flexibilität macht den Biquad zum De-facto-Standard für integrierte Filterlösungen in der Audiotechnik, Messtechnik und industriellen Signal­verarbeitung.
-[@FILTERS07]
--->
+<p>Ein <strong>Biquad-Filter</strong> ist eine universelle, aktive Filterstruktur zweiter Ordnung, die in einer Vielzahl von Anwendungen zur Realisierung unterschiedlicher Filtertypen wie Tiefpass, Hochpass, Bandpass und Bandsperre eingesetzt wird. Die Bezeichnung „Biquad“ leitet sich vom englischen Begriff „biquadratic“ ab und bezieht sich auf die quadratische Form des Nennerpolynoms in der Übertragungsfunktion, was die zweite Ordnung des Filters kennzeichnet.</p>
+<p>Die typische Realisierung eines Biquad-Filters erfolgt mittels zweier gekoppelter Operationsverstärkerstufen, die über spezifisch ausgelegte Rückkopplungs- und Durchkopplungsnetzwerke miteinander verbunden sind. Diese Anordnung ermöglicht es, das gewünschte Übertragungsverhalten bereits mit einem vergleichsweise geringen Bauteilaufwand umzusetzen. Durch gezielte <strong>Auswahl der Widerstands- und Kapazitätswerte</strong> lassen sich charakteristische Parameter wie <strong>Grenzfrequenz</strong> und <strong>Gütefaktor (Q)</strong> präzise einstellen, sodass verschiedene Filtercharakteristika, beispielsweise <strong>Butterworth</strong> (maximale Flachheit im Durchlassbereich), Tschebyscheff (ausgeprägte Flankensteilheit mit Welligkeit) oder Bessel (maximale Linearität der Gruppenlaufzeit), realisierbar sind.</p>
+<p>Die allgemeine Übertragungsfunktion eines Biquad-Filters lautet:</p>
+<p><span class="math display">\[
+H(s) = \frac{b_0 + b_1 s + b_2 s^2}{a_0 + a_1 s + a_2 s^2}
+\]</span></p>
+<p>Hierbei werden die Koeffizienten <span class="math inline">\(b_i\)</span> und <span class="math inline">\(a_i\)</span> durch die konkrete Wahl der Widerstands- und Kondensatorwerte festgelegt. Die verschiedenen Filtertypen unterscheiden sich lediglich in den spezifischen Koeffizientenwerten, während die zugrunde liegende Schaltungsstruktur identisch bleibt. Beispielsweise resultiert ein reiner Bandpass bei <span class="math inline">\(b_0 = b_2 = 0\)</span>, <span class="math inline">\(b_1 \neq 0\)</span>, während bei <span class="math inline">\(b_1 = 0\)</span> und <span class="math inline">\(b_0 = b_2 \neq 0\)</span> eine Bandsperre realisiert wird.</p>
+<p>Ein wesentlicher Vorteil des Biquad-Konzepts liegt in seiner Modularität. Durch die serielle oder parallele Verschaltung mehrerer identischer Biquad-Stufen lassen sich problemlos Filter höherer Ordnung aufbauen, ohne dass die Komplexität jeder einzelnen Stufe zunimmt. Zudem ermöglicht die separate Kalibrierbarkeit jeder Stufe eine exakte Justierung von Gütefaktor und Grenzfrequenz, wodurch Fertigungstoleranzen gezielt kompensiert werden können. Aufgrund dieser Flexibilität und der vergleichsweise einfachen Implementierung haben sich Biquad-Filter als Standardlösung in vielen Bereichen etabliert, etwa in der Audio- und Messtechnik sowie in der industriellen Signalverarbeitung.</p>
+<p><span class="citation" data-cites="FILTERS07">(<a href="#ref-FILTERS07" role="doc-biblioref">Smith 2007</a>)</span></p>
 <p><span class="citation" data-cites="adi">(<a href="#ref-adi" role="doc-biblioref"><strong>adi?</strong></a>)</span></p>
 </section>
 <section id="gütefaktor-q-und-einfluss" class="level2" data-number="2.4">
