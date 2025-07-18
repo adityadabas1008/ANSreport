@@ -5,15 +5,17 @@
 ## Universeller aktiver Filter 2. Ordnung
 Hier dann Bi-quad filter schaltung aus ASLK Pro Experiment-4
 
+### Auswahl und Berechnung der Bauteile {.unnumbered}
+
 ## Simulation und Aufbau
 Hier müssen wir die filter speizifikation aus Experiment-4 schreiben.
 
-### Simulation der Schaltung (KiCad)
+### Simulation der Schaltung (KiCad) {.unnumbered}
 Hier zeigen wir die Simulation von der Schaltung und die Plots
 
 @Adrian
 
-### Aufbau auf dem ASLK PRO Board
+### Aufbau auf dem ASLK PRO Board {.unnumbered}
 Aufbau von der Schaltung auf ASLK Board mit jumper Wires
 
 4. ASLK Lab Manual - Labor 4 gelesen, Spezifikation gelesen, Schaltung gesehen, Ziel des Projekts festgelegt
@@ -26,7 +28,7 @@ Aufbau von der Schaltung auf ASLK Board mit jumper Wires
 
 @Adi
 
-## Butterworth 3. Ordnung
+## Butterworth 3. Ordnung: Entwurf und Erweiterung
 
 hier beschreiben wir 3. Ordnung, die Übertragungsfunktion usw...
 
@@ -35,5 +37,5 @@ hier beschreiben wir 3. Ordnung, die Übertragungsfunktion usw...
 22. Schaltung auf dem Steckbrett entsprechend der Simulation erweitert und gemessen: Auch gute Ergebnisse bekommen
 
 
-## Herleitung der Übertragungsfunktion
+### Herleitung der Übertragungsfunktion {.unnumbered}
 Hier die Herleitung der Übertragungsfunktionen schreiben

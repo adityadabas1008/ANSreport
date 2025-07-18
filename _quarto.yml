@@ -12,6 +12,11 @@ execute:
 format:
   html:
     theme: flatly
+    fig-numbering: true      
+    number-sections: true   
+    toc: true               
+    toc-depth: 3     
+
 #  pdf:
 #     documentclass: scrreprt
 # #    lof: true

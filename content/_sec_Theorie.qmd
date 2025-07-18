@@ -1,5 +1,6 @@
 # Theoretischer Hintergrund
 
+## Grundlagen zu analogen Filtern
 @Adrian
 
 Hier Theorie erklären, aber locker schreiben 
@@ -11,14 +12,17 @@ wie
 3. Einführung in die Biquads
 4. Güte Faktor
 
+### Übertragungsfunktionen und verschiedene Filtertypen {.unnumbered}
+
 ## Anti Aliasiing Filter
 
 Analog zu Digital usw
-
+Anti-Aliasing-Filter: Wozu braucht man die?
 
 @mohamad 
 
-## Grundlagen Biquad-Filter 
+## Grundlagen Biquad-Filter
+<!--
 
 Ein Biquad-Filter (zweites Ordnungsglied) ist eine universelle, aktive Filterstruktur, die in nahezu allen Standard-Filterkonfigurationen (Tiefpass, Hochpass, Bandpass, Bandsperre) eingesetzt werden kann. Die Bezeichnung „Biquad“ leitet sich dabei vom englischen „biquadratic“ ab und verweist auf die quadratische (zweite) Ordnung der Nennerpolynomfunktion der Übertragungsfunktion.
 
@@ -34,6 +38,7 @@ wobei die Koeffizienten $b_i$ und $a_i$ aus den gewählten Widerstands- und Kond
 
 Ein wesentlicher Vorteil des Biquad-Aufbaus liegt in seiner Modularität: Durch Parallelschaltung mehrerer identischer Biquad-Stufen können höher­ordnungs Filter realisiert werden, ohne die Komplexität je Stufe zu erhöhen. Zudem lässt sich jede Stufe einzeln kalibrieren, um Fertigungstoleranzen auszugleichen und präzise Filter­güte (Q-Faktor) sowie Grenzfrequenz einzustellen. Diese Flexibilität macht den Biquad zum De-facto-Standard für integrierte Filterlösungen in der Audiotechnik, Messtechnik und industriellen Signal­verarbeitung.
 [@FILTERS07]
+-->
 
 
 @adi

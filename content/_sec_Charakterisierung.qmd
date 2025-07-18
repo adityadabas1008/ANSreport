@@ -2,11 +2,16 @@
 
 @Adrian
 
+### Problem Name {.unnumbered}
+
 9. Schaltungsverhalten unerwartet, dann die Schaltung überprüft (gemerkt: Kabelnstecken ist eine Fehlerquelle)
 10. Messung erneut düchgeführt, mussten nochmal schaltüng überprüfen
 11. Das Problem war ASLK Board und nicht der Aufbau, rausgefunden indem: die Schaltung vom Laboring überprüfen lassen
 12. Die Schaltung neu aufbaut, mit dem neuen Board und ohne Kabeln zu verlängern (keine 2 Kabeln zusammengesteckt)
 13. Nochmal gemessen und erwartete Ergebnisse bekommen. (Bestätigt - Board war das Problem)
+
+
+### Problem Name {.unnumbered}
 
 16. Bode Plot analysiert um Verhalten von Filtern zu überprüfen, -20dB Dämpfung in der Amplitude rausgefunden
 17. Fehler Suche: Wiederstände überprüft und die auf dem Board gemessen mit Multimeter, festgestellt: R6 war 10k Ohm anstatt 1k Ohm

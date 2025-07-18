@@ -4,7 +4,9 @@
 
 Plots and fancy curves
 
-## Vergleich Simulation vs. Realaufbau
+### Messungsschritte {.unnumbered}
+
+## Vergleich Simulation vs. Diskret
 hier machen wir ein vergleich zwischen Simulation und die auf dem Board aufgebaute Schaltung mit Plots 
 
 ## Interpretation der Messergebnisse

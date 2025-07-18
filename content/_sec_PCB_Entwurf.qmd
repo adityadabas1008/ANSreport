@@ -5,13 +5,17 @@
 Those cables were boring, we need a PCB
 
 ## Vorgehensweise im Layoutprozess
-hier beschreiben wir das Vorgehen 
+hier beschreiben wir das Vorgehen
 
 ## Messungen an der PCB-Schaltung
 hier zeigen wir Plots von der PCB-Schaltung 
 
-## Vergleich: Realaufbau vs. PCB
+## Vergleich der Ergebnisse: 
 hier vergleichen wir zwischen der Schaltung auf dem ASLK-Board und der auf dem PCB
+
+## Vergleich: Diskret vs. PCB {.unnumbered}
+
+## Vergleich: Ideal vs. PCB {.unnumbered}
 
 
 23. Schaltung war jetzt bereit für ein Leiterplattendesign
