@@ -121,6 +121,7 @@ window.Quarto = {
 <meta name="citation_reference" content="citation_title=Analog building blocks of dc-dc converters: Examining fundamental concepts;,citation_author=Bernhard Wicht;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_issue=3;,citation_doi=10.1109/mssc.2020.3002141;,citation_volume=12;,citation_journal_title=IEEE Solid-State Circuits Magazine;,citation_publisher=institution of Electrical; Electronics Engineers (IEEE);">
 <meta name="citation_reference" content="citation_title=Design of power management integrated circuits;,citation_author=Bernhard Wicht;,citation_publication_date=2024-05;,citation_cover_date=2024-05;,citation_year=2024;,citation_doi=10.1002/9781119123095;,citation_isbn=9781119123095;">
 <meta name="citation_reference" content="citation_title=Introduction to digital filters with audio applications;,citation_author=Julius O. Smith;,citation_publication_date=2007;,citation_cover_date=2007;,citation_year=2007;,citation_isbn=978-0-9745607-1-7;">
+<meta name="citation_reference" content="citation_title=Analoge filter design;,citation_author=Mirco Meiners;,citation_publication_date=2025;,citation_cover_date=2025;,citation_year=2025;,citation_fulltext_html_url=https://aulis.hs-bremen.de/ilias.php?baseClass=ilrepositorygui&amp;amp;amp;ref_id=1022597;,citation_publisher=Vorlesungsskript: Lecture-20, Hochschule Bremen;">
 </head>
 
 <body class="quarto-light">
@@ -301,11 +302,20 @@ H(s) = \frac{b_0 + b_1 s + b_2 s^2}{a_0 + a_1 s + a_2 s^2}
 <p>Hierbei werden die Koeffizienten <span class="math inline">\(b_i\)</span> und <span class="math inline">\(a_i\)</span> durch die konkrete Wahl der Widerstands- und Kondensatorwerte festgelegt. Die verschiedenen Filtertypen unterscheiden sich lediglich in den spezifischen Koeffizientenwerten, während die zugrunde liegende Schaltungsstruktur identisch bleibt. Beispielsweise resultiert ein reiner Bandpass bei <span class="math inline">\(b_0 = b_2 = 0\)</span>, <span class="math inline">\(b_1 \neq 0\)</span>, während bei <span class="math inline">\(b_1 = 0\)</span> und <span class="math inline">\(b_0 = b_2 \neq 0\)</span> eine Bandsperre realisiert wird.</p>
 <p>Ein wesentlicher Vorteil des Biquad-Konzepts liegt in seiner Modularität. Durch die serielle oder parallele Verschaltung mehrerer identischer Biquad-Stufen lassen sich problemlos Filter höherer Ordnung aufbauen, ohne dass die Komplexität jeder einzelnen Stufe zunimmt. Zudem ermöglicht die separate Kalibrierbarkeit jeder Stufe eine exakte Justierung von Gütefaktor und Grenzfrequenz, wodurch Fertigungstoleranzen gezielt kompensiert werden können. Aufgrund dieser Flexibilität und der vergleichsweise einfachen Implementierung haben sich Biquad-Filter als Standardlösung in vielen Bereichen etabliert, etwa in der Audio- und Messtechnik sowie in der industriellen Signalverarbeitung.</p>
 <p><span class="citation" data-cites="FILTERS07">(<a href="#ref-FILTERS07" role="doc-biblioref">Smith 2007</a>)</span></p>
-<p><span class="citation" data-cites="adi">(<a href="#ref-adi" role="doc-biblioref"><strong>adi?</strong></a>)</span></p>
 </section>
 <section id="gütefaktor-q-und-einfluss" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="gütefaktor-q-und-einfluss"><span class="header-section-number">2.4</span> Gütefaktor Q und Einfluss</h2>
-<p>Quality Faktor hier kurz beschrieben</p>
+<p>Der Gütefaktor <span class="math inline">\(Q\)</span> beschreibt bei Zweitordnungs-Filtern, wie scharf die Resonanz um die Mittenfrequenz <span class="math inline">\(\omega_0\)</span> ausgebildet ist. Ein hoher <span class="math inline">\(Q\)</span>-Wert erzeugt eine steilere Flankensteilheit und – bei Bandpass- oder Bandsperre-Charakteristik – einen ausgeprägteren Resonanzbuckel. Mathematisch ergibt sich für die Standard-Übertragungsfunktion eines Zweitordnungs-Tiefpass:</p>
+<p><span class="math display">\[
+H(s) \;=\; \frac{1}{1 + \frac{s}{\omega_{0} Q} + \left(\frac{s}{\omega_{0}}\right)^{2}}
+\]</span></p>
+<p>Hier bestimmt <span class="math inline">\(Q\)</span> gemeinsam mit <span class="math inline">\(\omega_0\)</span> die Lage und Streuung der beiden komplexen Polstellen:</p>
+<p><span class="math display">\[
+s_{1,2} \;=\; -\frac{\omega_{0}}{2Q} \;\pm\; j\,\omega_{0}\,\sqrt{\,1 - \frac{1}{4Q^{2}}\,}\;.
+\]</span></p>
+<p>Für den ideal „maximal flachen“ Butterworth-Fall wählt man <span class="math inline">\(Q = 1/\sqrt{2} \approx 0{,}707\)</span>, wodurch kein Durchtritts-Peaking auftritt und die Flankensteilheit <span class="math inline">\(-20\ \mathrm{dB/Dekade}\)</span> beträgt (das heißt: Eine Verzehnfachung der Frequenz führt zu einem Pegelabfall von 20 dB). <span class="citation" data-cites="lecture20">(<a href="#ref-lecture20" role="doc-biblioref">Meiners 2025</a>)</span></p>
+<p>In der KHN-Biquad-Topologie wird der Gütefaktor jedes Teilpfads (Tiefpass, Bandpass, Hochpass, Bandsperre) direkt über das Verhältnis ausgewählter Widerstände eingestellt. Durch Variation dieser Widerstandsrelation lässt sich <span class="math inline">\(Q\)</span> unabhängig von der Eckfrequenz <span class="math inline">\(\omega_0\)</span> justieren – man gewinnt also Kontrolle über die Schärfe der Filtercharakteristik, ohne die Mittenfrequenz zu verändern. Ein niedriger <span class="math inline">\(Q\)</span>-Wert führt zu einem breiten, sanft abfallenden Übergang, während ein hoher <span class="math inline">\(Q\)</span>-Wert die Flanken steiler macht und bei Bandpass- oder Bandsperre-Ausgängen zusätzlich einen ausgeprägten Resonanzbuckel erzeugt.</p>
+<p>In diesem Versuch wurden die Gütefaktoren <span class="math inline">\(Q = 1\)</span> und <span class="math inline">\(Q = 10\)</span> eingestellt und das jeweilige Verhalten der Filterausgänge entsprechend beobachtet.</p>
 </section>
 </section>
 <section id="schaltungsentwurf-des-biquad-filters" class="level1" data-number="3">
@@ -485,6 +495,29 @@ Abbildung&nbsp;7: Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Man
 <section id="herleitung-der-übertragungsfunktion" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="herleitung-der-übertragungsfunktion">Herleitung der Übertragungsfunktion</h3>
 <p>Hier die Herleitung der Übertragungsfunktionen schreiben</p>
+<!--Die Übertragungsfunktion eines Tiefpassfilters dritter Ordnung mit der Butterworth approximation ist in der Gleichung @eq-HBW gezeigt.-->
+<p>Die Übertragungsfunktion eines Tiefpassfilters dritter Ordnung mit Butterworth-Annäherung ist in der Gleichung <a href="#eq-HBW" class="quarto-xref">Gleichung&nbsp;1</a> dargestellt.</p>
+<p><span id="eq-HBW"><span class="math display">\[
+H_{BW}(s) = \frac{H_0 \cdot {\omega_0}^3}{a\cdot s^3 +b\cdot s^2 +c \cdot s + (\omega_0)^3}
+\tag{1}\]</span></span> <!-- Um aus dem vorhanden Tiefpassfilter zweiter odnung ein Butterworth Tiefpass Dritter ordnung zu gewinnen muss die Gleichung @eq-HBW angepasst werden. --> Um aus dem vorhandenen Tiefpassfilter zweiter Ordnung einen Butterworth-Tiefpass dritter Ordnung zu gewinnen, muss die Gleichung <a href="#eq-HBW" class="quarto-xref">Gleichung&nbsp;1</a> angepasst werden.</p>
+<!-- Die Gleichung @eq-0P16 kann zu besseren Herleitung als einfacher Bruch umgeschrieben werden siehe @eq-TPOhneBruch.  -->
+<p>Die Gleichung <strong>?@eq-0P16</strong> lässt sich zur besseren Herleitung als einfacher Bruch umschreiben, siehe <a href="#eq-TPOhneBruch" class="quarto-xref">Gleichung&nbsp;2</a>.</p>
+<p><span id="eq-TPOhneBruch"><span class="math display">\[
+\frac{H_0 \cdot (\omega_0)^2}{(\omega_0)^2+\frac{s}{Q} \cdot \omega_0 +s^2}
+\tag{2}\]</span></span></p>
+<!-- Bei Genauer Betrachung stellt man fest das mit dem Multiplizieren der Zusätzlichen @eq-losleyIntegrator -->
+<!-- Bei genauerer Betrachtung stellt man fest, dass mit dem Multiplizieren der zusätzlichen @eq-losleyIntegrator , die Ursprüngliche Butterworth Übertragungsfunktion gewonnen werden kann siehe @eq-TPZusätzlichmitIntegrator -->
+<p>Bei genauerer Betrachtung stellt man fest, dass sich die ursprüngliche Butterworth-Übertragungsfunktion durch Multiplizieren der zusätzlichen <a href="#eq-losleyIntegrator" class="quarto-xref">Gleichung&nbsp;3</a> gewinnen lässt, siehe <a href="#eq-TPZusätzlichmitIntegrator" class="quarto-xref">Gleichung&nbsp;4</a>.</p>
+<p><span id="eq-losleyIntegrator"><span class="math display">\[
+\frac{\omega_0}{\omega_0 + s}
+\tag{3}\]</span></span></p>
+<!-- die Ursprüngliche Butterworth Übertragungsfunktion gewonnen werden kann siehe @eq-TPZusätzlichmitIntegrator -->
+<p><span id="eq-TPZusätzlichmitIntegrator"><span class="math display">\[
+\frac{H_0 \cdot (\omega_0)^2}{(\omega_0)^2+\frac{s}{Q} \cdot \omega_0 +s^2} \cdot \frac{\omega_0}{\omega_0 + s} = \frac{H_0 \cdot (\omega_0)^3} {(\omega_0)^3 + \frac{s}{Q}\omega_0^2+s^2\omega_0+\omega_0^2s + \frac{s^2}{Q}\omega_0 + s^3}
+\tag{4}\]</span></span> Umgeformt:</p>
+<p><span id="eq-FertigeÜbertragungsfunktion"><span class="math display">\[
+H_{BW3}(s) = \frac{H_0 \cdot (\omega_0)^3}{s^3 + s^2(\omega_0+\frac{\omega_0}{Q})+s(\frac{(\omega_0)^2}{Q}+(\omega_0)^2) +(\omega_0)^3}
+\tag{5}\]</span></span></p>
 </section>
 </section>
 </section>
@@ -566,6 +599,9 @@ Abbildung&nbsp;7: Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Man
 <section id="literaturverzeichnis" class="level1 unnumbered">
 <h1 class="unnumbered">Literaturverzeichnis</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-lecture20" class="csl-entry" role="listitem">
+Meiners, Mirco. 2025. <span>„Analoge Filter Design“</span>. Vorlesungsskript: Lecture-20, Hochschule Bremen. <a href="https://aulis.hs-bremen.de/ilias.php?baseClass=ilrepositorygui&amp;ref_id=1022597">https://aulis.hs-bremen.de/ilias.php?baseClass=ilrepositorygui&amp;ref_id=1022597</a>.
+</div>
 <div id="ref-FILTERS07" class="csl-entry" role="listitem">
 Smith, Julius O. 2007. <em>Introduction to Digital Filters with Audio Applications</em>. : W3K Publishing.
 </div>

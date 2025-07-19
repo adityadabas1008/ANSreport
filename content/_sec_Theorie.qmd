@@ -45,8 +45,24 @@ Ein wesentlicher Vorteil des Biquad-Konzepts liegt in seiner Modularität. Durch
 
 [@FILTERS07]
 
-
-@adi
-
 ## Gütefaktor Q und Einfluss
-Quality Faktor hier kurz beschrieben
+
+Der Gütefaktor $Q$ beschreibt bei Zweitordnungs-Filtern, wie scharf die Resonanz um die Mittenfrequenz $\omega_0$ ausgebildet ist. Ein hoher $Q$-Wert erzeugt eine steilere Flankensteilheit und – bei Bandpass- oder Bandsperre-Charakteristik – einen ausgeprägteren Resonanzbuckel. Mathematisch ergibt sich für die Standard-Übertragungsfunktion eines Zweitordnungs-Tiefpass:
+
+$$
+H(s) \;=\; \frac{1}{1 + \frac{s}{\omega_{0} Q} + \left(\frac{s}{\omega_{0}}\right)^{2}}
+$$
+
+Hier bestimmt $Q$ gemeinsam mit $\omega_0$ die Lage und Streuung der beiden komplexen Polstellen:
+
+$$
+s_{1,2} \;=\; -\frac{\omega_{0}}{2Q} \;\pm\; j\,\omega_{0}\,\sqrt{\,1 - \frac{1}{4Q^{2}}\,}\;.
+$$
+
+Für den ideal „maximal flachen“ Butterworth-Fall wählt man $Q = 1/\sqrt{2} \approx 0{,}707$, wodurch kein Durchtritts-Peaking auftritt und die Flankensteilheit $-20\ \mathrm{dB/Dekade}$ beträgt (das heißt: Eine Verzehnfachung der Frequenz führt zu einem Pegelabfall von 20 dB). 
+[@lecture20]
+
+In der KHN-Biquad-Topologie wird der Gütefaktor jedes Teilpfads (Tiefpass, Bandpass, Hochpass, Bandsperre) direkt über das Verhältnis ausgewählter Widerstände eingestellt. Durch Variation dieser Widerstandsrelation lässt sich $Q$ unabhängig von der Eckfrequenz $\omega_0$ justieren – man gewinnt also Kontrolle über die Schärfe der Filtercharakteristik, ohne die Mittenfrequenz zu verändern. Ein niedriger $Q$-Wert führt zu einem breiten, sanft abfallenden Übergang, während ein hoher $Q$-Wert die Flanken steiler macht und bei Bandpass- oder Bandsperre-Ausgängen zusätzlich einen ausgeprägten Resonanzbuckel erzeugt.
+
+In diesem Versuch wurden die Gütefaktoren $Q = 1$ und $Q = 10$ eingestellt und das jeweilige Verhalten der Filterausgänge entsprechend beobachtet.  
+
