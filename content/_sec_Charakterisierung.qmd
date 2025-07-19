@@ -2,7 +2,15 @@
 
 @Adrian
 
-### Problem Name {.unnumbered}
+### Steckbrett {.unnumbered}
+
+Wie zu erwarten, hat bei uns nicht alles von begin an funktioniert. Wir haben Fehler gemacht und generelle Probleme gehabt, welche wir alle lösen konnten.
+Zu begin stimmten die Messungen des Steckbrettes nicht mit unseren simulierten Ergebnissen überein. Nach überprüfung der Schaltung, ist uns auch mit hilfe des Laboringenieurs, kein Fehler aufgefallen.
+Nachdem wir davon ausgehen konnten, dass die Schaltung funktionieren sollte, haben wir den Entschluss gefasst, die Schaltung auf einem anderen Steckbrett aufzubauen.
+Um weitere Probleme zu vermeiden, haben wir bei dem zweiten Aufbau auf Kabelverlängerungen verzichtet, um jegliche Chanche auf Abweichung zu verringern.
+Nachdem wir die Schaltung auf dem neuen Steckbrett aufgebaut haben, stimmten die Messdaten des Steckbrettes mit unserer Simulation überein.
+Daraus können wir schließen, dass das Steckbrett fehlerhaft war.
+
 
 9. Schaltungsverhalten unerwartet, dann die Schaltung überprüft (gemerkt: Kabelnstecken ist eine Fehlerquelle)
 10. Messung erneut düchgeführt, mussten nochmal schaltüng überprüfen
@@ -11,7 +19,15 @@
 13. Nochmal gemessen und erwartete Ergebnisse bekommen. (Bestätigt - Board war das Problem)
 
 
-### Problem Name {.unnumbered}
+### Dämpfung {.unnumbered}
+
+Doch das Steckbrett war nicht unser einziges Problem. Nachdem wir die einzelnen Filter gemessen haben, ist uns aufgefallen, dass eine Dämpfung von 20dB vorliegt.
+Bei der Fehlersuche ist uns mit dem bloßen Auge zunächst nichts aufgefallen. Draufhin haben wir mit Hilfe von einem Multimeter die Widerstände überprüft.
+Dabei haben wir bemerkt, dass der Widerstand R6 10K Ohm anstatt 1K Ohm betragen hat. Dieser Fehler ist uns vermutlich beim bearbeiten einer der Lab Aufgaben unterlaufen. Nachdem wir den Widerstand gewecheselt haben, ist jedoch ein weiterer Fehler aufgetaucht.
+Da keine Dämpfung mehr vorlag, mussten wir den RedPitaya von "Low Voltage" auf "High Voltage" stellen. Ohne diese Änderung könnte der RedPitaya nur von -1 Volt bis 1 Volt messen.
+Nachdem wir den RedPitaya auf "High Voltage" gestellt haben, sahen unsere Messungen so aus wie die Simulation.
+Somit konnten wir das Problem, dass wir eine 20dB Dämpfung haben, beheben.
+
 
 16. Bode Plot analysiert um Verhalten von Filtern zu überprüfen, -20dB Dämpfung in der Amplitude rausgefunden
 17. Fehler Suche: Wiederstände überprüft und die auf dem Board gemessen mit Multimeter, festgestellt: R6 war 10k Ohm anstatt 1k Ohm
