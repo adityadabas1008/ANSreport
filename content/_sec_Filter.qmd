@@ -94,6 +94,23 @@ Um einen besseren Vergleich zu ermöglichen, sind in den folgenden Abbildungen d
 ### Aufbau auf dem ASLK PRO Board {.unnumbered}
 Aufbau von der Schaltung auf ASLK Board mit jumper Wires
 
+Das Analog System Lab Kit Pro Board (ASLK Pro Board), ist ein Steckbrett auf welchem man Schaltungen simpel und ohne zu Löten umsetzten kann.
+Mit hilfe dieses Steckbretts konnten wir die angegebene Schaltung aus dem Lab Manual, Labor 4, realisieren.
+Doch damit die Umsetzung erfolgreich wird, mussten wir zunächst die Spezifikationen für die Schaltung bestimmen, siehe Tabelle.
+
+Daraufhin haben wir damit begonnen die Schaltung auf dem Steckbrett aufzubauen. Dies haben wir Kabeln und steckbaren Widerständen umgesetzt
+
+![Aufbau auf dem ASLK PRO Board](images/Realaufbau.png){#fig-Realaufbau fig-align="center" width=100%}
+
+
+Diese Schaltung haben wir mit einem RedPitaya verbunden, mit welchem wir die jeweiligen Filter messen konnten.
+
+
+Nachdem wir die einezlnen Filter gemessen haben, setzten wir die Schaltung in KiCAD um einen Vergleich für die Filter zu erhalten.
+
+Zuletzt haben wir das Steckbrett noch für die Aufgaben aus dem Lab Manual benutzt, wodurch wie immer wieder leichte Veränderungen an der Schaltung vornehmen mussten.
+
+
 4. ASLK Lab Manual - Labor 4 gelesen, Spezifikation gelesen, Schaltung gesehen, Ziel des Projekts festgelegt
 5. Spezifikation für die Schaltung: Durch Kreisfrequenzen R , C werte und Kreisfrequenz f berechnet, Güte Faktor miteinbezogen 
 6. Simulation auf KiCAD durchgeführt, Plots mit dem Manual verglichen
