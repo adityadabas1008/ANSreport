@@ -206,7 +206,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#auswahl-und-berechnung-der-bauteile" id="toc-auswahl-und-berechnung-der-bauteile" class="nav-link" data-scroll-target="#auswahl-und-berechnung-der-bauteile">Auswahl und Berechnung der Bauteile</a></li>
   </ul></li>
-  <li><a href="#aufbau-und-simulation" id="toc-aufbau-und-simulation" class="nav-link" data-scroll-target="#aufbau-und-simulation"><span class="header-section-number">3.2</span> Aufbau und Simulation</a>
+  <li><a href="#simulation-und-aufbau" id="toc-simulation-und-aufbau" class="nav-link" data-scroll-target="#simulation-und-aufbau"><span class="header-section-number">3.2</span> Simulation und Aufbau</a>
   <ul class="collapse">
   <li><a href="#simulation-der-schaltung-kicad" id="toc-simulation-der-schaltung-kicad" class="nav-link" data-scroll-target="#simulation-der-schaltung-kicad">Simulation der Schaltung (KiCad)</a></li>
   <li><a href="#aufbau-auf-dem-aslk-pro-board" id="toc-aufbau-auf-dem-aslk-pro-board" class="nav-link" data-scroll-target="#aufbau-auf-dem-aslk-pro-board">Aufbau auf dem ASLK PRO Board</a></li>
@@ -254,17 +254,15 @@ window.Quarto = {
 <p>In der Nachrichtentechnik sind Filter unverzichtbar. Insbesondere leistungsfähige, höhergradige Filter stoßen bei passiven RLC-Netzwerken jedoch schnell an ihre Grenzen: Spulen werden dabei sehr groß und teuer. Aufgrund ihrer Fertigungstoleranzen sind sie außerdem oft unzuverlässig bzw. nicht für präzise Filteranwendungen geeignet. Aktive Filter auf Basis von Operationsverstärkern, Kondensatoren und Widerständen bieten hier klare Vorteile, da sich ihre Bauteilwerte einfacher und präziser herstellen und bestimmen lassen. Spulen lassen sich dabei durch Integratorschaltungen ersetzen.</p>
 <p>Für das vorliegende Projekt greifen wir gezielt auf die Lerninhalte aus der Systemtheorie (Herleitung und Interpretation von Übertragungsfunktionen), der Elektronik (Verhalten von Operationsverstärkern als Integratoren und Addierer) und der digitalen Signalverarbeitung (Eigenschaften von Butterworth-, Tschebyscheff- und elliptischen Filtern) zurück. <strong>So entsteht eine modulare Biquad-Schaltung, die alle vier Filtercharakteristiken auf einer Platine vereint</strong> und zugleich durch eine zusätzliche Integrator-Stufe ein Butterworth-Filter höherer Ordnung realisiert. Diese durchgängige Lösung vermittelt sowohl theoretische Grundlagen als auch den kompletten Hardware-Design-Prozess – von der Simulation bis zur fertigen Leiterplatte – auf praxisnahe Weise.</p>
 <p>Unser Biquad-Filterentwurf präsentiert sich in folgender Ausführung:</p>
-<div id="fig:pcb">
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><a href="images/platine.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Abbildung: 1 Fertige Leiterplatte mit universellem Biquad-Filterentwurf."><img src="images/platine.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:70.0%" alt="Abbildung: 1 Fertige Leiterplatte mit universellem Biquad-Filterentwurf."></a></p>
-</figure>
+<div id="fig-pcb" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pcb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/platine.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Abbildung&nbsp;1: Fertige Leiterplatte mit universellem Biquad-Filterentwurf."><img src="images/platine.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></a>
 </div>
-<figcaption><strong><em>Abbildung: 1</em></strong> Fertige Leiterplatte mit universellem Biquad-Filterentwurf.</figcaption>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Fertige Leiterplatte mit universellem Biquad-Filterentwurf.
+</figcaption>
 </figure>
-</div>
 </div>
 <p>Im Folgenden werden das Verfahren, mit dem wir dieses Design entwickelt haben, sowie das zugrundeliegende Lernkonzept ausführlich dargestellt.</p>
 </section>
@@ -317,33 +315,24 @@ H(s) = \frac{b_0 + b_1 s + b_2 s^2}{a_0 + a_1 s + a_2 s^2}
 <h2 data-number="3.1" class="anchored" data-anchor-id="universeller-aktiver-filter-2.-ordnung-biquad"><span class="header-section-number">3.1</span> Universeller aktiver Filter 2. Ordnung (Biquad)</h2>
 <p>Im Rahmen dieses Projekts wurde die Biquad-Schaltung nach dem <strong>ASLK Pro Experiment 4</strong> realisiert. Diese Experimentierplatine ermöglicht die einfache Umsetzung und Untersuchung verschiedener Filterkonfigurationen auf Basis von Operationsverstärkern.</p>
 <p>Die folgende Abbildung zeigt die Schaltung des Biquad-Filters, wie sie im ASLK Pro Experiment 4 verwendet wurde:</p>
-<div id="fig-biquadfilter" class="quarto-float quarto-figure quarto-figure-left anchored">
+<div id="fig-biquadfilter" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-biquadfilter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><a href="images/biquad_aslk_exp4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Abbildung: 2 Zweiter Ordnung Universeller Aktiver Filter."><img src="images/biquad_aslk_exp4.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></a></p>
-</figure>
+<a href="images/biquad_aslk_exp4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Abbildung&nbsp;2: Zweiter Ordnung Universeller Aktiver Filter."><img src="images/biquad_aslk_exp4.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></a>
 </div>
-<figcaption><strong><em>Abbildung: 2</em></strong> Zweiter Ordnung Universeller Aktiver Filter<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</figcaption>
-</figure>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-biquadfilter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-biquadfilter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Zweiter Ordnung Universeller Aktiver Filter.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
 </figcaption>
 </figure>
 </div>
 <section id="auswahl-und-berechnung-der-bauteile" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="auswahl-und-berechnung-der-bauteile">Auswahl und Berechnung der Bauteile</h3>
-<p>Ein wichtiger Aspekt der Realisierung der Schaltung, wie wir sie in <a href="#fig-biquadfilter" class="quarto-xref">Abbildung&nbsp;1</a> gesehen haben, liegt in der gezielten Auswahl der <strong>Widerstände (R)</strong> und <strong>Kondensatoren (C)</strong>. Die genaue Dimensionierung dieser Bauteile bestimmt die wesentlichen Filtereigenschaften wie <strong>Grenzfrequenz</strong>, <strong>Gütefaktor</strong> und <strong>Verstärkung</strong>.</p>
+<p>Ein wichtiger Aspekt der Realisierung der Schaltung, wie wir sie in <a href="#fig-biquadfilter" class="quarto-xref">Abbildung&nbsp;2</a> gesehen haben, liegt in der gezielten Auswahl der <strong>Widerstände (R)</strong> und <strong>Kondensatoren (C)</strong>. Die genaue Dimensionierung dieser Bauteile bestimmt die wesentlichen Filtereigenschaften wie <strong>Grenzfrequenz</strong>, <strong>Gütefaktor</strong> und <strong>Verstärkung</strong>.</p>
 <p>Diese Schaltung bildet die Grundlage für die nachfolgenden Messungen und Analysen im Projekt. Verschiedene Filtertypen können durch Anpassung der Einspeisepunkte und Bauteilwerte realisiert werden.</p>
 <p>Die Auswahl der Bauteile für den Biquad-Filter erfolgte nach Vorgabe von zwei unterschiedlichen Kreisfrequenzen gemäß dem ASLK Pro Experiment 4:</p>
 <ul>
 <li><p>Für <span class="math inline">\(\omega_0 = 1\,\text{KHz}\)</span> (<span class="math inline">\(f_0\)</span> entspricht ca. <span class="math inline">\(160\,\text{Hz}\)</span>) wurde <span class="math inline">\(R = 1\,\text{k}\Omega\)</span> und <span class="math inline">\(C = 1\,\mu\text{F}\)</span> verwendet.</p></li>
-<li><p>Für <span class="math inline">\(\omega_0 = 10\,\text{KHz}\)</span> (<span class="math inline">\(f_0\)</span> entspricht ca. <span class="math inline">\(1\,600\,\text{Hz}\)</span>) wurde <span class="math inline">\(R = 10\,\text{k}\Omega\)</span> und <span class="math inline">\(C = 0{,}1\,\mu\text{F}\)</span> eingesetzt.</p></li>
+<li><p>Für <span class="math inline">\(\omega_0 = 10\,\text{KHz}\)</span> (<span class="math inline">\(f_0\)</span> entspricht ca. <span class="math inline">\(1\,600\,\text{Hz}\)</span>) wurde <span class="math inline">\(R = 1\,\text{k}\Omega\)</span> und <span class="math inline">\(C = 0{,}1\,\mu\text{F}\)</span> eingesetzt.</p></li>
 </ul>
 <p>Die Dimensionierung basiert auf der Beziehung: <span class="math display">\[
 \omega_0 = \frac{1}{RC}
@@ -351,20 +340,49 @@ Abbildung&nbsp;1
 <p>Damit ergibt sich für beide Fälle:</p>
 <ul>
 <li><p><span class="math inline">\(1\,\text{KHz} = \frac{1}{1\,\text{k}\Omega \cdot 1\,\mu\text{F}}\)</span></p></li>
-<li><p><span class="math inline">\(10\,\text{KHZ} = \frac{1}{10\,\text{k}\Omega \cdot 0{,}1\,\mu\text{F}}\)</span></p></li>
+<li><p><span class="math inline">\(10\,\text{KHZ} = \frac{1}{1\,\text{k}\Omega \cdot 0{,}1\,\mu\text{F}}\)</span></p></li>
 </ul>
-<p>Der Gütefaktor <span class="math inline">\(Q\)</span> wurde jeweils über das Verhältnis der Widerstände in den Rückkopplungszweigen angepasst, entsprechend den Vorgaben des Experiments. Die in diesem Abschnitt verwendeten Bauteilwerte sind in der folgenden Tabelle übersichtlich zusammengefasst:</p>
+<p>Der Gütefaktor <span class="math inline">\(Q\)</span> wurde jeweils über das Verhältnis der Widerstände in den Rückkopplungszweigen angepasst, entsprechend den Vorgaben des Experiments.</p>
+<div id="fig-gütewiderstand" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gütewiderstand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/Güte_Faktor.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Abbildung&nbsp;3: Gütefaktor und zuständige Widerstand."><img src="images/Güte_Faktor.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gütewiderstand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Gütefaktor und zuständige Widerstand.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
+</figcaption>
+</figure>
+</div>
+<p>Wie in Abbildung <a href="#fig-gütewiderstand" class="quarto-xref">Abbildung&nbsp;3</a> dargestellt, wird der <strong>Gütefaktor (<span class="math inline">\(Q\)</span>)</strong> des Filters maßgeblich durch den Widerstand im oberen Zweig der Schaltung (beschriftet mit “<span class="math inline">\(Q \cdot R\)</span>”) bestimmt. Dieser Widerstand legt, zusammen mit den verwendeten Kondensatoren, die Selektivität und Bandbreite des Filters fest. Um einen gewünschten Gütefaktor einzustellen, wird entsprechend der Wert dieses Widerstands angepasst.</p>
+<p>Es ist zu beachten, dass bei einer Änderung des Gütefaktors in der Praxis häufig auch der Wert der Kondensatoren (<span class="math inline">\(C\)</span>) mit angepasst werden muss. Nur so bleibt das Zusammenspiel von Mittenfrequenz (<span class="math inline">\(\omega_0 = 1/RC\)</span>) und Gütefaktor (<span class="math inline">\(Q\)</span>) für die gewünschte Filtercharakteristik erhalten.</p>
+<p>Der sogenannte Gütewiderstand ist somit ein zentrales Element für die Feinanpassung der Filtereigenschaften bei universellen aktiven Filterschaltungen wie dem hier gezeigten Biquad-Filter.</p>
+<p>Die in diesem Abschnitt verwendeten Bauteilwerte sind in der folgenden Tabelle übersichtlich zusammengefasst:</p>
+<div id="tbl-dimensions" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dimensions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;1: Dimensionierung der Bauteile
+</figcaption>
+<div aria-describedby="tbl-dimensions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 7%">
+<col style="width: 20%">
+<col style="width: 25%">
+<col style="width: 20%">
+</colgroup>
 <thead>
 <tr class="header">
-<th><span class="math inline">\(\omega_0\)</span> in KHz</th>
+<th><span class="math inline">\(\omega_0\)</span> [kHz]</th>
 <th><span class="math inline">\(Q\)</span></th>
 <th><span class="math inline">\(C\)</span> [<span class="math inline">\(\mu\)</span>F]</th>
 <th><span class="math inline">\(R\)</span> [k<span class="math inline">\(\Omega\)</span>]</th>
+<th><span class="math inline">\(Q \cdot R\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td>1</td>
 <td>1</td>
 <td>1</td>
 <td>1</td>
@@ -374,29 +392,73 @@ Abbildung&nbsp;1
 <td>10</td>
 <td>10</td>
 <td>0,1</td>
+<td>1</td>
 <td>10</td>
 </tr>
 </tbody>
 </table>
-<p><em>Tabelle 1: Dimensionierung der Bauteile für die untersuchten Versuchsbedingungen.</em></p>
+</div>
+</figure>
+</div>
 <p>Auf diese Weise konnte für beide Versuchsvarianten die gewünschte Kreisfrequenz sowie der zugehörige Gütefaktor realisiert werden.</p>
 </section>
 </section>
-<section id="aufbau-und-simulation" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="aufbau-und-simulation"><span class="header-section-number">3.2</span> Aufbau und Simulation</h2>
-<p>Im Experiment 4 des ASLK Pro Manuals wurden die Filter-Spezifikationen wie folgt festgelegt:</p>
-<ul>
-<li><strong>Filtertyp:</strong> Universeller aktiver Biquad-Filter (2. Ordnung)</li>
-<li><strong>Kreisfrequenzen:</strong> <span class="math inline">\(\omega_0 = 1\,\text{KHz}\)</span> und <span class="math inline">\(\omega_0 = 10\,\text{KHz}\)</span></li>
-<li><strong>Gütefaktor (<span class="math inline">\(Q\)</span>):</strong> Für die jeweiligen Versuche wurden <span class="math inline">\(Q = 1\)</span> und <span class="math inline">\(Q = 10\)</span> gewählt.</li>
-<li><strong>Bauteilwerte:</strong> Siehe Tabelle 1 oben.</li>
-</ul>
-<p>Die Schaltung wurde zunächst in KiCad nach diesen Vorgaben aufgebaut und simuliert. Die Simulationsergebnisse stimmen mit den theoretischen Erwartungen und den Vorgaben des Manuals überein. Die wichtigsten Kenngrößen wie Grenzfrequenz und Gütefaktor konnten durch gezielte Auswahl der Widerstands- und Kapazitätswerte realisiert werden.</p>
-<p>Im nächsten Schritt wurde die Schaltung auf dem ASLK Pro Board entsprechend der Simulation aufgebaut und getestet.</p>
+<section id="simulation-und-aufbau" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="simulation-und-aufbau"><span class="header-section-number">3.2</span> Simulation und Aufbau</h2>
+<p>Nachdem die Bauteilwerte für die gewünschten Filtereigenschaften festgelegt waren, wie in <a href="#tbl-dimensions" class="quarto-xref">Tabelle&nbsp;1</a> zu sehen, wurde die Schaltung in <strong>KiCad 9.0</strong> aufgebaut und simuliert.</p>
+<p>Unser Ziel war es, ein Referenzmodell für das spätere praktische Verhalten des Filters zu erhalten. Mit Hilfe der Bode-Plot-Simulationen konnten die theoretisch zu erwartenden Amplituden- und Phasengänge überprüft werden. Der Filterentwurf in KiCad kann wie in Abbildung <a href="#fig-Kicad" class="quarto-xref">Abbildung&nbsp;4</a> dargestellt aufgebaut werden:</p>
+<div id="fig-Kicad" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Kicad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/Kicad_Schaltung_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Abbildung&nbsp;4: Simulationsaufbau für den aktiven Biquad-Filter in KiCad."><img src="images/Kicad_Schaltung_2.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Kicad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Simulationsaufbau für den aktiven Biquad-Filter in KiCad.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>
+</figcaption>
+</figure>
+</div>
 <section id="simulation-der-schaltung-kicad" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="simulation-der-schaltung-kicad">Simulation der Schaltung (KiCad)</h3>
-<p>Hier zeigen wir die Simulation von der Schaltung und die Plots</p>
+<p>Die Simulation diente dazu, eventuelle Fehler oder Unstimmigkeiten im Schaltungsentwurf frühzeitig zu erkennen und die Praxistauglichkeit des gewählten Aufbaus zu beurteilen. So konnten vor dem Laboraufbau bereits wichtige Eigenschaften wie die Durchlasskurve, die Flankensteilheit und das Verhalten des Filters bei verschiedenen Gütefaktoren visualisiert und bewertet werden. Die aus der Simulation gewonnenen Frequenzgänge bilden die Grundlage für den späteren Vergleich mit den Messergebnissen am realen Aufbau. Die Ergebnisse der simulierten Schaltung sind in den folgenden Plots dargestellt:</p>
+<section id="für-q-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="für-q-1">für <span class="math inline">\(Q = 1\)</span></h4>
+<div id="fig-bodeQ1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bodeQ1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/bodeplot_Q1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Abbildung&nbsp;5: Bode-Plot der simulierten Biquad-Schaltung für Q = 1."><img src="images/bodeplot_Q1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bodeQ1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Bode-Plot der simulierten Biquad-Schaltung für <span class="math inline">\(Q = 1\)</span>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="für-q-10" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="für-q-10">für <span class="math inline">\(Q = 10\)</span></h4>
+<div id="fig-bodeQ10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bodeQ10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/bodeplot_Q10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Abbildung&nbsp;6: Bode-Plot der simulierten Biquad-Schaltung für Q = 10."><img src="images/bodeplot_Q10.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bodeQ10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6: Bode-Plot der simulierten Biquad-Schaltung für <span class="math inline">\(Q = 10\)</span>.
+</figcaption>
+</figure>
+</div>
+<p>Wie in den Abbildungen <a href="#fig-bodeQ1" class="quarto-xref">Abbildung&nbsp;5</a> und <a href="#fig-bodeQ10" class="quarto-xref">Abbildung&nbsp;6</a> zu erkennen ist, stimmen die simulierten Amplituden- und Phasengänge gut mit den theoretisch erwarteten Kurven überein. Die Filter zeigen die charakteristischen Eigenschaften entsprechend der gewählten Bauteilwerte und Gütefaktoren.</p>
+<p>Um einen besseren Vergleich zu ermöglichen, sind in den folgenden Abbildungen die theoretischen Amplituden- und Phasengänge dargestellt. Diese Kurven wurden dem ASLK Pro Manual entnommen und dienen als Referenz, um die Übereinstimmung zwischen Simulation und Theorie zu veranschaulichen.</p>
+<div id="fig-bodetheori" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bodetheori-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/theorie_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Abbildung&nbsp;7: Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual "><img src="images/theorie_plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bodetheori-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;7: Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>
+</figcaption>
+</figure>
+</div>
 <p><span class="citation" data-cites="Adrian">(<a href="#ref-Adrian" role="doc-biblioref"><strong>Adrian?</strong></a>)</span></p>
+</section>
 </section>
 <section id="aufbau-auf-dem-aslk-pro-board" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="aufbau-auf-dem-aslk-pro-board">Aufbau auf dem ASLK PRO Board</h3>
@@ -515,7 +577,10 @@ Smith, Julius O. 2007. <em>Introduction to Digital Filters with Audio Applicatio
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Fußnoten</h2>
 
 <ol>
-<li id="fn1"><p>aslk-pro-manual-v103<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>aslk pro manual exp 4<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>aslk pro manual exp 4<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Kicad 9.0 Filterentwurf<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>aslk pro manual exp 4<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main>
 <!-- /main column -->

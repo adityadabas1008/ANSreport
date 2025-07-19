@@ -8,11 +8,7 @@ Im Rahmen dieses Projekts wurde die Biquad-Schaltung nach dem **ASLK Pro Experim
 
 Die folgende Abbildung zeigt die Schaltung des Biquad-Filters, wie sie im ASLK Pro Experiment 4 verwendet wurde:
 
-::: {#fig-biquadfilter}
-![***Abbildung: 2*** Zweiter Ordnung Universeller Aktiver Filter[^1].](images/biquad_aslk_exp4.png){fig-align="left" width=80%}
-
-[^1]: aslk-pro-manual-v103
-:::  
+![Zweiter Ordnung Universeller Aktiver Filter.[^1]](images/biquad_aslk_exp4.png){#fig-biquadfilter fig-align="left" width=80%}
 
 
 ### Auswahl und Berechnung der Bauteile {.unnumbered}
@@ -23,9 +19,9 @@ Diese Schaltung bildet die Grundlage für die nachfolgenden Messungen und Analys
 
 Die Auswahl der Bauteile für den Biquad-Filter erfolgte nach Vorgabe von zwei unterschiedlichen Kreisfrequenzen gemäß dem ASLK Pro Experiment 4:
 
-- Für $\omega_0 = 1\,\text{KHz}$ ($f_0$ entspricht ca. $160\,\text{Hz}$) wurde $R = 1\,\text{k}\Omega$ und $C = 1\,\mu\text{F}$ verwendet.
+- Für $\omega_0 = 1\,\text{KHz}$ ($f_0$ entspricht ca. $160\,\text{Hz}$) wurde $R = 1\,\text{k}\Omega$  und  $C = 1\,\mu\text{F}$ verwendet.
 
-- Für $\omega_0 = 10\,\text{KHz}$ ($f_0$ entspricht ca. $1\,600\,\text{Hz}$) wurde $R = 10\,\text{k}\Omega$ und $C = 0{,}1\,\mu\text{F}$ eingesetzt.
+- Für $\omega_0 = 10\,\text{KHz}$ ($f_0$ entspricht ca. $1\,600\,\text{Hz}$) wurde $R = 1\,\text{k}\Omega$  und  $C = 0{,}1\,\mu\text{F}$ eingesetzt.
 
 Die Dimensionierung basiert auf der Beziehung:
 $$
@@ -36,26 +32,62 @@ Damit ergibt sich für beide Fälle:
 
 - $1\,\text{KHz} = \frac{1}{1\,\text{k}\Omega \cdot 1\,\mu\text{F}}$
 
-- $10\,\text{KHZ} = \frac{1}{10\,\text{k}\Omega \cdot 0{,}1\,\mu\text{F}}$
+- $10\,\text{KHZ} = \frac{1}{1\,\text{k}\Omega \cdot 0{,}1\,\mu\text{F}}$
 
 Der Gütefaktor $Q$ wurde jeweils über das Verhältnis der Widerstände in den Rückkopplungszweigen angepasst, entsprechend den Vorgaben des Experiments.
+
+![Gütefaktor und zuständige Widerstand.[^1]](images/Güte_Faktor.png){#fig-gütewiderstand fig-align="left" width=80%}
+
+[^1]: aslk pro manual exp 4
+
+Wie in Abbildung @fig-gütewiderstand dargestellt, wird der **Gütefaktor ($Q$)** des Filters maßgeblich durch den Widerstand im oberen Zweig der Schaltung (beschriftet mit "$Q \cdot R$") bestimmt. Dieser Widerstand legt, zusammen mit den verwendeten Kondensatoren, die Selektivität und Bandbreite des Filters fest. Um einen gewünschten Gütefaktor einzustellen, wird entsprechend der Wert dieses Widerstands angepasst.
+
+Es ist zu beachten, dass bei einer Änderung des Gütefaktors in der Praxis häufig auch der Wert der Kondensatoren ($C$) mit angepasst werden muss. Nur so bleibt das Zusammenspiel von Mittenfrequenz ($\omega_0 = 1/RC$) und Gütefaktor ($Q$) für die gewünschte Filtercharakteristik erhalten.
+
+Der sogenannte Gütewiderstand ist somit ein zentrales Element für die Feinanpassung der Filtereigenschaften bei universellen aktiven Filterschaltungen wie dem hier gezeigten Biquad-Filter.
+
 Die in diesem Abschnitt verwendeten Bauteilwerte sind in der folgenden Tabelle übersichtlich zusammengefasst:
 
-|$\omega_0$ in KHz   | $Q$   | $C$ [$\mu$F] | $R$ [k$\Omega$] |
-|--------------------|-------|--------------|-----------------|
-| 1                  | 1     | 1            | 1               |
-| 10                 | 10    | 0,1          | 10              |
+| $\omega_0$ [kHz] | $Q$ | $C$ [$\mu$F] | $R$ [k$\Omega$] | $Q \cdot R$  |
+|------------------|-----|--------------|-----------------|--------------|
+| 1                | 1   | 1            | 1               | 1            |
+| 10               | 10  | 0,1          | 1               | 10           |
 
-*Tabelle 1: Dimensionierung der Bauteile für die untersuchten Versuchsbedingungen.*
+: Dimensionierung der Bauteile {#tbl-dimensions}
 
 Auf diese Weise konnte für beide Versuchsvarianten die gewünschte Kreisfrequenz sowie der zugehörige Gütefaktor realisiert werden.
 
 
-## Aufbau und Simulation
-Hier müssen wir die filter speizifikation aus Experiment-4 schreiben.
+## Simulation und Aufbau 
+
+Nachdem die Bauteilwerte für die gewünschten Filtereigenschaften festgelegt waren, wie in @tbl-dimensions zu sehen, wurde die Schaltung in **KiCad 9.0** aufgebaut und simuliert.
+
+Unser Ziel war es, ein Referenzmodell für das spätere praktische Verhalten des Filters zu erhalten. Mit Hilfe der Bode-Plot-Simulationen konnten die theoretisch zu erwartenden Amplituden- und Phasengänge überprüft werden.
+Der Filterentwurf in KiCad kann wie in Abbildung @fig-Kicad dargestellt aufgebaut werden:
+
+![Simulationsaufbau für den aktiven Biquad-Filter in KiCad.[^2]](images/Kicad_Schaltung_2.png){#fig-Kicad fig-align="left" width=100%}
+
+[^2]: Kicad 9.0 Filterentwurf
 
 ### Simulation der Schaltung (KiCad) {.unnumbered}
-Hier zeigen wir die Simulation von der Schaltung und die Plots
+
+Die Simulation diente dazu, eventuelle Fehler oder Unstimmigkeiten im Schaltungsentwurf frühzeitig zu erkennen und die Praxistauglichkeit des gewählten Aufbaus zu beurteilen. So konnten vor dem Laboraufbau bereits wichtige Eigenschaften wie die Durchlasskurve, die Flankensteilheit und das Verhalten des Filters bei verschiedenen Gütefaktoren visualisiert und bewertet werden. Die aus der Simulation gewonnenen Frequenzgänge bilden die Grundlage für den späteren Vergleich mit den Messergebnissen am realen Aufbau.
+Die Ergebnisse der simulierten Schaltung sind in den folgenden Plots dargestellt:
+
+#### für $Q = 1$ {.unnumbered}
+
+![Bode-Plot der simulierten Biquad-Schaltung für $Q = 1$.](images/bodeplot_Q1.png){#fig-bodeQ1 fig-align="center" width=100%}
+
+#### für $Q = 10$ {.unnumbered}
+
+![Bode-Plot der simulierten Biquad-Schaltung für $Q = 10$.](images/bodeplot_Q10.png){#fig-bodeQ10 fig-align="center" width=100%}
+
+Wie in den Abbildungen @fig-bodeQ1 und @fig-bodeQ10 zu erkennen ist, stimmen die simulierten Amplituden- und Phasengänge gut mit den theoretisch erwarteten Kurven überein. Die Filter zeigen die charakteristischen Eigenschaften entsprechend der gewählten Bauteilwerte und Gütefaktoren.
+
+Um einen besseren Vergleich zu ermöglichen, sind in den folgenden Abbildungen die theoretischen Amplituden- und Phasengänge dargestellt. Diese Kurven wurden dem ASLK Pro Manual entnommen und dienen als Referenz, um die Übereinstimmung zwischen Simulation und Theorie zu veranschaulichen.
+
+![Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual [^1] ](images/theorie_plot.png){#fig-bodetheori fig-align="center" width=100%}
+
 
 @Adrian
 

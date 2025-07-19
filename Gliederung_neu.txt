@@ -1,7 +1,7 @@
 # Motivation
-Zielsetzung
-Warum sind analoge Filter relevant?
-Beispiele für Anwendungen
+Zielsetzung  				/////////////////////////////////////////erledigt///////////////////////////adi
+Warum sind analoge Filter relevant?    /////////////////////////////////////////erledigt///////////////////////////adi
+Beispiele für Anwendungen		/////////////////////////////////////////erledigt///////////////////////////adi
 
 # Theorie
 Grundlagen zu analogen Filtern
@@ -15,7 +15,7 @@ Butterworth-Filter: Besonderheiten
 Biquad-Filter (2. Ordnung): Entwurfsschritte     /////////////////////////////////////////erledigt///////////////////////////Mohamad
 Auswahl und Berechnung der Bauteile,            /////////////////////////////////////////erledigt///////////////////////////Mohamad
 Butterworth-Filter (3. Ordnung): Entwurf und Erweiterung
-Simulationsergebnisse und theoretische Plots
+Simulationsergebnisse und theoretische Plots    /////////////////////////////////////////erledigt///////////////////////////Mohamad
 Welche Bauteiltoleranzen und Fehlerquellen gibt es?
 
 # Messaufbau und Vorgehen
@@ -25,7 +25,7 @@ Probleme und wie wir sie gelöst haben
 Dokumentation der Änderungen im Aufbau
 
 # Messungen und Auswertung
-Messdaten Biquad-Filter
+Messdaten Biquad-Filters
 Messdaten Butterworth-Filter
 Analyse: Übertragungsfunktionen, Dämpfung, Einfluss von Q
 Abgleich Simulation und Praxis

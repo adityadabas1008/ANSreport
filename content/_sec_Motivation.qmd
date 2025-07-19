@@ -6,10 +6,6 @@ Für das vorliegende Projekt greifen wir gezielt auf die Lerninhalte aus der Sys
 
 Unser Biquad-Filterentwurf präsentiert sich in folgender Ausführung:
 
-::: {#fig:pcb}
-![***Abbildung: 1*** Fertige Leiterplatte mit universellem Biquad-Filterentwurf.](images/platine.jpg){fig-align="left" width=70%}
-:::  
+![Fertige Leiterplatte mit universellem Biquad-Filterentwurf.](images/platine.jpg){#fig-pcb fig-align="left" width=80%}
 
 Im Folgenden werden das Verfahren, mit dem wir dieses Design entwickelt haben, sowie das zugrundeliegende Lernkonzept ausführlich dargestellt.
-
-
