@@ -121,7 +121,7 @@ window.Quarto = {
 <meta name="citation_reference" content="citation_title=Analog building blocks of dc-dc converters: Examining fundamental concepts;,citation_author=Bernhard Wicht;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_issue=3;,citation_doi=10.1109/mssc.2020.3002141;,citation_volume=12;,citation_journal_title=IEEE Solid-State Circuits Magazine;,citation_publisher=institution of Electrical; Electronics Engineers (IEEE);">
 <meta name="citation_reference" content="citation_title=Design of power management integrated circuits;,citation_author=Bernhard Wicht;,citation_publication_date=2024-05;,citation_cover_date=2024-05;,citation_year=2024;,citation_doi=10.1002/9781119123095;,citation_isbn=9781119123095;">
 <meta name="citation_reference" content="citation_title=Introduction to digital filters with audio applications;,citation_author=Julius O. Smith;,citation_publication_date=2007;,citation_cover_date=2007;,citation_year=2007;,citation_isbn=978-0-9745607-1-7;">
-<meta name="citation_reference" content="citation_title=Analoge filter design;,citation_author=Mirco Meiners;,citation_publication_date=2025;,citation_cover_date=2025;,citation_year=2025;,citation_fulltext_html_url=https://aulis.hs-bremen.de/ilias.php?baseClass=ilrepositorygui&amp;amp;amp;ref_id=1022597;,citation_publisher=Vorlesungsskript: Lecture-20, Hochschule Bremen;">
+<meta name="citation_reference" content="citation_title=Analoge filter design;,citation_author=Mirco Meiners;,citation_publication_date=2025;,citation_cover_date=2025;,citation_year=2025;,citation_publisher=Vorlesungsskript: Lecture-20, Hochschule Bremen;">
 </head>
 
 <body class="quarto-light">
@@ -224,8 +224,8 @@ window.Quarto = {
   </ul></li>
   <li><a href="#charakterisierung" id="toc-charakterisierung" class="nav-link" data-scroll-target="#charakterisierung"><span class="header-section-number">4</span> Charakterisierung</a>
   <ul class="collapse">
-  <li><a href="#problem-name" id="toc-problem-name" class="nav-link" data-scroll-target="#problem-name">Problem Name</a></li>
-  <li><a href="#problem-name-1" id="toc-problem-name-1" class="nav-link" data-scroll-target="#problem-name-1">Problem Name</a></li>
+  <li><a href="#steckbrett" id="toc-steckbrett" class="nav-link" data-scroll-target="#steckbrett">Steckbrett</a></li>
+  <li><a href="#dämpfung" id="toc-dämpfung" class="nav-link" data-scroll-target="#dämpfung">Dämpfung</a></li>
   </ul></li>
   <li><a href="#messung-und-analyse" id="toc-messung-und-analyse" class="nav-link" data-scroll-target="#messung-und-analyse"><span class="header-section-number">5</span> Messung und Analyse</a>
   <ul class="collapse">
@@ -555,9 +555,9 @@ H_{\mathrm{BW3}}(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)} = - \frac{H
 </section>
 <section id="charakterisierung" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Charakterisierung</h1>
-<p><span class="citation" data-cites="Adrian">(<a href="#ref-Adrian" role="doc-biblioref"><strong>Adrian?</strong></a>)</span></p>
-<section id="problem-name" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="problem-name">Problem Name</h3>
+<section id="steckbrett" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="steckbrett">Steckbrett</h3>
+<p>Wie zu erwarten, hat bei uns nicht alles von begin an funktioniert. Wir haben Fehler gemacht und generelle Probleme gehabt, welche wir alle lösen konnten. Zu begin stimmten die Messungen des Steckbrettes nicht mit unseren simulierten Ergebnissen überein. Nach überprüfung der Schaltung, ist uns auch mit hilfe des Laboringenieurs, kein Fehler aufgefallen. Nachdem wir davon ausgehen konnten, dass die Schaltung funktionieren sollte, haben wir den Entschluss gefasst, die Schaltung auf einem anderen Steckbrett aufzubauen. Um weitere Probleme zu vermeiden, haben wir bei dem zweiten Aufbau auf Kabelverlängerungen verzichtet, um jegliche Chanche auf Abweichung zu verringern. Nachdem wir die Schaltung auf dem neuen Steckbrett aufgebaut haben, stimmten die Messdaten des Steckbrettes mit unserer Simulation überein. Daraus können wir schließen, dass das Steckbrett fehlerhaft war.</p>
 <ol start="9" type="1">
 <li>Schaltungsverhalten unerwartet, dann die Schaltung überprüft (gemerkt: Kabelnstecken ist eine Fehlerquelle)</li>
 <li>Messung erneut düchgeführt, mussten nochmal schaltüng überprüfen</li>
@@ -566,8 +566,9 @@ H_{\mathrm{BW3}}(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)} = - \frac{H
 <li>Nochmal gemessen und erwartete Ergebnisse bekommen. (Bestätigt - Board war das Problem)</li>
 </ol>
 </section>
-<section id="problem-name-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="problem-name-1">Problem Name</h3>
+<section id="dämpfung" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="dämpfung">Dämpfung</h3>
+<p>Doch das Steckbrett war nicht unser einziges Problem. Nachdem wir die einzelnen Filter gemessen haben, ist uns aufgefallen, dass eine Dämpfung von 20dB vorliegt. Bei der Fehlersuche ist uns mit dem bloßen Auge zunächst nichts aufgefallen. Draufhin haben wir mit Hilfe von einem Multimeter die Widerstände überprüft. Dabei haben wir bemerkt, dass der Widerstand R6 10K Ohm anstatt 1K Ohm betragen hat. Dieser Fehler ist uns vermutlich beim bearbeiten einer der Lab Aufgaben unterlaufen. Nachdem wir den Widerstand gewecheselt haben, ist jedoch ein weiterer Fehler aufgetaucht. Da keine Dämpfung mehr vorlag, mussten wir den RedPitaya von “Low Voltage” auf “High Voltage” stellen. Ohne diese Änderung könnte der RedPitaya nur von -1 Volt bis 1 Volt messen. Nachdem wir den RedPitaya auf “High Voltage” gestellt haben, sahen unsere Messungen so aus wie die Simulation. Somit konnten wir das Problem, dass wir eine 20dB Dämpfung haben, beheben.</p>
 <ol start="16" type="1">
 <li>Bode Plot analysiert um Verhalten von Filtern zu überprüfen, -20dB Dämpfung in der Amplitude rausgefunden</li>
 <li>Fehler Suche: Wiederstände überprüft und die auf dem Board gemessen mit Multimeter, festgestellt: R6 war 10k Ohm anstatt 1k Ohm</li>
@@ -632,13 +633,12 @@ H_{\mathrm{BW3}}(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)} = - \frac{H
 <h1 class="unnumbered">Literaturverzeichnis</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-lecture20" class="csl-entry" role="listitem">
-Meiners, Mirco. 2025. <span>„Analoge Filter Design“</span>. Vorlesungsskript: Lecture-20, Hochschule Bremen. <a href="https://aulis.hs-bremen.de/ilias.php?baseClass=ilrepositorygui&amp;ref_id=1022597">https://aulis.hs-bremen.de/ilias.php?baseClass=ilrepositorygui&amp;ref_id=1022597</a>.
+Meiners, Mirco. 2025. <span>„Analoge Filter Design“</span>. Vorlesungsskript: Lecture-20, Hochschule Bremen.
 </div>
 <div id="ref-FILTERS07" class="csl-entry" role="listitem">
 Smith, Julius O. 2007. <em>Introduction to Digital Filters with Audio Applications</em>. : W3K Publishing.
 </div>
 </div>
-<p><span class="citation" data-cites="FILTERS07">Smith (<a href="#ref-FILTERS07" role="doc-biblioref">2007</a>)</span></p>
 </section>
 
 
