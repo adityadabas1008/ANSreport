@@ -100,7 +100,7 @@ Doch damit die Umsetzung erfolgreich wird, mussten wir zunächst die Spezifikati
 
 Daraufhin haben wir damit begonnen die Schaltung auf dem Steckbrett aufzubauen. Dies haben wir Kabeln und steckbaren Widerständen umgesetzt
 
-![Aufbau auf dem ASLK PRO Board](images/Realaufbau.png){#fig-Realaufbau fig-align="center" width=100%}
+![Aufbau auf dem ASLK PRO Board](images/Realaufbau.jpg){#fig-Realaufbau fig-align="center" width=100%}
 
 
 Diese Schaltung haben wir mit einem RedPitaya verbunden, mit welchem wir die jeweiligen Filter messen konnten.
@@ -119,16 +119,67 @@ Zuletzt haben wir das Steckbrett noch für die Aufgaben aus dem Lab Manual benut
 
 15. Nach ASLK Manual Aufgaben gemacht und die Messwerte aufgenommen, leichte änderung an der Schaltung je nach Aufgabenstellung
 
-@Adi
-
 ## Butterworth 3. Ordnung: Entwurf und Erweiterung
 
-hier beschreiben wir 3. Ordnung, die Übertragungsfunktion usw...
+Ein Butterworth-Filter zeichnet sich durch ein maximales Flachheitskriterium im Durchlassbereich aus und liefert eine steile Flanke von $-20\ \mathrm{dB/Dekade}$ pro Filterordnung ohne Überschwingen.  
+Um im Rahmen dieses Experiments einen Tiefpass dritter Ordnung zu realisieren, wurde der Ausgang des bereits etablierten Zweitordnungs-Tiefpasses als Eingang für eine weitere Integratorstufe verwendet.
 
-20. Schaltung mit einer weiteren Ordnung Erweitert: Butterworth Filter in der Schaltung eingebaut, Übertragungsfunktionen hergeleitet
-21. Die erweiterte Schaltung simuliert: Erwartete Ergebnisse bekommen
-22. Schaltung auf dem Steckbrett entsprechend der Simulation erweitert und gemessen: Auch gute Ergebnisse bekommen
+![Butterworth Filter 3. Ordnung ](images/butterworth.png){#fig-bw3 fig-align="left" width=70%}
+
+#### Normale Integrator-Übertragungsfunktion: {.unnumbered}
+
+Ein idealer invertierender Integrator mit Eingangswiderstand $R$ und Rückkopplungskondensator $C$ besitzt im $S$-Bereich die Übertragungsfunktion
+
+$$
+H_{\text{ideal}}(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)} = - \frac{1}{s\,R\,C}.
+$$
 
 
-### Herleitung der Übertragungsfunktion {.unnumbered}
-Hier die Herleitung der Übertragungsfunktionen schreiben
+#### Integrator: {.unnumbered}
+
+Um bei tiefen Frequenzen eine unendliche Gleichstromverstärkung zu vermeiden, wird in der Rückkopplung ein Widerstand $R_{10}$ parallel zu $C_{3}$ geschaltet. Die Impedanz des Feedback-Zweigs lautet
+
+$$
+Z_{f}(s) = \frac{R_{10}}{1 + s\,R_{10}\,C_{3}},
+$$
+
+und die Übertragungsfunktion des **Integrators** mit Eingangswiderstand $R_{9}$ ist
+
+$$
+H_{\text{int}}(s) = - \frac{Z_{f}(s)}{R_{9}} = - \frac{R_{10}}{R_{9}} \cdot \frac{1}{1 + s\,R_{10}\,C_{3}}.
+$$
+
+
+#### Zweitordnungs-Tiefpass: {.unnumbered}
+
+Die bereits etablierte Tiefpass-Stufe zweiter Ordnung hat die Form
+
+$$
+H_{2}(s) = \frac{V_{03}(s)}{V_{\mathrm{in}}(s)} = \frac{H_{0}}{1 + \frac{s}{\omega_{0} Q} + \left(\frac{s}{\omega_{0}}\right)^2} = \frac{H_{0} \,\omega_{0}^{2}}{s^{2} + \frac{\omega_{0}}{Q} s + \omega_{0}^{2}}.
+$$
+
+
+#### Gesamtübertragungsfunktion: {.unnumbered}
+
+Die Gesamtübertragungsfunktion des Butterworth-Tiefpasses 3. Ordnung ergibt sich durch Kaskadierung beider Stufen:
+
+$$
+H_{3}(s) = H_{2}(s) \times H_{\text{int}}(s) = \frac{H_{0} \,\omega_{0}^{2}}{s^{2} + \frac{\omega_{0}}{Q} s + \omega_{0}^{2}} \times \left(- \frac{R_{10}}{R_{9}} \cdot \frac{1}{1 + s\,R_{10}\,C_{3}} \right).
+$$
+
+Wählt man $\omega_{0} = \frac{1}{R_{10} C_{3}}$ und $\frac{R_{10}}{R_{9}} = 1$ , so vereinfacht sich die Gleichung zu
+
+$$
+H_{3}(s) = - \frac{H_{0} \,\omega_{0}^{3}}{(s^{2} + \frac{\omega_{0}}{Q} s + \omega_{0}^{2})(s + \omega_{0})}.
+$$
+
+Durch Ausmultiplizieren des Nenners erhält man die Normform:
+
+$$
+\boxed{
+H_{\mathrm{BW3}}(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)} = - \frac{H_{0} \,\omega_{0}^{3}}{s^{3} + \left(1 + \frac{1}{Q}\right) \omega_{0} s^{2} + \left(1 + \frac{1}{Q}\right) \omega_{0}^{2} s + \omega_{0}^{3}}
+}.
+$$
+
+
+

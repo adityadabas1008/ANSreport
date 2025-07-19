@@ -1,7 +1,5 @@
 # Charakterisierung 
 
-@Adrian
-
 ### Steckbrett {.unnumbered}
 
 Wie zu erwarten, hat bei uns nicht alles von begin an funktioniert. Wir haben Fehler gemacht und generelle Probleme gehabt, welche wir alle lösen konnten.

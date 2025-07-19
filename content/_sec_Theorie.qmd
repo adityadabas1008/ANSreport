@@ -2,15 +2,7 @@
 
 ## Grundlagen zu analogen Filtern
 @Adrian
-
-Hier Theorie erklären, aber locker schreiben 
-
-wie
-
-1. Anti Aliasing Fliter
-2. Filter entwurf mit RLC Glied, TP, HP, BP --nicht berichten
-3. Einführung in die Biquads
-4. Güte Faktor
+1. Filter entwurf mit RLC Glied, TP, HP, BP --nicht berichten
 
 ### Übertragungsfunktionen und verschiedene Filtertypen {.unnumbered}
 

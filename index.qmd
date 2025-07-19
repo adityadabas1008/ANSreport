@@ -6,24 +6,28 @@ author:
     email: adabas@stud.hs-bremen.de
     corresponding: true
     roles: "Lead author"
+    affiliation: Hochschule Bremen - City University of Applied Sciences (HSB)
 
   - name: Mohamad Wehbi (5235487)
     orcid: 
     email: mwehbi@stud.hs-bremen.de
     corresponding: true
     roles: "Lead author"
+    affiliation: Hochschule Bremen - City University of Applied Sciences (HSB)
+
 
   - name: Adrian Jauch (5178618)
     orcid: 
     email: ajauch@stud.hs-bremen.de
-    corresponding: true
+    corresponding: false
     roles: "Lead author"
+    affiliation: Hochschule Bremen - City University of Applied Sciences (HSB)
 
-    affiliation:
-    -  name: Hochschule Bremen - City University of Applied Sciences (HSB)
-       city: Bremen
-       state: Germany
-       url: https://www.hs-bremen.de  
+affiliation:
+  -  name: Hochschule Bremen - City University of Applied Sciences (HSB)
+     city: Bremen
+     state: Germany
+     url: https://www.hs-bremen.de  
 
 keyword:
   - Filter Design 
