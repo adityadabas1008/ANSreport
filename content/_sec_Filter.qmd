@@ -1,13 +1,57 @@
 # Schaltungsentwurf des Biquad-Filters
 
-@Mohamad
+Im Folgenden wird die praktische Umsetzung des Biquad-Filters beschrieben. Der Schwerpunkt liegt auf dem gewählten Schaltungsaufbau, der Dimensionierung der Bauteile und der Umsetzung auf dem ASLK Pro Board.
 
-## Universeller aktiver Filter 2. Ordnung
-Hier dann Bi-quad filter schaltung aus ASLK Pro Experiment-4
+## Universeller aktiver Filter 2. Ordnung (Biquad)
+
+Im Rahmen dieses Projekts wurde die Biquad-Schaltung nach dem **ASLK Pro Experiment 4** realisiert. Diese Experimentierplatine ermöglicht die einfache Umsetzung und Untersuchung verschiedener Filterkonfigurationen auf Basis von Operationsverstärkern.
+
+Die folgende Abbildung zeigt die Schaltung des Biquad-Filters, wie sie im ASLK Pro Experiment 4 verwendet wurde:
+
+::: {#fig-biquadfilter}
+![***Abbildung: 2*** Zweiter Ordnung Universeller Aktiver Filter[^1].](images/biquad_aslk_exp4.png){fig-align="left" width=80%}
+
+[^1]: aslk-pro-manual-v103
+:::  
+
 
 ### Auswahl und Berechnung der Bauteile {.unnumbered}
 
-## Simulation und Aufbau
+Ein wichtiger Aspekt der Realisierung der Schaltung, wie wir sie in @fig-biquadfilter gesehen haben, liegt in der gezielten Auswahl der **Widerstände (R)** und **Kondensatoren (C)**. Die genaue Dimensionierung dieser Bauteile bestimmt die wesentlichen Filtereigenschaften wie **Grenzfrequenz**, **Gütefaktor** und **Verstärkung**.
+
+Diese Schaltung bildet die Grundlage für die nachfolgenden Messungen und Analysen im Projekt. Verschiedene Filtertypen können durch Anpassung der Einspeisepunkte und Bauteilwerte realisiert werden.
+
+Die Auswahl der Bauteile für den Biquad-Filter erfolgte nach Vorgabe von zwei unterschiedlichen Kreisfrequenzen gemäß dem ASLK Pro Experiment 4:
+
+- Für $\omega_0 = 1\,\text{KHz}$ ($f_0$ entspricht ca. $160\,\text{Hz}$) wurde $R = 1\,\text{k}\Omega$ und $C = 1\,\mu\text{F}$ verwendet.
+
+- Für $\omega_0 = 10\,\text{KHz}$ ($f_0$ entspricht ca. $1\,600\,\text{Hz}$) wurde $R = 10\,\text{k}\Omega$ und $C = 0{,}1\,\mu\text{F}$ eingesetzt.
+
+Die Dimensionierung basiert auf der Beziehung:
+$$
+\omega_0 = \frac{1}{RC}
+$$
+
+Damit ergibt sich für beide Fälle:
+
+- $1\,\text{KHz} = \frac{1}{1\,\text{k}\Omega \cdot 1\,\mu\text{F}}$
+
+- $10\,\text{KHZ} = \frac{1}{10\,\text{k}\Omega \cdot 0{,}1\,\mu\text{F}}$
+
+Der Gütefaktor $Q$ wurde jeweils über das Verhältnis der Widerstände in den Rückkopplungszweigen angepasst, entsprechend den Vorgaben des Experiments.
+Die in diesem Abschnitt verwendeten Bauteilwerte sind in der folgenden Tabelle übersichtlich zusammengefasst:
+
+|$\omega_0$ in KHz   | $Q$   | $C$ [$\mu$F] | $R$ [k$\Omega$] |
+|--------------------|-------|--------------|-----------------|
+| 1                  | 1     | 1            | 1               |
+| 10                 | 10    | 0,1          | 10              |
+
+*Tabelle 1: Dimensionierung der Bauteile für die untersuchten Versuchsbedingungen.*
+
+Auf diese Weise konnte für beide Versuchsvarianten die gewünschte Kreisfrequenz sowie der zugehörige Gütefaktor realisiert werden.
+
+
+## Aufbau und Simulation
 Hier müssen wir die filter speizifikation aus Experiment-4 schreiben.
 
 ### Simulation der Schaltung (KiCad) {.unnumbered}

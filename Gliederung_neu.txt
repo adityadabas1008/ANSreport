@@ -6,14 +6,14 @@ Beispiele für Anwendungen
 # Theorie
 Grundlagen zu analogen Filtern
 Übertragungsfunktionen und verschiedene Filtertypen (Tiefpass, Hochpass, Bandpass)
-Anti-Aliasing-Filter: Wozu braucht man die?     /////////////////////////////////////////erledigt///////////////////////////
+Anti-Aliasing-Filter: Wozu braucht man die?     /////////////////////////////////////////erledigt///////////////////////////Mohamad
 Der Gütefaktor Q – was ist das und warum ist er wichtig?
-Biquad-Filter: Aufbau, Funktion, Herleitung     /////////////////////////////////////////erledigt///////////////////////////
+Biquad-Filter: Aufbau, Funktion, Herleitung     /////////////////////////////////////////erledigt///////////////////////////Mohamad
 Butterworth-Filter: Besonderheiten
 
 # Filterentwurf
-Biquad-Filter (2. Ordnung): Entwurfsschritte
-Auswahl und Berechnung der Bauteile,
+Biquad-Filter (2. Ordnung): Entwurfsschritte     /////////////////////////////////////////erledigt///////////////////////////Mohamad
+Auswahl und Berechnung der Bauteile,            /////////////////////////////////////////erledigt///////////////////////////Mohamad
 Butterworth-Filter (3. Ordnung): Entwurf und Erweiterung
 Simulationsergebnisse und theoretische Plots
 Welche Bauteiltoleranzen und Fehlerquellen gibt es?
