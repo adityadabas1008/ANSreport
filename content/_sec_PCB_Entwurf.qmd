@@ -15,8 +15,79 @@ hier vergleichen wir zwischen der Schaltung auf dem ASLK-Board und der auf dem P
 
 ## Vergleich: Diskret vs. PCB {.unnumbered}
 
+### Für $Q=1$ {.unnumbered}
+
+### -Bandpass {.unnumbered}
+
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandpassfilters für $Q = 1$.](platine_real_vergleich\Q1\Bandpass.png){#fig-pcbrealbpf1 fig-align="center" width=100%}
+
+### -Bandstop {.unnumbered}
+
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandstopfilters für $Q = 1$.](platine_real_vergleich\Q1\Bandstop.png){#fig-pcbrealbsf1 fig-align="center" width=100%}
+
+### -Hochpass {.unnumbered}
+
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Hochpassfilters für $Q = 1$.](platine_real_vergleich\Q1\Hochpass.png){#fig-pcbrealhpf1 fig-align="center" width=100%}
+
+### -Tiefpass {.unnumbered}
+
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Tiefpassfilters für $Q = 1$.](platine_real_vergleich\Q1\Tiefpass.png){#fig-pcbrealtpf1 fig-align="center" width=100%}
+
+### Für $Q=10$ {.unnumbered}
+
+### -Bandpass {.unnumbered}
+
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandpassfilters für $Q = 10$.](platine_real_vergleich\Q10\Bandpass.png){#fig-pcbrealbpf10 fig-align="center" width=100%}
+
+### -Bandstop {.unnumbered}
+
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandstopfilters für $Q = 10$.](platine_real_vergleich\Q10\Bandstop.png){#fig-pcbrealbsf10 fig-align="center" width=100%}
+
+### -Hochpass {.unnumbered}
+
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Hochpassfilters für $Q = 10$.](platine_real_vergleich\Q10\Hochpass.png){#fig-pcbrealhpf10 fig-align="center" width=100%}
+
+### -Tiefpass {.unnumbered}
+
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Tiefpassfilters für $Q = 10$.](platine_real_vergleich\Q10\Tiefpass.png){#fig-pcbrealtpf10 fig-align="center" width=100%}
+
 ## Vergleich: Ideal vs. PCB {.unnumbered}
 
+### Für $Q=1$ {.unnumbered}
+
+### -Bandpass {.unnumbered}
+
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandpassfilters für $Q = 1$.](platine_real_vergleich\Q1\Bandpass.png){#fig-pcbsimbpf1 fig-align="center" width=100%}
+
+### -Bandstop {.unnumbered}
+
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandstopfilters für $Q = 1$.](platine_real_vergleich\Q1\Bandstop.png){#fig-pcbsimbsf1 fig-align="center" width=100%}
+
+### -Hochpass {.unnumbered}
+
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Hochpassfilters für $Q = 1$.](platine_real_vergleich\Q1\Hochpass.png){#fig-pcbsimhpf1 fig-align="center" width=100%}
+
+### -Tiefpass {.unnumbered}
+
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für $Q = 1$.](platine_real_vergleich\Q1\Tiefpass.png){#fig-pcbsimtpf1 fig-align="center" width=100%}
+
+### Für $Q=10$ {.unnumbered}
+
+### -Bandpass {.unnumbered}
+
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandpassfilters für $Q = 10$.](platine_real_vergleich\Q10\Bandpass.png){#fig-pcbsimbpf10 fig-align="center" width=100%}
+
+### -Bandstop {.unnumbered}
+
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandstopfilters für $Q = 10$.](platine_real_vergleich\Q10\Bandstop.png){#fig-pcbsimbsf10 fig-align="center" width=100%}
+
+### -Hochpass {.unnumbered}
+
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Hochpassfilters für $Q = 10$.](platine_real_vergleich\Q10\Hochpass.png){#fig-pcbsimhpf10 fig-align="center" width=100%}
+
+### -Tiefpass {.unnumbered}
+
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für $Q = 10$.](platine_real_vergleich\Q10\Tiefpass.png){#fig-pcbsimtpf10 fig-align="center" width=100%}
 
 23. Schaltung war jetzt bereit für ein Leiterplattendesign
 24. 3 Variante von PCB design mit Verbesserungen in jeder Transition

@@ -17,19 +17,37 @@ Zur Bewertung der praktischen Umsetzung wurden die Messergebnisse der real aufge
 
 ### -Bandpass {.unnumbered}
 
-![Bode-Plot Vergleich der simulierten- und der auf dem Board Bandpassfilter für $Q = 1$.](Mess_Sim_Vergleich\Q1\Bandpass.png){#fig-bpf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für $Q = 1$.](Mess_Sim_Vergleich\Q1\Bandpass.png){#fig-bpf1 fig-align="center" width=100%}
 
 ### -Bandstop {.unnumbered}
 
-![Bode-Plot Vergleich der simulierten- und der auf dem Board Bandstopfilter für $Q = 1$.](Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png){#fig-bsf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für $Q = 1$.](Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png){#fig-bsf1 fig-align="center" width=100%}
 
 ### -Hochpass {.unnumbered}
 
-![Bode-Plot Vergleich der simulierten- und der auf dem Board Hochpassfilter für $Q = 1$.](Mess_Sim_Vergleich\Q1\Hochpass.png){#fig-hpf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für $Q = 1$.](Mess_Sim_Vergleich\Q1\Hochpass.png){#fig-hpf1 fig-align="center" width=100%}
 
 ### -Tiefpass {.unnumbered}
 
-![Bode-Plot Vergleich der simulierten- und der auf dem Board Tiefpassfilter für $Q = 1$.](Mess_Sim_Vergleich\Q1\Tiefpass.png){#fig-tpf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für $Q = 1$.](Mess_Sim_Vergleich\Q1\Tiefpass.png){#fig-tpf1 fig-align="center" width=100%}
+
+### Für $Q=10$ {.unnumbered}
+
+### -Bandpass {.unnumbered}
+
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für $Q = 10$.](Mess_Sim_Vergleich\Q10\Bandpass_ohne_Dämpfung.png){#fig-bpf10 fig-align="center" width=100%}
+
+### -Bandstop {.unnumbered}
+
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für $Q = 10$.](Mess_Sim_Vergleich\Q10\Bandstop_ohne_Dämpfung.png){#fig-bsf10 fig-align="center" width=100%}
+
+### -Hochpass {.unnumbered}
+
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für $Q = 10$.](Mess_Sim_Vergleich\Q10\Hochpass_ohne_Dämpfung.png){#fig-hpf10 fig-align="center" width=100%}
+
+### -Tiefpass {.unnumbered}
+
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für $Q = 10$.](Mess_Sim_Vergleich\Q10\Tiefpass_ohne_Dämpfung.png){#fig-tpf10 fig-align="center" width=100%}
 
 
 ## Interpretation der Messergebnisse

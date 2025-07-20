@@ -76,11 +76,11 @@ Die Ergebnisse der simulierten Schaltung sind in den folgenden Plots dargestellt
 
 #### für $Q = 1$ {.unnumbered}
 
-![Bode-Plot der simulierten Biquad-Schaltung für $Q = 1$.](images/bodeplot_Q1.png){#fig-bodeQ1 fig-align="center" width=100%}
+![Bode-Plot der simulierten Biquad-Schaltung für $Q = 1$.](simulation\Q1_Plot.png){#fig-bodeQ1 fig-align="center" width=100%}
 
 #### für $Q = 10$ {.unnumbered}
 
-![Bode-Plot der simulierten Biquad-Schaltung für $Q = 10$.](images/bodeplot_Q10.png){#fig-bodeQ10 fig-align="center" width=100%}
+![Bode-Plot der simulierten Biquad-Schaltung für $Q = 10$.](simulation\Q10_Plot.png){#fig-bodeQ10 fig-align="center" width=100%}
 
 Wie in den Abbildungen @fig-bodeQ1 und @fig-bodeQ10 zu erkennen ist, stimmen die simulierten Amplituden- und Phasengänge gut mit den theoretisch erwarteten Kurven überein. Die Filter zeigen die charakteristischen Eigenschaften entsprechend der gewählten Bauteilwerte und Gütefaktoren.
 
