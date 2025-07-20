@@ -30,13 +30,13 @@ Daraufhin haben wir die Übertragungsfunktionen der beiden Filter berechnet
 
 Dabei ist die folgende Übertragungsfunktion für den Hochpassfilter herausgekommen:
 $$
-H(s) = \frac{\frac{s}{s_0}}{1 + \frac{s}{s_0}}
+H(s) = \frac{sRC}{1 + sRC}
 $$
 
 Und die folgende Übertragungsfunktion für den Tiefpass Filter:
 
 $$
-H(s) = \frac{1}{1 + \frac{s}{s0}}
+H(s) = \frac{1}{1 + sRC}
 $$
 
 ## Anti Aliasing Filter
