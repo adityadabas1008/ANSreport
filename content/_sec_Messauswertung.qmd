@@ -1,7 +1,5 @@
 # Messung und Analyse
 
-@Mohamad
-
 Nachdem wir die Biquad-Filter-Schaltung bereits erfolgreich auf dem ASLK Pro Board aufgebaut haben, lag der Fokus dieses Abschnitts auf der Durchführung der Messungen und der anschließenden Auswertung der Ergebnisse. Ziel war es, die realen Frequenzgänge der verschiedenen Filtertypen experimentell zu erfassen und diese mit den zuvor durchgeführten Simulationen zu vergleichen.
 
 ### Messungsschritte {.unnumbered}

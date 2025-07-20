@@ -251,30 +251,34 @@ window.Quarto = {
   </ul></li>
   <li><a href="#umsetzung-als-leiterplatte" id="toc-umsetzung-als-leiterplatte" class="nav-link" data-scroll-target="#umsetzung-als-leiterplatte"><span class="header-section-number">6</span> Umsetzung als Leiterplatte</a>
   <ul class="collapse">
-  <li><a href="#vorgehensweise-im-layoutprozess" id="toc-vorgehensweise-im-layoutprozess" class="nav-link" data-scroll-target="#vorgehensweise-im-layoutprozess"><span class="header-section-number">6.1</span> Vorgehensweise im Layoutprozess</a></li>
+  <li><a href="#vorgehensweise-im-layoutprozess" id="toc-vorgehensweise-im-layoutprozess" class="nav-link" data-scroll-target="#vorgehensweise-im-layoutprozess"><span class="header-section-number">6.1</span> Vorgehensweise im Layoutprozess</a>
+  <ul class="collapse">
+  <li><a href="#design-verbesserungen-und-begründungen" id="toc-design-verbesserungen-und-begründungen" class="nav-link" data-scroll-target="#design-verbesserungen-und-begründungen">Design-Verbesserungen und Begründungen</a></li>
+  <li><a href="#zusammenfassung-und-ausblick" id="toc-zusammenfassung-und-ausblick" class="nav-link" data-scroll-target="#zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</a></li>
+  </ul></li>
   <li><a href="#messungen-an-der-pcb-schaltung" id="toc-messungen-an-der-pcb-schaltung" class="nav-link" data-scroll-target="#messungen-an-der-pcb-schaltung"><span class="header-section-number">6.2</span> Messungen an der PCB-Schaltung</a></li>
-  <li><a href="#vergleich-der-ergebnisse" id="toc-vergleich-der-ergebnisse" class="nav-link" data-scroll-target="#vergleich-der-ergebnisse"><span class="header-section-number">6.3</span> Vergleich der Ergebnisse:</a></li>
   <li><a href="#vergleich-diskret-vs.-pcb" id="toc-vergleich-diskret-vs.-pcb" class="nav-link" data-scroll-target="#vergleich-diskret-vs.-pcb">Vergleich: Diskret vs.&nbsp;PCB</a>
   <ul class="collapse">
-  <li><a href="#für-q1-1" id="toc-für-q1-1" class="nav-link" data-scroll-target="#für-q1-1">Für <span class="math inline">\(Q=1\)</span></a></li>
+  <li><a href="#für-q-1-1" id="toc-für-q-1-1" class="nav-link" data-scroll-target="#für-q-1-1">Für (Q = 1)</a></li>
   <li><a href="#bandpass-2" id="toc-bandpass-2" class="nav-link" data-scroll-target="#bandpass-2">-Bandpass</a></li>
   <li><a href="#bandstop-2" id="toc-bandstop-2" class="nav-link" data-scroll-target="#bandstop-2">-Bandstop</a></li>
   <li><a href="#hochpass-2" id="toc-hochpass-2" class="nav-link" data-scroll-target="#hochpass-2">-Hochpass</a></li>
   <li><a href="#tiefpass-2" id="toc-tiefpass-2" class="nav-link" data-scroll-target="#tiefpass-2">-Tiefpass</a></li>
-  <li><a href="#für-q10-1" id="toc-für-q10-1" class="nav-link" data-scroll-target="#für-q10-1">Für <span class="math inline">\(Q=10\)</span></a></li>
+  <li><a href="#für-q-10-1" id="toc-für-q-10-1" class="nav-link" data-scroll-target="#für-q-10-1">Für (Q = 10)</a></li>
   <li><a href="#bandpass-3" id="toc-bandpass-3" class="nav-link" data-scroll-target="#bandpass-3">-Bandpass</a></li>
   <li><a href="#bandstop-3" id="toc-bandstop-3" class="nav-link" data-scroll-target="#bandstop-3">-Bandstop</a></li>
   <li><a href="#hochpass-3" id="toc-hochpass-3" class="nav-link" data-scroll-target="#hochpass-3">-Hochpass</a></li>
   <li><a href="#tiefpass-3" id="toc-tiefpass-3" class="nav-link" data-scroll-target="#tiefpass-3">-Tiefpass</a></li>
+  <li><a href="#diskussion-der-ergebnisse" id="toc-diskussion-der-ergebnisse" class="nav-link" data-scroll-target="#diskussion-der-ergebnisse">Diskussion der Ergebnisse:</a></li>
   </ul></li>
   <li><a href="#vergleich-ideal-vs.-pcb" id="toc-vergleich-ideal-vs.-pcb" class="nav-link" data-scroll-target="#vergleich-ideal-vs.-pcb">Vergleich: Ideal vs.&nbsp;PCB</a>
   <ul class="collapse">
-  <li><a href="#für-q1-2" id="toc-für-q1-2" class="nav-link" data-scroll-target="#für-q1-2">Für <span class="math inline">\(Q=1\)</span></a></li>
+  <li><a href="#für-q1-1" id="toc-für-q1-1" class="nav-link" data-scroll-target="#für-q1-1">Für <span class="math inline">\(Q=1\)</span></a></li>
   <li><a href="#bandpass-4" id="toc-bandpass-4" class="nav-link" data-scroll-target="#bandpass-4">-Bandpass</a></li>
   <li><a href="#bandstop-4" id="toc-bandstop-4" class="nav-link" data-scroll-target="#bandstop-4">-Bandstop</a></li>
   <li><a href="#hochpass-4" id="toc-hochpass-4" class="nav-link" data-scroll-target="#hochpass-4">-Hochpass</a></li>
   <li><a href="#tiefpass-4" id="toc-tiefpass-4" class="nav-link" data-scroll-target="#tiefpass-4">-Tiefpass</a></li>
-  <li><a href="#für-q10-2" id="toc-für-q10-2" class="nav-link" data-scroll-target="#für-q10-2">Für <span class="math inline">\(Q=10\)</span></a></li>
+  <li><a href="#für-q10-1" id="toc-für-q10-1" class="nav-link" data-scroll-target="#für-q10-1">Für <span class="math inline">\(Q=10\)</span></a></li>
   <li><a href="#bandpass-5" id="toc-bandpass-5" class="nav-link" data-scroll-target="#bandpass-5">-Bandpass</a></li>
   <li><a href="#bandstop-5" id="toc-bandstop-5" class="nav-link" data-scroll-target="#bandstop-5">-Bandstop</a></li>
   <li><a href="#hochpass-5" id="toc-hochpass-5" class="nav-link" data-scroll-target="#hochpass-5">-Hochpass</a></li>
@@ -316,10 +320,6 @@ Abbildung&nbsp;1: Fertige Leiterplatte mit universellem Biquad-Filterentwurf.
 <h1 data-number="2"><span class="header-section-number">2</span> Theoretischer Hintergrund</h1>
 <section id="grundlagen-zu-analogen-filtern" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="grundlagen-zu-analogen-filtern"><span class="header-section-number">2.1</span> Grundlagen zu analogen Filtern</h2>
-<<<<<<< Updated upstream
-<p><span class="citation" data-cites="Adrian">(<a href="#ref-Adrian" role="doc-biblioref"><strong>Adrian?</strong></a>)</span> 1. Filter entwurf mit RLC Glied, TP, HP, BP –nicht berichten</p>
-=======
-<p><span class="citation" data-cites="Adrian"><a href="#ref-Adrian" role="doc-biblioref"><strong>Adrian?</strong></a></span></p>
 <p>Zunächst haben wir uns mit dem Aufbau analoger Filter beschäftig, um genauer zu sein mit FIltern welche RLC Glieder haben. Das “R” steht für den Widerstand, das “L” steht für die Last und das “C” für den Kondensator.</p>
 <p>Jenachdem wie man die einzelnen Bestandteile anordnet, kann man Vier verschiedene Filter entwerfen, einen Hochpass, einen Tiefpass, einen Bandpass und einen Bandstop.</p>
 <p>Ein wichtiger Faktor für diese Filter ist die Kreisfrequenz. Diese Hilft einem dabei den Frequenzbereich, welcher für einen von Interesse ist, zu ermitteln, da an der Kreisfrequenz der Filter eine Änderung, je nach Filter, durchläuft.</p>
@@ -330,7 +330,6 @@ Abbildung&nbsp;1: Fertige Leiterplatte mit universellem Biquad-Filterentwurf.
 <ol type="1">
 <li>Filter entwurf mit RLC Glied, TP, HP, BP –nicht berichten</li>
 </ol>
->>>>>>> Stashed changes
 <section id="übertragungsfunktionen-und-verschiedene-filtertypen" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="übertragungsfunktionen-und-verschiedene-filtertypen">Übertragungsfunktionen und verschiedene Filtertypen</h3>
 </section>
@@ -620,11 +619,7 @@ Abbildung&nbsp;7: Simulationsaufbau für den aktiven Biquad-Filter in KiCad.<a h
 <div id="fig-bodeQ1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bodeQ1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<<<<<<< Updated upstream
-<a href="simulation\Q1_Plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Abbildung&nbsp;6: Bode-Plot der simulierten Biquad-Schaltung für Q = 1."><img src="simulation\Q1_Plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
-=======
-<a href="images/bodeplot_Q1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Abbildung&nbsp;8: Bode-Plot der simulierten Biquad-Schaltung für Q = 1."><img src="images/bodeplot_Q1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
->>>>>>> Stashed changes
+<a href="simulation\Q1_Plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Abbildung&nbsp;8: Bode-Plot der simulierten Biquad-Schaltung für Q = 1."><img src="simulation\Q1_Plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bodeQ1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;8: Bode-Plot der simulierten Biquad-Schaltung für <span class="math inline">\(Q = 1\)</span>.
@@ -637,11 +632,7 @@ Abbildung&nbsp;8: Bode-Plot der simulierten Biquad-Schaltung für <span class="m
 <div id="fig-bodeQ10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bodeQ10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<<<<<<< Updated upstream
-<a href="simulation\Q10_Plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Abbildung&nbsp;7: Bode-Plot der simulierten Biquad-Schaltung für Q = 10."><img src="simulation\Q10_Plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
-=======
-<a href="images/bodeplot_Q10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Abbildung&nbsp;9: Bode-Plot der simulierten Biquad-Schaltung für Q = 10."><img src="images/bodeplot_Q10.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
->>>>>>> Stashed changes
+<a href="simulation\Q10_Plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Abbildung&nbsp;9: Bode-Plot der simulierten Biquad-Schaltung für Q = 10."><img src="simulation\Q10_Plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bodeQ10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;9: Bode-Plot der simulierten Biquad-Schaltung für <span class="math inline">\(Q = 10\)</span>.
@@ -660,7 +651,6 @@ Abbildung&nbsp;10: Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Ma
 </figcaption>
 </figure>
 </div>
-<p><span class="citation" data-cites="Adrian"><a href="#ref-Adrian" role="doc-biblioref"><strong>Adrian?</strong></a></span></p>
 </section>
 </section>
 <section id="aufbau-auf-dem-aslk-pro-board" class="level3 unnumbered">
@@ -775,7 +765,6 @@ H_{\mathrm{BW3}}(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)} = - \frac{H
 </section>
 <section id="messung-und-analyse" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Messung und Analyse</h1>
-<p><span class="citation" data-cites="Mohamad"><a href="#ref-Mohamad" role="doc-biblioref"><strong>Mohamad?</strong></a></span></p>
 <p>Nachdem wir die Biquad-Filter-Schaltung bereits erfolgreich auf dem ASLK Pro Board aufgebaut haben, lag der Fokus dieses Abschnitts auf der Durchführung der Messungen und der anschließenden Auswertung der Ergebnisse. Ziel war es, die realen Frequenzgänge der verschiedenen Filtertypen experimentell zu erfassen und diese mit den zuvor durchgeführten Simulationen zu vergleichen.</p>
 <section id="messungsschritte" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="messungsschritte">Messungsschritte</h3>
@@ -793,17 +782,10 @@ H_{\mathrm{BW3}}(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)} = - \frac{H
 <div id="fig-bpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<<<<<<< Updated upstream
-<a href="Mess_Sim_Vergleich\Q1\Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Abbildung&nbsp;11: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich\Q1\Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Abbildung&nbsp;13: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;11: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für <span class="math inline">\(Q = 1\)</span>.
-=======
-<a href="Mess_Sim_Vergleich\Q1\Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Abbildung&nbsp;13: Bode-Plot Vergleich der simulierten- und der auf dem Board Bandpassfilter für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;13: Bode-Plot Vergleich der simulierten- und der auf dem Board Bandpassfilter für <span class="math inline">\(Q = 1\)</span>.
->>>>>>> Stashed changes
+Abbildung&nbsp;13: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für <span class="math inline">\(Q = 1\)</span>.
 </figcaption>
 </figure>
 </div>
@@ -813,17 +795,10 @@ Abbildung&nbsp;13: Bode-Plot Vergleich der simulierten- und der auf dem Board Ba
 <div id="fig-bsf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bsf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<<<<<<< Updated upstream
-<a href="Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Abbildung&nbsp;12: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Abbildung&nbsp;14: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bsf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für <span class="math inline">\(Q = 1\)</span>.
-=======
-<a href="Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Abbildung&nbsp;14: Bode-Plot Vergleich der simulierten- und der auf dem Board Bandstopfilter für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bsf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;14: Bode-Plot Vergleich der simulierten- und der auf dem Board Bandstopfilter für <span class="math inline">\(Q = 1\)</span>.
->>>>>>> Stashed changes
+Abbildung&nbsp;14: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für <span class="math inline">\(Q = 1\)</span>.
 </figcaption>
 </figure>
 </div>
@@ -833,17 +808,10 @@ Abbildung&nbsp;14: Bode-Plot Vergleich der simulierten- und der auf dem Board Ba
 <div id="fig-hpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<<<<<<< Updated upstream
-<a href="Mess_Sim_Vergleich\Q1\Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Abbildung&nbsp;13: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich\Q1\Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Abbildung&nbsp;15: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;13: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für <span class="math inline">\(Q = 1\)</span>.
-=======
-<a href="Mess_Sim_Vergleich\Q1\Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Abbildung&nbsp;15: Bode-Plot Vergleich der simulierten- und der auf dem Board Hochpassfilter für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;15: Bode-Plot Vergleich der simulierten- und der auf dem Board Hochpassfilter für <span class="math inline">\(Q = 1\)</span>.
->>>>>>> Stashed changes
+Abbildung&nbsp;15: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für <span class="math inline">\(Q = 1\)</span>.
 </figcaption>
 </figure>
 </div>
@@ -853,11 +821,10 @@ Abbildung&nbsp;15: Bode-Plot Vergleich der simulierten- und der auf dem Board Ho
 <div id="fig-tpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<<<<<<< Updated upstream
-<a href="Mess_Sim_Vergleich\Q1\Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Abbildung&nbsp;14: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich\Q1\Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Abbildung&nbsp;16: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;14: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für <span class="math inline">\(Q = 1\)</span>.
+Abbildung&nbsp;16: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für <span class="math inline">\(Q = 1\)</span>.
 </figcaption>
 </figure>
 </div>
@@ -870,10 +837,10 @@ Abbildung&nbsp;14: Bode-Plot Vergleich des simulierten- und des auf dem Board Ti
 <div id="fig-bpf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Mess_Sim_Vergleich\Q10\Bandpass_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Abbildung&nbsp;15: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für Q = 10."><img src="Mess_Sim_Vergleich\Q10\Bandpass_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich\Q10\Bandpass_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Abbildung&nbsp;17: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für Q = 10."><img src="Mess_Sim_Vergleich\Q10\Bandpass_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;15: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für <span class="math inline">\(Q = 10\)</span>.
+Abbildung&nbsp;17: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für <span class="math inline">\(Q = 10\)</span>.
 </figcaption>
 </figure>
 </div>
@@ -883,10 +850,10 @@ Abbildung&nbsp;15: Bode-Plot Vergleich des simulierten- und des auf dem Board Ba
 <div id="fig-bsf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bsf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Mess_Sim_Vergleich\Q10\Bandstop_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Abbildung&nbsp;16: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für Q = 10."><img src="Mess_Sim_Vergleich\Q10\Bandstop_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich\Q10\Bandstop_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Abbildung&nbsp;18: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für Q = 10."><img src="Mess_Sim_Vergleich\Q10\Bandstop_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bsf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;16: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für <span class="math inline">\(Q = 10\)</span>.
+Abbildung&nbsp;18: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für <span class="math inline">\(Q = 10\)</span>.
 </figcaption>
 </figure>
 </div>
@@ -896,10 +863,10 @@ Abbildung&nbsp;16: Bode-Plot Vergleich des simulierten- und des auf dem Board Ba
 <div id="fig-hpf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Mess_Sim_Vergleich\Q10\Hochpass_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Abbildung&nbsp;17: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für Q = 10."><img src="Mess_Sim_Vergleich\Q10\Hochpass_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich\Q10\Hochpass_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Abbildung&nbsp;19: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für Q = 10."><img src="Mess_Sim_Vergleich\Q10\Hochpass_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;17: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für <span class="math inline">\(Q = 10\)</span>.
+Abbildung&nbsp;19: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für <span class="math inline">\(Q = 10\)</span>.
 </figcaption>
 </figure>
 </div>
@@ -909,16 +876,10 @@ Abbildung&nbsp;17: Bode-Plot Vergleich des simulierten- und des auf dem Board Ho
 <div id="fig-tpf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Mess_Sim_Vergleich\Q10\Tiefpass_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Abbildung&nbsp;18: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für Q = 10."><img src="Mess_Sim_Vergleich\Q10\Tiefpass_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich\Q10\Tiefpass_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Abbildung&nbsp;20: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für Q = 10."><img src="Mess_Sim_Vergleich\Q10\Tiefpass_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;17: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für <span class="math inline">\(Q = 10\)</span>.
-=======
-<a href="Mess_Sim_Vergleich\Q1\Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Abbildung&nbsp;16: Bode-Plot Vergleich der simulierten- und der auf dem Board Tiefpassfilter für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;16: Bode-Plot Vergleich der simulierten- und der auf dem Board Tiefpassfilter für <span class="math inline">\(Q = 1\)</span>.
->>>>>>> Stashed changes
+Abbildung&nbsp;20: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für <span class="math inline">\(Q = 10\)</span>.
 </figcaption>
 </figure>
 </div>
@@ -931,251 +892,370 @@ Abbildung&nbsp;16: Bode-Plot Vergleich der simulierten- und der auf dem Board Ti
 </section>
 <section id="umsetzung-als-leiterplatte" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Umsetzung als Leiterplatte</h1>
-<p><span class="citation" data-cites="Adi"><a href="#ref-Adi" role="doc-biblioref"><strong>Adi?</strong></a></span></p>
-<p>Those cables were boring, we need a PCB</p>
+<p>Die Umsetzung der Biquad-Schaltung auf eine gedruckte Leiterplatte (PCB) verfolgt mehrere Ziele: Erstens erhöht eine professionelle Leiterplatte die mechanische Stabilität und Wiederholgenauigkeit im Vergleich zu Jumperkabel-Versuchen. Zweitens minimiert eine sorgfältig geroutete Platine parasitäre Effekte (Leitungsinduktivitäten, -kapazitäten), die bei langen, unkontrollierten Kabelwegen auftreten. Drittens erlaubt die PCB eine kompakte, übersichtliche Integration aller Filterzweige, sodass verschiedene Eckfrequenzen oder Gütefaktoren per Jumper umgeschaltet werden können, ohne das Board komplett neu aufzubauen.</p>
 <section id="vorgehensweise-im-layoutprozess" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="vorgehensweise-im-layoutprozess"><span class="header-section-number">6.1</span> Vorgehensweise im Layoutprozess</h2>
-<p>hier beschreiben wir das Vorgehen</p>
+<ol type="1">
+<li><p><strong>Auswahl der Basis-Topologie</strong><br>
+Zunächst wurde die einfachste Biquad-Schaltung für Güte <span class="math inline">\(Q=1\)</span> mit Eckfrequenz <span class="math inline">\(\approx 160\,\mathrm{Hz}\)</span> in KiCad aufgebaut.</p></li>
+<li><p><strong>Footprint-Zuordnung</strong><br>
+Für alle Bauteile (Operationsverstärker im DIL-Sockel, Widerstände, Kondensatoren, Jumper) wurden passende Footprints manuell ausgewählt. DIL-Sockel ermöglichen den einfachen Ein- und Ausbau der OP-Amps.</p></li>
+<li><p><strong>Erweiterung um Schaltoptionen</strong><br>
+Um Messungen bei zwei unterschiedlichen Gütefaktoren und zwei Eckfrequenzen zu ermöglichen, wurden Jumper-Pads vorgesehen, mit denen man:</p>
+<ul>
+<li>zwischen <span class="math inline">\(Q=1\)</span> und <span class="math inline">\(Q=10\)</span> umschalten<br>
+</li>
+<li>die Eckfrequenz durch Parallelschaltung unterschiedlicher RC-Glieder wechseln<br>
+</li>
+<li>den LPF-Ausgang als Eingang für die 3. Ordnung–Butterworth-Stufe aktivieren kann</li>
+</ul></li>
+<li><p><strong>Platzoptimierung</strong><br>
+Das erste Layout maß ca. 5 cm × 7 cm (siehe <a href="#fig-pcbv1" class="quarto-xref">Abbildung&nbsp;21</a>), war aber zu unflexibel. Das erweiterte Design kam auf 5 cm × 8 cm(siehe <a href="#fig-pcbs" class="quarto-xref">Abbildung&nbsp;22</a>). Dabei war uns wichtig:</p>
+<ul>
+<li><strong>Bauteilenah</strong>: Kurze Verbindungen zwischen OP-Amp-Pins und zugehörigen RC-Netzwerken reduzieren parasitäre L- und C-Effekte.<br>
+</li>
+<li><strong>Abwinkelung</strong>: Leiterbahnen wurden nur mit maximal <span class="math inline">\(45^\circ\)</span>-Ecken geroutet, um Reflexionen und Signalverzerrungen bei höheren Frequenzen zu minimieren.<br>
+</li>
+<li><strong>Layernutzung</strong>: Das Top-Layer für Signal- und Strompfade, das Bottom-Layer vollständig als durchgehende Massefläche („Ground Plane“) reserviert. So entfallen separate GND-Drähte.</li>
+<li><strong>Decoupling</strong>: An jeder Spannungsversorgung des TL082 wurde <span class="math inline">\(100\,\mathrm{nF}\)</span> Kondensatoren nahe den OP-Amp-Pins platziert, um Versorgungsspannungsspitzen und Rauschen zu unterdrücken.</li>
+</ul>
+<div id="fig-pcbv1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pcbv1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/pcbv1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Abbildung&nbsp;21: PCB-Design Version 1"><img src="images/pcbv1.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:60.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbv1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;21: PCB-Design Version 1
+</figcaption>
+</figure>
+</div></li>
+</ol>
+<hr>
+<section id="design-verbesserungen-und-begründungen" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="design-verbesserungen-und-begründungen">Design-Verbesserungen und Begründungen</h3>
+<ol type="1">
+<li><p><strong>Bauteiwertebeschriftung</strong><br>
+Jeder Widerstand und Kondensator erhielt eine Referenz („R1“, „C3“) und einen Wertaufdruck auf der Silkscreen-Schicht. Fehlt dies, kann beim Bestücken leicht verwechselt werden.</p></li>
+<li><p><strong>Fehlender GND-Pins</strong><br>
+Auf dem PCB fehlte Ground-Pins. Dadurch war es schwer, während der Messung eine sichere Masseverbindung herzustellen. Wir haben das provisorisch durch manuelles Bohren von zwei Löchern und den Einbau von Pins zur Groundplane behoben.</p></li>
+<li><p><strong>Jumper als Fehlerquelle</strong><br>
+Die mechanischen Jumper auf dem Board sind zwar flexibel, können aber ähnliche Störeffekte wie Jumperkabel verursachen und Messungenauigkeiten einführen.</p></li>
+</ol>
+<div id="fig-pcbs" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pcbs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/pcbv2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Fertiges PCB-Design"><img src="images/pcbv2.png" class="img-fluid figure-img" style="width:90.0%"></a></p>
+<figcaption>Fertiges PCB-Design</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/platine.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Fertige PCB"><img src="images/platine.jpg" class="img-fluid figure-img" style="width:90.0%"></a></p>
+<figcaption>Fertige PCB</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;22: Fertige Bi-Quad Filter Platine
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="zusammenfassung-und-ausblick" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="zusammenfassung-und-ausblick">Zusammenfassung und Ausblick</h3>
+<p>Mit diesem PCB-Design haben wir eine kompakte, reproduzierbare Plattform geschaffen, um Biquad-Filter mit variabler Güte und Eckfrequenz zu charakterisieren und bei Bedarf um eine Butterworth-Stufe 3. Ordnung zu ergänzen. Für künftige Revisionen empfehlen sich:<br>
+- Vollständige Beschriftung aller Werte auf der Platine<br>
+- Einheitliche Testpoints für Ein-/Ausgang und GND<br>
+- Integration von SMD-Schaltern statt Jumpern</p>
+<p>Damit wird die Platine für die Lehrzwecke gut geeignet.</p>
+</section>
 </section>
 <section id="messungen-an-der-pcb-schaltung" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="messungen-an-der-pcb-schaltung"><span class="header-section-number">6.2</span> Messungen an der PCB-Schaltung</h2>
-<p>hier zeigen wir Plots von der PCB-Schaltung</p>
-</section>
-<section id="vergleich-der-ergebnisse" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="vergleich-der-ergebnisse"><span class="header-section-number">6.3</span> Vergleich der Ergebnisse:</h2>
-<p>hier vergleichen wir zwischen der Schaltung auf dem ASLK-Board und der auf dem PCB</p>
+<p>Im Anschluss an das Layout und die Fertigung der Platine wurden die Übertragungs­funktionen aller Filterausgänge mit dem Red Pitaya Mess­system aufgenommen. Die Signale wurden über einen Frequenz­sweep für verschiedene Frequenzen eingespeist und die Amplituden- sowie Phasengänge mit einem eigens entwickelten Python-Skript ausgewertet und geplottet.</p>
 </section>
 <section id="vergleich-diskret-vs.-pcb" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="vergleich-diskret-vs.-pcb">Vergleich: Diskret vs.&nbsp;PCB</h2>
-<section id="für-q1-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="für-q1-1">Für <span class="math inline">\(Q=1\)</span></h3>
+<p>Im Folgenden sind die Bode-Diagramme der diskreten Versuchsaufbauten (auf dem ASLK PRO Board mit Jumperkabeln) gegenüber den Messergebnissen der fertigen PCB-Schaltung dargestellt. Dieser Vergleich zeigt, inwieweit das PCB-Layout die Filtercharakteristik stabilisiert.</p>
+<section id="für-q-1-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="für-q-1-1">Für (Q = 1)</h3>
 </section>
 <section id="bandpass-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="bandpass-2">-Bandpass</h3>
 <div id="fig-pcbrealbpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbrealbpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q1\Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Abbildung&nbsp;19: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandpassfilters für Q = 1."><img src="platine_real_vergleich\Q1\Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_real_vergleich/Q1/Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="Abbildung&nbsp;23: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandpassfilters für (Q = 1)."><img src="platine_real_vergleich/Q1/Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbrealbpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;19: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandpassfilters für <span class="math inline">\(Q = 1\)</span>.
+Abbildung&nbsp;23: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandpassfilters für (Q = 1).
 </figcaption>
 </figure>
 </div>
+<p>Die PCB-Messung liefert einen klar definierten Resonanzpeak mit sehr gleichmäßigen Flanken. Die diskrete Variante zeigt den Peak geringfügig verschoben und weist an den Flanken kleine Unregelmäßigkeiten auf, wodurch der Verlauf etwas unschärfer erscheint.</p>
 </section>
 <section id="bandstop-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="bandstop-2">-Bandstop</h3>
 <div id="fig-pcbrealbsf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbrealbsf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q1\Bandstop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Abbildung&nbsp;20: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandstopfilters für Q = 1."><img src="platine_real_vergleich\Q1\Bandstop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_real_vergleich/Q1/Bandstop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Abbildung&nbsp;24: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandstopfilters für (Q = 1)."><img src="platine_real_vergleich/Q1/Bandstop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbrealbsf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;20: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandstopfilters für <span class="math inline">\(Q = 1\)</span>.
+Abbildung&nbsp;24: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandstopfilters für (Q = 1).
 </figcaption>
 </figure>
 </div>
+<p>Der Bandsperre-Einbruch auf der Platine verläuft besonders tief und mit flachen, sauberen Flanken. Im diskreten Aufbau ist die Dämpfung ähnlich, jedoch treten an den Randbereichen leichte Sprünge und kleine Unebenheiten auf.</p>
 </section>
 <section id="hochpass-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="hochpass-2">-Hochpass</h3>
 <div id="fig-pcbrealhpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbrealhpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q1\Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Abbildung&nbsp;21: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Hochpassfilters für Q = 1."><img src="platine_real_vergleich\Q1\Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_real_vergleich/Q1/Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Abbildung&nbsp;25: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Hochpassfilters für (Q = 1)."><img src="platine_real_vergleich/Q1/Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbrealhpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;21: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Hochpassfilters für <span class="math inline">\(Q = 1\)</span>.
+Abbildung&nbsp;25: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Hochpassfilters für (Q = 1).
 </figcaption>
 </figure>
 </div>
+<p>Der Hochpass auf der PCB steigt bis zur Eckfrequenz ohne Störungen an und fällt danach konstant mit –20 dB/Dekade ab. Der diskrete Versuchsaufbau hinkt diesem Anstieg minimal hinterher und zeigt punktuelle Ausreißer bei etwa 50 Hz und 100 Hz.</p>
 </section>
 <section id="tiefpass-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="tiefpass-2">-Tiefpass</h3>
 <div id="fig-pcbrealtpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbrealtpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q1\Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Abbildung&nbsp;22: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Tiefpassfilters für Q = 1."><img src="platine_real_vergleich\Q1\Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_real_vergleich/Q1/Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Abbildung&nbsp;26: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Tiefpassfilters für (Q = 1)."><img src="platine_real_vergleich/Q1/Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbrealtpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;22: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Tiefpassfilters für <span class="math inline">\(Q = 1\)</span>.
+Abbildung&nbsp;26: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Tiefpassfilters für (Q = 1).
 </figcaption>
 </figure>
 </div>
+<p>Beim Tiefpass fällt die PCB-Kurve bis zur Eckfrequenz ideal flach ab und nimmt dann homogen –40 dB/Dekade an. Die diskrete Schaltung weist um die Eckfrequenz ein leichtes Überschwingen und vereinzelt kleine Unebenheiten im Sperrbereich auf.</p>
+<hr>
 </section>
-<section id="für-q10-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="für-q10-1">Für <span class="math inline">\(Q=10\)</span></h3>
+<section id="für-q-10-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="für-q-10-1">Für (Q = 10)</h3>
 </section>
 <section id="bandpass-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="bandpass-3">-Bandpass</h3>
 <div id="fig-pcbrealbpf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbrealbpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q10\Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Abbildung&nbsp;23: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandpassfilters für Q = 10."><img src="platine_real_vergleich\Q10\Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_real_vergleich/Q10/Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Abbildung&nbsp;27: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandpassfilters für (Q = 10)."><img src="platine_real_vergleich/Q10/Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbrealbpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;23: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandpassfilters für <span class="math inline">\(Q = 10\)</span>.
+Abbildung&nbsp;27: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandpassfilters für (Q = 10).
 </figcaption>
 </figure>
 </div>
+<p>Der starke Resonanzpeak der Platine ist deutlich ausgeprägt, jedoch sehr gleichmäßig. Im diskreten Aufbau fällt der Peak minimal höher aus, wirkt aber an der Spitze etwas unruhig und leicht gezackt.</p>
 </section>
 <section id="bandstop-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="bandstop-3">-Bandstop</h3>
 <div id="fig-pcbrealbsf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbrealbsf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q10\Bandstop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="Abbildung&nbsp;24: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandstopfilters für Q = 10."><img src="platine_real_vergleich\Q10\Bandstop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_real_vergleich/Q10/Bandstop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="Abbildung&nbsp;28: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandstopfilters für (Q = 10)."><img src="platine_real_vergleich/Q10/Bandstop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbrealbsf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;24: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandstopfilters für <span class="math inline">\(Q = 10\)</span>.
+Abbildung&nbsp;28: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandstopfilters für (Q = 10).
 </figcaption>
 </figure>
 </div>
+<p>Bei der Bandsperre ist der Einbruch auf der PCB geringfügig flacher, dafür allerdings äußerst stabil und glatt. Die diskrete Kurve erreicht eine etwas tiefere Dämpfung, zeigt jedoch in der Nähe des Einbruchs leichte Unregelmäßigkeiten.</p>
 </section>
 <section id="hochpass-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="hochpass-3">-Hochpass</h3>
 <div id="fig-pcbrealhpf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbrealhpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q10\Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Abbildung&nbsp;25: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Hochpassfilters für Q = 10."><img src="platine_real_vergleich\Q10\Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_real_vergleich/Q10/Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30" title="Abbildung&nbsp;29: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Hochpassfilters für (Q = 10)."><img src="platine_real_vergleich/Q10/Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbrealhpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;25: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Hochpassfilters für <span class="math inline">\(Q = 10\)</span>.
+Abbildung&nbsp;29: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Hochpassfilters für (Q = 10).
 </figcaption>
 </figure>
 </div>
+<p>Im Hochpassbereich tritt die PCB-Resonanzspitze leicht verzögert auf, bleibt dabei aber sehr sauber. Die diskrete Schaltung erreicht die Spitze ein wenig früher, ist dabei jedoch im Anstieg geringfügig weniger gleichmäßig.</p>
 </section>
 <section id="tiefpass-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="tiefpass-3">-Tiefpass</h3>
 <div id="fig-pcbrealtpf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbrealtpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q10\Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Abbildung&nbsp;26: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Tiefpassfilters für Q = 10."><img src="platine_real_vergleich\Q10\Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_real_vergleich/Q10/Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31" title="Abbildung&nbsp;30: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Tiefpassfilters für (Q = 10)."><img src="platine_real_vergleich/Q10/Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbrealtpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;26: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Tiefpassfilters für <span class="math inline">\(Q = 10\)</span>.
+Abbildung&nbsp;30: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Tiefpassfilters für (Q = 10).
 </figcaption>
 </figure>
 </div>
+<p>Der Tiefpass auf der Platine bildet den Peak etwas nachlaufend und etwas flacher als die Simulation ab. Der diskrete Aufbau zeigt einen schärferen, früheren Peak, dessen Flanken an einzelnen Frequenzen kleine Sprünge aufweisen.</p>
+</section>
+<section id="diskussion-der-ergebnisse" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="diskussion-der-ergebnisse">Diskussion der Ergebnisse:</h3>
+<p>Beim Vergleich der Bode-Diagramme (rote Kurven = diskret, blaue = PCB) ergeben sich folgende allgemeine Beobachtungen:</p>
+<ul>
+<li><strong>Amplitude-Verschiebung</strong>
+<ul>
+<li>Für (Q=1) liegt die PCB-Amplitude tendenziell leicht vor (Vorsprung um wenige Hertz) gegenüber dem diskreten Aufbau.<br>
+</li>
+<li>Für (Q=10) zeigt die PCB eine kleine Verzögerung (nachlaufender Peak) um wenige Hertz.<br>
+</li>
+</ul></li>
+<li><strong>Kurvenglätte</strong><br>
+Die PCB-Daten verlaufen insgesamt glatter. Die im Diskret-Aufbau auftretenden kleinen Ausreißer entfallen, da das PCB parasitäre Effekte reduziert.<br>
+</li>
+<li><strong>Sampling-Artefakte</strong><br>
+An einigen Stellen wirken die Kurven „eckig“ – hier lagen zu wenige Messpunkte vor, was die Interpolation weniger stufenlos erscheinen lässt.</li>
+</ul>
+<hr>
 </section>
 </section>
 <section id="vergleich-ideal-vs.-pcb" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="vergleich-ideal-vs.-pcb">Vergleich: Ideal vs.&nbsp;PCB</h2>
-<section id="für-q1-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="für-q1-2">Für <span class="math inline">\(Q=1\)</span></h3>
+<section id="für-q1-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="für-q1-1">Für <span class="math inline">\(Q=1\)</span></h3>
+<!--
+::: {layout-nrow=2}
+![Bandpass](platine_real_vergleich\Q1\Bandpass.png){#fig-pcbsimbpf1 width=100%}
+
+![Bandstop](platine_real_vergleich\Q1\Bandstop.png){#fig-pcbsimbpf2 width=100%}
+
+![Hochpass](platine_real_vergleich\Q1\Hochpass.png){#fig-pcbsimbpf3 width=100%}
+
+![Tiefpass](platine_real_vergleich\Q1\Tiefpass.png){#fig-pcbsimbpf4 width=100%}
+:::
+-->
 </section>
 <section id="bandpass-4" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="bandpass-4">-Bandpass</h3>
 <div id="fig-pcbsimbpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbsimbpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q1\Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Abbildung&nbsp;27: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandpassfilters für Q = 1."><img src="platine_real_vergleich\Q1\Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_sim_vergleich\Q1\Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32" title="Abbildung&nbsp;31: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandpassfilters für Q = 1."><img src="platine_sim_vergleich\Q1\Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbsimbpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;27: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandpassfilters für <span class="math inline">\(Q = 1\)</span>.
+Abbildung&nbsp;31: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandpassfilters für <span class="math inline">\(Q = 1\)</span>.
 </figcaption>
 </figure>
 </div>
+<p>Die gemessene PCB-Kurve folgt der Simulation nahezu perfekt. Resonanzfrequenz und Peak-Amplitude stimmen überein, die PCB zeigt nur minimale Glättungsdifferenzen im Flankenbereich.</p>
 </section>
 <section id="bandstop-4" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="bandstop-4">-Bandstop</h3>
 <div id="fig-pcbsimbsf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbsimbsf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q1\Bandstop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Abbildung&nbsp;28: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandstopfilters für Q = 1."><img src="platine_real_vergleich\Q1\Bandstop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_sim_vergleich\Q1\Bandstop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33" title="Abbildung&nbsp;32: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandstopfilters für Q = 1."><img src="platine_sim_vergleich\Q1\Bandstop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbsimbsf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;28: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandstopfilters für <span class="math inline">\(Q = 1\)</span>.
+Abbildung&nbsp;32: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandstopfilters für <span class="math inline">\(Q = 1\)</span>.
 </figcaption>
 </figure>
 </div>
+<p>Simulation und Platine liegen im Sperrbereich deckungsgleich. Der Einbruchstiefpunkt und die Flankensteilheit stimmen fast überein.</p>
 </section>
 <section id="hochpass-4" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="hochpass-4">-Hochpass</h3>
 <div id="fig-pcbsimhpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbsimhpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q1\Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="Abbildung&nbsp;29: Bode-Plot Vergleich des simulierten- und des auf dem PCB Hochpassfilters für Q = 1."><img src="platine_real_vergleich\Q1\Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_sim_vergleich\Q1\Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34" title="Abbildung&nbsp;33: Bode-Plot Vergleich des simulierten- und des auf dem PCB Hochpassfilters für Q = 1."><img src="platine_sim_vergleich\Q1\Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbsimhpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;29: Bode-Plot Vergleich des simulierten- und des auf dem PCB Hochpassfilters für <span class="math inline">\(Q = 1\)</span>.
+Abbildung&nbsp;33: Bode-Plot Vergleich des simulierten- und des auf dem PCB Hochpassfilters für <span class="math inline">\(Q = 1\)</span>.
 </figcaption>
 </figure>
 </div>
+<p>Die Amplitude und Phase der PCB fallen identisch zu den simulierten Kennlinien ab. Lediglich im sehr hohen Frequenzbereich (&lt; 1 dB Abweichung) ist die PCB-Zeitkonstante leicht weicher.</p>
 </section>
 <section id="tiefpass-4" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="tiefpass-4">-Tiefpass</h3>
 <div id="fig-pcbsimtpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbsimtpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q1\Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30" title="Abbildung&nbsp;30: Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für Q = 1."><img src="platine_real_vergleich\Q1\Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_sim_vergleich\Q1\Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35" title="Abbildung&nbsp;34: Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für Q = 1."><img src="platine_sim_vergleich\Q1\Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbsimtpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;30: Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für <span class="math inline">\(Q = 1\)</span>.
+Abbildung&nbsp;34: Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für <span class="math inline">\(Q = 1\)</span>.
 </figcaption>
 </figure>
 </div>
+<p>Auch hier liegen Messung und Simulation fast auf demselben Verlauf. Der kleine Peak um die Eckfrequenz zeigt sich auf der Platine ebenso deutlich und mit derselben Steilheit.</p>
 </section>
-<section id="für-q10-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="für-q10-2">Für <span class="math inline">\(Q=10\)</span></h3>
+<section id="für-q10-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="für-q10-1">Für <span class="math inline">\(Q=10\)</span></h3>
 </section>
 <section id="bandpass-5" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="bandpass-5">-Bandpass</h3>
 <div id="fig-pcbsimbpf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbsimbpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q10\Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31" title="Abbildung&nbsp;31: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandpassfilters für Q = 10."><img src="platine_real_vergleich\Q10\Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_sim_vergleich\Q10\Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36" title="Abbildung&nbsp;35: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandpassfilters für Q = 10."><img src="platine_sim_vergleich\Q10\Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbsimbpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;31: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandpassfilters für <span class="math inline">\(Q = 10\)</span>.
+Abbildung&nbsp;35: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandpassfilters für <span class="math inline">\(Q = 10\)</span>.
 </figcaption>
 </figure>
 </div>
+<p>Bei der Simulation liegt der Resonanzpeak etwas schärfer und minimal später, während die PCB-Messung einen etwas flacheren, leicht vorgezogenen Peak zeigt. Die Bandbreite ist sehr vergleichbar, die PCB-Kurve wirkt insgesamt glatter.</p>
 </section>
 <section id="bandstop-5" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="bandstop-5">-Bandstop</h3>
 <div id="fig-pcbsimbsf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbsimbsf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q10\Bandstop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32" title="Abbildung&nbsp;32: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandstopfilters für Q = 10."><img src="platine_real_vergleich\Q10\Bandstop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_sim_vergleich\Q10\Bandstop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37" title="Abbildung&nbsp;36: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandstopfilters für Q = 10."><img src="platine_sim_vergleich\Q10\Bandstop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbsimbsf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;32: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandstopfilters für <span class="math inline">\(Q = 10\)</span>.
+Abbildung&nbsp;36: Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandstopfilters für <span class="math inline">\(Q = 10\)</span>.
 </figcaption>
 </figure>
 </div>
+<p>Der tiefe Einschnitt der Simulation erscheint stärker. Die PCB-Kurve weist einen flacheren Verlauf auf, was auf die begrenzte Messpunktdichte zurückzuführen sein kann. Es ist anzunehmen, dass die Kurve bei einer höheren Anzahl an Messpunkten auch bei PCB tiefer verlaufen würde.</p>
 </section>
 <section id="hochpass-5" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="hochpass-5">-Hochpass</h3>
 <div id="fig-pcbsimhpf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbsimhpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q10\Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33" title="Abbildung&nbsp;33: Bode-Plot Vergleich des simulierten- und des auf dem PCB Hochpassfilters für Q = 10."><img src="platine_real_vergleich\Q10\Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_sim_vergleich\Q10\Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38" title="Abbildung&nbsp;37: Bode-Plot Vergleich des simulierten- und des auf dem PCB Hochpassfilters für Q = 10."><img src="platine_sim_vergleich\Q10\Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbsimhpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;33: Bode-Plot Vergleich des simulierten- und des auf dem PCB Hochpassfilters für <span class="math inline">\(Q = 10\)</span>.
+Abbildung&nbsp;37: Bode-Plot Vergleich des simulierten- und des auf dem PCB Hochpassfilters für <span class="math inline">\(Q = 10\)</span>.
 </figcaption>
 </figure>
 </div>
+<p>In der Simulation führt der Hochpass-Peak knapp vor der Eckfrequenz zu einer leicht ausgeprägteren Spitze; die PCB-Messung eilt ihr minimal hinterher. Im Sperrbereich verläuft die PCB-Kurve etwas ruhiger.</p>
 </section>
 <section id="tiefpass-5" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="tiefpass-5">-Tiefpass</h3>
 <div id="fig-pcbsimtpf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbsimtpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="platine_real_vergleich\Q10\Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34" title="Abbildung&nbsp;34: Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für Q = 10."><img src="platine_real_vergleich\Q10\Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="platine_sim_vergleich\Q10\Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39" title="Abbildung&nbsp;38: Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für Q = 10."><img src="platine_sim_vergleich\Q10\Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbsimtpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;34: Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für <span class="math inline">\(Q = 10\)</span>.
+Abbildung&nbsp;38: Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für <span class="math inline">\(Q = 10\)</span>.
 </figcaption>
 </figure>
 </div>
-<ol start="23" type="1">
-<li>Schaltung war jetzt bereit für ein Leiterplattendesign</li>
-<li>3 Variante von PCB design mit Verbesserungen in jeder Transition</li>
-<li>PCB Design erwitert für 2 Schaltungmöglichkeiten</li>
-<li>Design Überprüfen lassen vom LaborING und dann die Platine bestellt</li>
-<li>Platine gefertigt, gemessen, Messwerte für den Vergleich mit Redpitaya aufgenommen</li>
-</ol>
+<p>Auch beim Tiefpass findet sich in der Simulation ein etwas ausgeprägteres Peak-Overshoot, während die PCB-Messung den Peak minimal verzögert wiedergibt. Die Abfallflanke ist auf beiden Kurven nahezu identisch.</p>
+<p><strong>Allgemeine Beobachtung:</strong><br>
+Die PCB-Messdaten folgen dem idealen Simulationsverlauf sehr eng, lediglich kleine Frequenzverschiebungen und glattere Flanken auf der Platine fallen auf. Die geringere Tiefe im Bandsperr-Einschnitt und der leicht vor- bzw. nachlaufende Resonanzpeak sind wahrscheinlich auf die endliche Anzahl von Messpunkten und minimale Layout-Parasitär­effekte zurückzuführen.</p>
 </section>
 </section>
 </section>
@@ -1183,7 +1263,6 @@ Abbildung&nbsp;34: Bode-Plot Vergleich des simulierten- und des auf dem PCB Tief
 <h1 data-number="7"><span class="header-section-number">7</span> Fazit und Ausblick</h1>
 <p>Hier schreiben wir Fazit von dem Experiment</p>
 <p>Was ist rausgekommen? Was lief gut, wo gab’s Schwierigkeiten? Was könnte man als Nächstes machen?</p>
-<p><span class="citation" data-cites="Adrian"><a href="#ref-Adrian" role="doc-biblioref"><strong>Adrian?</strong></a></span></p>
 </section>
 <section id="literaturverzeichnis" class="level1 unnumbered">
 <h1 class="unnumbered">Literaturverzeichnis</h1>

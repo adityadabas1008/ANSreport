@@ -4,5 +4,3 @@ Hier schreiben wir Fazit von dem Experiment
 Was ist rausgekommen?
 Was lief gut, wo gab’s Schwierigkeiten?
 Was könnte man als Nächstes machen?
-
-@Adrian

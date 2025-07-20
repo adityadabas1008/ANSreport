@@ -219,9 +219,6 @@ Um einen besseren Vergleich zu ermöglichen, sind in den folgenden Abbildungen d
 
 ![Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual [^1] ](images/theorie_plot.png){#fig-bodetheori fig-align="center" width=100%}
 
-
-@Adrian
-
 ### Aufbau auf dem ASLK PRO Board {.unnumbered}
 Aufbau von der Schaltung auf ASLK Board mit jumper Wires
 

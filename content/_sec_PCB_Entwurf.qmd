@@ -1,96 +1,208 @@
 # Umsetzung als Leiterplatte
-
-@Adi
-
-Those cables were boring, we need a PCB
+Die Umsetzung der Biquad-Schaltung auf eine gedruckte Leiterplatte (PCB) verfolgt mehrere Ziele: 
+Erstens erhöht eine professionelle Leiterplatte die mechanische Stabilität und Wiederholgenauigkeit im Vergleich zu Jumperkabel-Versuchen. 
+Zweitens minimiert eine sorgfältig geroutete Platine parasitäre Effekte (Leitungsinduktivitäten, -kapazitäten), die bei langen, unkontrollierten Kabelwegen auftreten. 
+Drittens erlaubt die PCB eine kompakte, übersichtliche Integration aller Filterzweige, sodass verschiedene Eckfrequenzen oder Gütefaktoren per Jumper umgeschaltet werden können, ohne das Board komplett neu aufzubauen.
 
 ## Vorgehensweise im Layoutprozess
-hier beschreiben wir das Vorgehen
+
+1. **Auswahl der Basis-Topologie**  
+   Zunächst wurde die einfachste Biquad-Schaltung für Güte $Q=1$ mit Eckfrequenz $\approx 160\,\mathrm{Hz}$ in KiCad aufgebaut.
+
+2. **Footprint-Zuordnung**  
+   Für alle Bauteile (Operationsverstärker im DIL-Sockel, Widerstände, Kondensatoren, Jumper) wurden passende Footprints manuell ausgewählt. DIL-Sockel ermöglichen den einfachen Ein- und Ausbau der OP-Amps.
+
+3. **Erweiterung um Schaltoptionen**  
+   Um Messungen bei zwei unterschiedlichen Gütefaktoren und zwei Eckfrequenzen zu ermöglichen, wurden Jumper-Pads vorgesehen, mit denen man:  
+   - zwischen $Q=1$ und $Q=10$ umschalten  
+   - die Eckfrequenz durch Parallelschaltung unterschiedlicher RC-Glieder wechseln  
+   - den LPF-Ausgang als Eingang für die 3. Ordnung–Butterworth-Stufe aktivieren kann  
+
+4. **Platzoptimierung**  
+   Das erste Layout maß ca. 5 cm × 7 cm (siehe @fig-pcbv1), war aber zu unflexibel. Das erweiterte Design kam auf 5 cm × 8 cm(siehe @fig-pcbs). Dabei war uns wichtig:  
+   - **Bauteilenah**: Kurze Verbindungen zwischen OP-Amp-Pins und zugehörigen RC-Netzwerken reduzieren parasitäre L- und C-Effekte.  
+   - **Abwinkelung**: Leiterbahnen wurden nur mit maximal $45^\circ$-Ecken geroutet, um Reflexionen und Signalverzerrungen bei höheren Frequenzen zu minimieren.  
+   - **Layernutzung**: Das Top-Layer für Signal- und Strompfade, das Bottom-Layer vollständig als durchgehende Massefläche („Ground Plane“) reserviert. So entfallen separate GND-Drähte. 
+   - **Decoupling**: An jeder Spannungsversorgung des TL082 wurde $100\,\mathrm{nF}$ Kondensatoren nahe den OP-Amp-Pins platziert, um Versorgungsspannungsspitzen und Rauschen zu unterdrücken.
+
+   ![PCB-Design Version 1](images/pcbv1.png){#fig-pcbv1 fig-align="left" width=60%}
+
+---
+
+### Design-Verbesserungen und Begründungen {.unnumbered}
+
+1. **Bauteiwertebeschriftung**  
+   Jeder Widerstand und Kondensator erhielt eine Referenz („R1“, „C3“) und einen Wertaufdruck auf der Silkscreen-Schicht. Fehlt dies, kann beim Bestücken leicht verwechselt werden.
+
+2. **Fehlender GND-Pins**  
+   Auf dem PCB fehlte Ground-Pins. Dadurch war es schwer, während der Messung eine sichere Masseverbindung herzustellen. Wir haben das provisorisch durch manuelles Bohren von zwei Löchern und den Einbau von Pins zur Groundplane behoben.
+
+3. **Jumper als Fehlerquelle**  
+   Die mechanischen Jumper auf dem Board sind zwar flexibel, können aber ähnliche Störeffekte wie Jumperkabel verursachen und Messungenauigkeiten einführen.
+
+::: {#fig-pcbs layout-ncol=2}
+
+![Fertiges PCB-Design](images/pcbv2.png){#fig:pcbv2 width=90%}
+
+![Fertige PCB](images/platine.jpg){#fig:pcb width=90%}
+
+Fertige Bi-Quad Filter Platine
+:::
+
+### Zusammenfassung und Ausblick {.unnumbered}
+
+Mit diesem PCB-Design haben wir eine kompakte, reproduzierbare Plattform geschaffen, um Biquad-Filter mit variabler Güte und Eckfrequenz zu charakterisieren und bei Bedarf um eine Butterworth-Stufe 3. Ordnung zu ergänzen. 
+Für künftige Revisionen empfehlen sich:  
+- Vollständige Beschriftung aller Werte auf der Platine  
+- Einheitliche Testpoints für Ein-/Ausgang und GND  
+- Integration von SMD-Schaltern statt Jumpern 
+
+Damit wird die Platine für die Lehrzwecke gut geeignet.
+
 
 ## Messungen an der PCB-Schaltung
-hier zeigen wir Plots von der PCB-Schaltung 
 
-## Vergleich der Ergebnisse: 
-hier vergleichen wir zwischen der Schaltung auf dem ASLK-Board und der auf dem PCB
+Im Anschluss an das Layout und die Fertigung der Platine wurden die Übertragungs­funktionen aller Filterausgänge mit dem Red Pitaya Mess­system aufgenommen. Die Signale wurden über einen Frequenz­sweep für verschiedene Frequenzen eingespeist und die Amplituden- sowie Phasengänge mit einem eigens entwickelten Python-Skript ausgewertet und geplottet.  
 
 ## Vergleich: Diskret vs. PCB {.unnumbered}
 
-### Für $Q=1$ {.unnumbered}
+Im Folgenden sind die Bode-Diagramme der diskreten Versuchsaufbauten (auf dem ASLK PRO Board mit Jumperkabeln) gegenüber den Messergebnissen der fertigen PCB-Schaltung dargestellt. Dieser Vergleich zeigt, inwieweit das PCB-Layout die Filtercharakteristik stabilisiert. 
+
+### Für \(Q = 1\) {.unnumbered}
 
 ### -Bandpass {.unnumbered}
 
-![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandpassfilters für $Q = 1$.](platine_real_vergleich\Q1\Bandpass.png){#fig-pcbrealbpf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandpassfilters für \(Q = 1\).](platine_real_vergleich/Q1/Bandpass.png){#fig-pcbrealbpf1 fig-align="center" width="100%"}
+
+Die PCB-Messung liefert einen klar definierten Resonanzpeak mit sehr gleichmäßigen Flanken. Die diskrete Variante zeigt den Peak geringfügig verschoben und weist an den Flanken kleine Unregelmäßigkeiten auf, wodurch der Verlauf etwas unschärfer erscheint.
 
 ### -Bandstop {.unnumbered}
 
-![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandstopfilters für $Q = 1$.](platine_real_vergleich\Q1\Bandstop.png){#fig-pcbrealbsf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandstopfilters für \(Q = 1\).](platine_real_vergleich/Q1/Bandstop.png){#fig-pcbrealbsf1 fig-align="center" width="100%"}
+
+Der Einbruch der Bandsperre auf der Platine zeichnet sich durch eine besondere Tiefe und flache, saubere Flanken aus. Bei einem diskreten Aufbau ist die Dämpfung durchaus vergleichbar, jedoch treten an den Rändern leichte Sprünge und geringfügige Ungenauigkeiten auf.
 
 ### -Hochpass {.unnumbered}
 
-![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Hochpassfilters für $Q = 1$.](platine_real_vergleich\Q1\Hochpass.png){#fig-pcbrealhpf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Hochpassfilters für \(Q = 1\).](platine_real_vergleich/Q1/Hochpass.png){#fig-pcbrealhpf1 fig-align="center" width="100%"}
+
+Der Hochpass auf der PCB steigt bis zur Eckfrequenz ohne Störungen an und fällt danach konstant mit –20 dB/Dekade ab. Der diskrete Versuchsaufbau hinkt diesem Anstieg minimal hinterher und zeigt punktuelle Ausreißer bei etwa 50 Hz und 100 Hz.
 
 ### -Tiefpass {.unnumbered}
 
-![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Tiefpassfilters für $Q = 1$.](platine_real_vergleich\Q1\Tiefpass.png){#fig-pcbrealtpf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Tiefpassfilters für \(Q = 1\).](platine_real_vergleich/Q1/Tiefpass.png){#fig-pcbrealtpf1 fig-align="center" width="100%"}
 
-### Für $Q=10$ {.unnumbered}
+Beim Tiefpass fällt die PCB-Kurve bis zur Eckfrequenz ideal flach ab und nimmt dann homogen –40 dB/Dekade an. Die diskrete Schaltung weist um die Eckfrequenz ein leichtes Überschwingen und vereinzelt kleine Unebenheiten im Sperrbereich auf.
+
+---
+
+### Für \(Q = 10\) {.unnumbered}
 
 ### -Bandpass {.unnumbered}
 
-![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandpassfilters für $Q = 10$.](platine_real_vergleich\Q10\Bandpass.png){#fig-pcbrealbpf10 fig-align="center" width=100%}
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandpassfilters für \(Q = 10\).](platine_real_vergleich/Q10/Bandpass.png){#fig-pcbrealbpf10 fig-align="center" width="100%"}
+
+Der starke Resonanzpeak der Platine ist deutlich ausgeprägt, jedoch sehr gleichmäßig. Im diskreten Aufbau fällt der Peak minimal höher aus, wirkt aber an der Spitze etwas unruhig und leicht gezackt.
 
 ### -Bandstop {.unnumbered}
 
-![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandstopfilters für $Q = 10$.](platine_real_vergleich\Q10\Bandstop.png){#fig-pcbrealbsf10 fig-align="center" width=100%}
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Bandstopfilters für \(Q = 10\).](platine_real_vergleich/Q10/Bandstop.png){#fig-pcbrealbsf10 fig-align="center" width="100%"}
+
+Bei der Bandsperre ist der Einbruch auf der PCB geringfügig flacher, dafür allerdings äußerst stabil und glatt. Die diskrete Kurve erreicht eine etwas tiefere Dämpfung, zeigt jedoch in der Nähe des Einbruchs leichte Unregelmäßigkeiten.
 
 ### -Hochpass {.unnumbered}
 
-![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Hochpassfilters für $Q = 10$.](platine_real_vergleich\Q10\Hochpass.png){#fig-pcbrealhpf10 fig-align="center" width=100%}
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Hochpassfilters für \(Q = 10\).](platine_real_vergleich/Q10/Hochpass.png){#fig-pcbrealhpf10 fig-align="center" width="100%"}
+
+Im Hochpassbereich tritt die PCB-Resonanzspitze leicht verzögert auf, bleibt dabei aber sehr sauber. Die diskrete Schaltung erreicht die Spitze ein wenig früher, ist dabei jedoch im Anstieg geringfügig weniger gleichmäßig.
 
 ### -Tiefpass {.unnumbered}
 
-![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Tiefpassfilters für $Q = 10$.](platine_real_vergleich\Q10\Tiefpass.png){#fig-pcbrealtpf10 fig-align="center" width=100%}
+![Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Tiefpassfilters für \(Q = 10\).](platine_real_vergleich/Q10/Tiefpass.png){#fig-pcbrealtpf10 fig-align="center" width="100%"}
+
+Der Tiefpass auf der Platine bildet den Peak etwas nachlaufend und etwas flacher als die Simulation ab. Der diskrete Aufbau zeigt einen schärferen, früheren Peak, dessen Flanken an einzelnen Frequenzen kleine Sprünge aufweisen.
+
+
+### Diskussion der Ergebnisse: {.unnumbered}
+
+
+Beim Vergleich der Bode-Diagramme (rote Kurven = diskret, blaue = PCB) ergeben sich folgende allgemeine Beobachtungen:
+
+- **Amplitude-Verschiebung**  
+  - Für \(Q=1\) liegt die PCB-Amplitude tendenziell leicht vor (Vorsprung um wenige Hertz) gegenüber dem diskreten Aufbau.  
+  - Für \(Q=10\) zeigt die PCB eine kleine Verzögerung (nachlaufender Peak) um wenige Hertz.  
+- **Kurvenglätte**  
+  Die PCB-Daten verlaufen insgesamt glatter. Die im Diskret-Aufbau auftretenden kleinen Ausreißer entfallen, da das PCB parasitäre Effekte reduziert.  
+- **Sampling-Artefakte**  
+  An einigen Stellen wirken die Kurven „eckig“ – hier lagen zu wenige Messpunkte vor, was die Interpolation weniger stufenlos erscheinen lässt.
+
+---
 
 ## Vergleich: Ideal vs. PCB {.unnumbered}
 
 ### Für $Q=1$ {.unnumbered}
 
+<!--
+::: {layout-nrow=2}
+![Bandpass](platine_real_vergleich\Q1\Bandpass.png){#fig-pcbsimbpf1 width=100%}
+
+![Bandstop](platine_real_vergleich\Q1\Bandstop.png){#fig-pcbsimbpf2 width=100%}
+
+![Hochpass](platine_real_vergleich\Q1\Hochpass.png){#fig-pcbsimbpf3 width=100%}
+
+![Tiefpass](platine_real_vergleich\Q1\Tiefpass.png){#fig-pcbsimbpf4 width=100%}
+:::
+-->
+
 ### -Bandpass {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandpassfilters für $Q = 1$.](platine_real_vergleich\Q1\Bandpass.png){#fig-pcbsimbpf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandpassfilters für $Q = 1$.](platine_sim_vergleich\Q1\Bandpass.png){#fig-pcbsimbpf1 fig-align="center" width=100%}
+
+Die gemessene PCB-Kurve folgt der Simulation nahezu perfekt. Resonanzfrequenz und Peak-Amplitude stimmen überein, die PCB zeigt nur minimale Glättungsdifferenzen im Flankenbereich.
 
 ### -Bandstop {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandstopfilters für $Q = 1$.](platine_real_vergleich\Q1\Bandstop.png){#fig-pcbsimbsf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandstopfilters für $Q = 1$.](platine_sim_vergleich\Q1\Bandstop.png){#fig-pcbsimbsf1 fig-align="center" width=100%}
+
+Simulation und Platine liegen im Sperrbereich deckungsgleich. Der Einbruchstiefpunkt und die Flankensteilheit stimmen fast überein.
 
 ### -Hochpass {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem PCB Hochpassfilters für $Q = 1$.](platine_real_vergleich\Q1\Hochpass.png){#fig-pcbsimhpf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Hochpassfilters für $Q = 1$.](platine_sim_vergleich\Q1\Hochpass.png){#fig-pcbsimhpf1 fig-align="center" width=100%}
+
+Die Amplitude und Phase der PCB fallen identisch zu den simulierten Kennlinien ab. Lediglich im sehr hohen Frequenzbereich (< 1 dB Abweichung) ist die PCB-Zeitkonstante leicht weicher.
 
 ### -Tiefpass {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für $Q = 1$.](platine_real_vergleich\Q1\Tiefpass.png){#fig-pcbsimtpf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für $Q = 1$.](platine_sim_vergleich\Q1\Tiefpass.png){#fig-pcbsimtpf1 fig-align="center" width=100%}
+
+Auch hier liegen Messung und Simulation fast auf demselben Verlauf. Der kleine Peak um die Eckfrequenz zeigt sich auf der Platine ebenso deutlich und mit derselben Steilheit.
 
 ### Für $Q=10$ {.unnumbered}
 
 ### -Bandpass {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandpassfilters für $Q = 10$.](platine_real_vergleich\Q10\Bandpass.png){#fig-pcbsimbpf10 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandpassfilters für $Q = 10$.](platine_sim_vergleich\Q10\Bandpass.png){#fig-pcbsimbpf10 fig-align="center" width=100%}
+
+Bei der Simulation liegt der Resonanzpeak etwas schärfer und minimal später, während die PCB-Messung einen etwas flacheren, leicht vorgezogenen Peak zeigt. Die Bandbreite ist sehr vergleichbar, die PCB-Kurve wirkt insgesamt glatter.
 
 ### -Bandstop {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandstopfilters für $Q = 10$.](platine_real_vergleich\Q10\Bandstop.png){#fig-pcbsimbsf10 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Bandstopfilters für $Q = 10$.](platine_sim_vergleich\Q10\Bandstop.png){#fig-pcbsimbsf10 fig-align="center" width=100%}
+ 
+Der tiefe Einschnitt der Simulation erscheint stärker. Die PCB-Kurve weist einen flacheren Verlauf auf, was auf die begrenzte Messpunktdichte zurückzuführen sein kann. Es ist anzunehmen, dass die Kurve bei einer höheren Anzahl an Messpunkten auch bei PCB tiefer verlaufen würde.
 
 ### -Hochpass {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem PCB Hochpassfilters für $Q = 10$.](platine_real_vergleich\Q10\Hochpass.png){#fig-pcbsimhpf10 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Hochpassfilters für $Q = 10$.](platine_sim_vergleich\Q10\Hochpass.png){#fig-pcbsimhpf10 fig-align="center" width=100%}
+
+In der Simulation führt der Hochpass-Peak knapp vor der Eckfrequenz zu einer leicht ausgeprägteren Spitze; die PCB-Messung eilt ihr minimal hinterher. Im Sperrbereich verläuft die PCB-Kurve etwas ruhiger.
 
 ### -Tiefpass {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für $Q = 10$.](platine_real_vergleich\Q10\Tiefpass.png){#fig-pcbsimtpf10 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für $Q = 10$.](platine_sim_vergleich\Q10\Tiefpass.png){#fig-pcbsimtpf10 fig-align="center" width=100%}
 
-23. Schaltung war jetzt bereit für ein Leiterplattendesign
-24. 3 Variante von PCB design mit Verbesserungen in jeder Transition
-25. PCB Design erwitert für 2 Schaltungmöglichkeiten
-26. Design Überprüfen lassen vom LaborING und dann die Platine bestellt
-27. Platine gefertigt, gemessen, Messwerte für den Vergleich mit Redpitaya aufgenommen
+Auch beim Tiefpass findet sich in der Simulation ein etwas ausgeprägteres Peak-Overshoot, während die PCB-Messung den Peak minimal verzögert wiedergibt. Die Abfallflanke ist auf beiden Kurven nahezu identisch.
+
+**Allgemeine Beobachtung:**  
+Die PCB-Messdaten folgen dem idealen Simulationsverlauf sehr eng, lediglich kleine Frequenzverschiebungen und glattere Flanken auf der Platine fallen auf. Die geringere Tiefe im Bandsperr-Einschnitt und der leicht vor- bzw. nachlaufende Resonanzpeak sind wahrscheinlich auf die endliche Anzahl von Messpunkten und minimale Layout-Parasitär­effekte zurückzuführen.  

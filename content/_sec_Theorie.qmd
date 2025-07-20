@@ -1,8 +1,6 @@
 # Theoretischer Hintergrund
 
 ## Grundlagen zu analogen Filtern
-@Adrian
-
 Zunächst haben wir uns mit dem Aufbau analoger Filter beschäftig, um genauer zu sein mit FIltern welche RLC Glieder haben. Das "R" steht für den Widerstand, das "L" steht für die Last und das "C" für den Kondensator.
 
 Jenachdem wie man die einzelnen Bestandteile anordnet, kann man Vier verschiedene Filter entwerfen, einen Hochpass, einen Tiefpass, einen Bandpass und einen Bandstop.
