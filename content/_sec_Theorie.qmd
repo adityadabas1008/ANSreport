@@ -1,5 +1,7 @@
 # Theoretischer Hintergrund
 
+Im folgenden Teil gehen wir auf die Theorie ein, auf Grundlagen welcher wir an dem Labor gearbeitet haben 
+
 ## Grundlagen zu analogen Filtern
 Zunächst haben wir uns mit dem Aufbau analoger Filter beschäftig, um genauer zu sein mit FIltern welche RLC Glieder haben. Das $R$ steht für den Widerstand, das $L$ steht für die Induktivität und das $C$ für den Kondensator.
 
@@ -17,6 +19,25 @@ Der Bandstopfilter ist das genaue Gegenteil vom Bandpassfilter und lässt jede F
  
 
 ### Übertragungsfunktionen und verschiedene Filtertypen {.unnumbered}
+
+Nachdem die Grundlegenden Eigenschafften der Filter bestimmt waren, haben wir uns noch um die Übertragungsfunktion und der RC Schaltung von dem Tiefpass- und HochpassFilter beschäftigt.
+
+![RC Schaltung von Hoch-und Tiefpassfilter.[@RCSchaltung]](images\Hochpass_Tiefpass_RCSchaltung.png){#fig-RCSchaltung fig-align="center" width=100%}
+
+
+Es ist zu sehen, dass der Hochpass- und Tiefpassfilter sich in der Anordnung unterscheiden, R und C werden miteinander ausgetauscht.
+Daraufhin haben wir die Übertragungsfunktionen der beiden Filter berechnet
+
+Dabei ist die folgende Übertragungsfunktion für den Hochpassfilter herausgekommen:
+$$
+H(s) = \frac{\frac{s}{s_0}}{1 + \frac{s}{s_0}}
+$$
+
+Und die folgende Übertragungsfunktion für den Tiefpass Filter:
+
+$$
+H(s) = \frac{1}{1 + \frac{s}{s0}}
+$$
 
 ## Anti Aliasing Filter
 
