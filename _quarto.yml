@@ -16,26 +16,28 @@ format:
     number-sections: true   
     toc: true               
     toc-depth: 3     
-
-#  pdf:
-#     documentclass: scrreprt
-# #    lof: true
-# #    lot: true
-#     toc: true
-#     toc-depth: 3    
-#     geometry:
-#       - top=30mm
-#       - left=20mm
-#       - heightrounded
-#     hyperrefoptions:
-#       - linktoc=all
-#     colorlinks: true
-#     linkcolor: "blue"
-#     biblio-style: ieee
-#     highlight-style: github
-#     mainfont: "Calibri"
-# #    keep-tex: true
-#     output-file: ans_bericht 
-#  epub:
-#    theme: flatly
-#    output-file: ans_bericht
+    pdf:
+      documentclass: scrreprt
+  #    lof: true
+  #    lot: true
+      toc: true
+      toc-depth: 3    
+      geometry:
+        - top=30mm
+        - left=20mm
+        - heightrounded
+      hyperrefoptions:
+        - linktoc=all
+      colorlinks: true
+      linkcolor: "blue"
+      biblio-style: ieee
+      highlight-style: github
+      mainfont: "Calibri"
+  #    keep-tex: true
+      output-file: ans_bericht 
+    epub:
+      theme: flatly
+      output-file: ans_bericht
+    pptx:
+      reference-doc: custom-reference.pptx
+      output-file: ans_bericht.pptx
