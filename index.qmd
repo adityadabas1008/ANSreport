@@ -38,6 +38,7 @@ abstract: |
 
 date: last-modified
 bibliography: references.bib
+csl: ieee-with-url.csl
 fig-numbering: true 
 ---
 

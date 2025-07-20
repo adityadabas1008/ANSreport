@@ -53,9 +53,7 @@ $$
 
 Hierbei werden die Koeffizienten $b_i$ und $a_i$ durch die konkrete Wahl der Widerstands- und Kondensatorwerte festgelegt. Die verschiedenen Filtertypen unterscheiden sich lediglich in den spezifischen Koeffizientenwerten, während die zugrunde liegende Schaltungsstruktur identisch bleibt. Beispielsweise resultiert ein reiner Bandpass bei $b_0 = b_2 = 0$, $b_1 \neq 0$, während bei $b_1 = 0$ und $b_0 = b_2 \neq 0$ eine Bandsperre realisiert wird.
 
-Ein wesentlicher Vorteil des Biquad-Konzepts liegt in seiner Modularität. Durch die serielle oder parallele Verschaltung mehrerer identischer Biquad-Stufen lassen sich problemlos Filter höherer Ordnung aufbauen, ohne dass die Komplexität jeder einzelnen Stufe zunimmt. Zudem ermöglicht die separate Kalibrierbarkeit jeder Stufe eine exakte Justierung von Gütefaktor und Grenzfrequenz, wodurch Fertigungstoleranzen gezielt kompensiert werden können. Aufgrund dieser Flexibilität und der vergleichsweise einfachen Implementierung haben sich Biquad-Filter als Standardlösung in vielen Bereichen etabliert, etwa in der Audio- und Messtechnik sowie in der industriellen Signalverarbeitung.
-
-[@FILTERS07]
+Ein wesentlicher Vorteil des Biquad-Konzepts liegt in seiner Modularität. Durch die serielle oder parallele Verschaltung mehrerer identischer Biquad-Stufen lassen sich problemlos Filter höherer Ordnung aufbauen, ohne dass die Komplexität jeder einzelnen Stufe zunimmt. Zudem ermöglicht die separate Kalibrierbarkeit jeder Stufe eine exakte Justierung von Gütefaktor und Grenzfrequenz, wodurch Fertigungstoleranzen gezielt kompensiert werden können. Aufgrund dieser Flexibilität und der vergleichsweise einfachen Implementierung haben sich Biquad-Filter als Standardlösung in vielen Bereichen etabliert, etwa in der Audio- und Messtechnik sowie in der industriellen Signalverarbeitung.[@FILTERS07]
 
 ## Gütefaktor Q und Einfluss
 
@@ -71,8 +69,7 @@ $$
 s_{1,2} \;=\; -\frac{\omega_{0}}{2Q} \;\pm\; j\,\omega_{0}\,\sqrt{\,1 - \frac{1}{4Q^{2}}\,}\;.
 $$
 
-Für den ideal „maximal flachen“ Butterworth-Fall wählt man $Q = 1/\sqrt{2} \approx 0{,}707$, wodurch kein Durchtritts-Peaking auftritt und die Flankensteilheit $-20\ \mathrm{dB/Dekade}$ beträgt (das heißt: Eine Verzehnfachung der Frequenz führt zu einem Pegelabfall von 20 dB). 
-[@lecture20]
+Für den ideal „maximal flachen“ Butterworth-Fall wählt man $Q = 1/\sqrt{2} \approx 0{,}707$, wodurch kein Durchtritts-Peaking auftritt und die Flankensteilheit $-20\ \mathrm{dB/Dekade}$ beträgt (das heißt: Eine Verzehnfachung der Frequenz führt zu einem Pegelabfall von 20 dB). [@lecture20]
 
 In der KHN-Biquad-Topologie wird der Gütefaktor jedes Teilpfads (Tiefpass, Bandpass, Hochpass, Bandsperre) direkt über das Verhältnis ausgewählter Widerstände eingestellt. Durch Variation dieser Widerstandsrelation lässt sich $Q$ unabhängig von der Eckfrequenz $\omega_0$ justieren – man gewinnt also Kontrolle über die Schärfe der Filtercharakteristik, ohne die Mittenfrequenz zu verändern. Ein niedriger $Q$-Wert führt zu einem breiten, sanft abfallenden Übergang, während ein hoher $Q$-Wert die Flanken steiler macht und bei Bandpass- oder Bandsperre-Ausgängen zusätzlich einen ausgeprägten Resonanzbuckel erzeugt.
 
