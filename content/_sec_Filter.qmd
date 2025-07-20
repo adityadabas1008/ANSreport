@@ -39,28 +39,32 @@ $$
 
 Das Minuszeichen veranschaulicht, dass die Ausgangsspannung eine entgegengesetzte Polarität zur Eingangsspannung aufweist. Diese Schaltungskonfiguration wird daher als invertierender Verstärker oder als Umkehrverstärker bezeichnet. [@reisch2007]
 
+---
+
 ### Der Addierer {.unnumbered}
 
-In der invertierenden Summierschaltung werden mehrere Eingangsspannungen $V_1, V_2, \dots, V_m$ jeweils über gleiche Widerstände $R$ an den invertierenden Eingang eines Operationsverstärkers geführt. Der nichtinvertierende Eingang liegt auf Masse, und der Rückkopplungswiderstand ist $R_f$:
+In der invertierenden Summierschaltung werden mehrere Eingangsspannungen $V_1, V_2, \dots, V_m$ jeweils über gleiche Widerstände $R$ an den invertierenden Eingang eines Operationsverstärkers geführt. Der nichtinvertierende Eingang liegt auf Masse, und der Rückkopplungswiderstand ist $R'$ wie im @fig-addopamp dargestellt ist.
+
+![Summierverstärker [@reisch2007]](images/addopamp.png){#fig-addopamp fig-align="left" width=50%}
 
 **Herleitung der Übertragungsfunktion**  
 1. Knotenregel am invertierenden Eingang (Potenzial $V_- = 0$):
 
 $$
-\sum_{i=1}^{m} \frac{V_i - V_-}{R} + \frac{V_{\text{out}} - V_-}{R_f} = 0
+\sum_{i=1}^{m} \frac{V_i - V_-}{R} + \frac{V_{\text{out}} - V_-}{R'} = 0
 \quad \Longrightarrow \quad
-\sum_{i=1}^{m} \frac{V_i}{R} + \frac{V_{\text{out}}}{R_f} = 0.
+\sum_{i=1}^{m} \frac{V_i}{R} + \frac{V_{\text{out}}}{R'} = 0.
 $$
 
 2. Auflösen nach $\frac{V_{\text{out}}}{V_i}$:
 
 $$
-\frac{V_{\text{out}}}{R_f} = - \sum_{i=1}^{m} \frac{V_i}{R}
+\frac{V_{\text{out}}}{R'} = - \sum_{i=1}^{m} \frac{V_i}{R}
 \quad \Longrightarrow \quad
-V_{\text{out}} = - R_f \sum_{i=1}^{m} \frac{V_i}{R}.
+V_{\text{out}} = - R' \sum_{i=1}^{m} \frac{V_i}{R}.
 $$
 
-3. Für gleiche Widerstände ($R_f = R$) vereinfacht sich das zu:
+3. Für gleiche Widerstände ($R' = R$) vereinfacht sich das zu:
 
 $$
 V_{\text{out}} = - \bigl(V_1 + V_2 + \dots + V_m \bigr).
@@ -68,6 +72,66 @@ $$
 
 Damit addiert der invertierende OP-Amp die Eingangsspannungen und invertiert das Vorzeichen.
 
+---
+
+### Der Invertierende Integrator {.unnumbered}
+
+@fig-intopamp zeigt den klassischen invertierenden Integrator:  
+- Eingangsspannung $V_1$ über Widerstand $R$ auf den invertierenden Eingang des OP-Amps.  
+- Rückkopplung über Kondensator $C$ zwischen Ausgang $V_2$ und invertierendem Eingang.  
+- Nichtinvertierender Eingang liegt auf Masse.
+
+![Der Integrierer [@reisch2007]](images/intopamp.png){#fig-intopamp fig-align="left" width=50%}
+
+#### Zeitbereich {.unnumbered}
+
+Mit der Annahme idealer OP-Amp-Eingänge ($V_{-} = V_{+} = 0$, $I_{-} = 0$) gilt:  
+1. Strom durch $R$:  
+   $$
+   i_1 = \frac{v_1}{R}
+   $$
+2. Strom durch $C$:  
+   $$
+   i_2 = C \frac{dv_2}{dt}.
+   $$
+3. Knotenregel am invertierenden Eingang ($i_1 + i_2 = 0$):  
+   $$
+   \frac{v_1}{R} + C \frac{dv_2}{dt} = 0
+   \quad\Longrightarrow\quad
+   \frac{dv_2}{dt} = -\frac{1}{R C} v_1.
+   $$
+4. Durch Integrieren folgt:  
+   $$
+   v_2(t) = v_2(0) - \frac{1}{R C} \int_0^t v_1(t')\, dt'.
+   $$
+
+#### Laplace-Bereich {.unnumbered}
+
+Im $s$-Bereich ersetzt man $\frac{d}{dt}$ durch $s$ und Anfangsbedingungen werden für die Übertragungsfunktion vernachlässigt. Dann gilt:  
+1. Impedanzen:  
+   $$
+   Z_R = R, \quad Z_C = \frac{1}{s C}.
+   $$
+2. Knotenregel am invertierenden Eingang ($V_{-} = 0$):  
+   $$
+   \frac{V_1(s) - 0}{R} + \frac{V_2(s) - 0}{1/(s C)} = 0
+   \quad\Longrightarrow\quad
+   \frac{V_1(s)}{R} + s C V_2(s) = 0.
+   $$
+3. Nach $\frac{V_2(s)}{V_1(s)}$ auflösen:  
+   $$
+   s C V_2(s) = - \frac{V_1(s)}{R}
+   \quad\Longrightarrow\quad
+   \frac{V_2(s)}{V_1(s)} = - \frac{1}{s R C}.
+   $$
+
+Somit lautet die **Übertragungsfunktion des invertierenden Integrators**:
+
+$$
+H_{\mathrm{int}}(s) = \frac{V_2(s)}{V_1(s)} = - \frac{1}{s R C}.
+$$
+
+---
 
 ## Universeller aktiver Filter 2. Ordnung (Biquad)
 

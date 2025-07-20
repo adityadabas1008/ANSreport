@@ -214,6 +214,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#der-invertierende-verstärker" id="toc-der-invertierende-verstärker" class="nav-link" data-scroll-target="#der-invertierende-verstärker">Der invertierende Verstärker</a></li>
   <li><a href="#der-addierer" id="toc-der-addierer" class="nav-link" data-scroll-target="#der-addierer">Der Addierer</a></li>
+  <li><a href="#der-invertierende-integrator" id="toc-der-invertierende-integrator" class="nav-link" data-scroll-target="#der-invertierende-integrator">Der Invertierende Integrator</a></li>
   <li><a href="#universeller-aktiver-filter-2.-ordnung-biquad" id="toc-universeller-aktiver-filter-2.-ordnung-biquad" class="nav-link" data-scroll-target="#universeller-aktiver-filter-2.-ordnung-biquad"><span class="header-section-number">3.1</span> Universeller aktiver Filter 2. Ordnung (Biquad)</a>
   <ul class="collapse">
   <li><a href="#auswahl-und-berechnung-der-bauteile" id="toc-auswahl-und-berechnung-der-bauteile" class="nav-link" data-scroll-target="#auswahl-und-berechnung-der-bauteile">Auswahl und Berechnung der Bauteile</a></li>
@@ -315,7 +316,21 @@ Abbildung&nbsp;1: Fertige Leiterplatte mit universellem Biquad-Filterentwurf.
 <h1 data-number="2"><span class="header-section-number">2</span> Theoretischer Hintergrund</h1>
 <section id="grundlagen-zu-analogen-filtern" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="grundlagen-zu-analogen-filtern"><span class="header-section-number">2.1</span> Grundlagen zu analogen Filtern</h2>
+<<<<<<< Updated upstream
 <p><span class="citation" data-cites="Adrian">(<a href="#ref-Adrian" role="doc-biblioref"><strong>Adrian?</strong></a>)</span> 1. Filter entwurf mit RLC Glied, TP, HP, BP –nicht berichten</p>
+=======
+<p><span class="citation" data-cites="Adrian"><a href="#ref-Adrian" role="doc-biblioref"><strong>Adrian?</strong></a></span></p>
+<p>Zunächst haben wir uns mit dem Aufbau analoger Filter beschäftig, um genauer zu sein mit FIltern welche RLC Glieder haben. Das “R” steht für den Widerstand, das “L” steht für die Last und das “C” für den Kondensator.</p>
+<p>Jenachdem wie man die einzelnen Bestandteile anordnet, kann man Vier verschiedene Filter entwerfen, einen Hochpass, einen Tiefpass, einen Bandpass und einen Bandstop.</p>
+<p>Ein wichtiger Faktor für diese Filter ist die Kreisfrequenz. Diese Hilft einem dabei den Frequenzbereich, welcher für einen von Interesse ist, zu ermitteln, da an der Kreisfrequenz der Filter eine Änderung, je nach Filter, durchläuft.</p>
+<p>Bei einem Hochpassfilter werden jegliche Frequenzen vor der Kreisfrequenz gefilter und jegliche Frequenzen nach der Kreisfrequenz durchgelassen.</p>
+<p>Der Tiefpassfilter ist das genaue Gegenteil des Hochpassfilters, jegliche Frequenzen vor der Kreisfrequenz werden durchgelasse und jegliche danach gefilter.</p>
+<p>Der Bandpassfilter filtert vor und nach der Kreisfrequenz jegliche Frequenzen und lässt die Kreisfrequenz passieren.</p>
+<p>Der Bandstopfilter ist das genaue Gegenteil vom Bandpassfilter und lässt jede Frequenz passieren bis auf die Kreisfrequenz.</p>
+<ol type="1">
+<li>Filter entwurf mit RLC Glied, TP, HP, BP –nicht berichten</li>
+</ol>
+>>>>>>> Stashed changes
 <section id="übertragungsfunktionen-und-verschiedene-filtertypen" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="übertragungsfunktionen-und-verschiedene-filtertypen">Übertragungsfunktionen und verschiedene Filtertypen</h3>
 </section>
@@ -393,32 +408,103 @@ Abbildung&nbsp;2: Invertierender Verstärker <span class="citation" data-cites="
 H_{\text{inv}}(s) = \frac{V_{2}(s)}{V_{1}(s)} \approx -\frac{R_{2}}{R_{1}}.
 \]</span></p>
 <p>Das Minuszeichen veranschaulicht, dass die Ausgangsspannung eine entgegengesetzte Polarität zur Eingangsspannung aufweist. Diese Schaltungskonfiguration wird daher als invertierender Verstärker oder als Umkehrverstärker bezeichnet. <span class="citation" data-cites="reisch2007"><a href="#ref-reisch2007" role="doc-biblioref">[3]</a></span></p>
+<hr>
 </section>
 <section id="der-addierer" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="der-addierer">Der Addierer</h3>
-<p>In der invertierenden Summierschaltung werden mehrere Eingangsspannungen <span class="math inline">\(V_1, V_2, \dots, V_m\)</span> jeweils über gleiche Widerstände <span class="math inline">\(R\)</span> an den invertierenden Eingang eines Operationsverstärkers geführt. Der nichtinvertierende Eingang liegt auf Masse, und der Rückkopplungswiderstand ist <span class="math inline">\(R_f\)</span>:</p>
+<p>In der invertierenden Summierschaltung werden mehrere Eingangsspannungen <span class="math inline">\(V_1, V_2, \dots, V_m\)</span> jeweils über gleiche Widerstände <span class="math inline">\(R\)</span> an den invertierenden Eingang eines Operationsverstärkers geführt. Der nichtinvertierende Eingang liegt auf Masse, und der Rückkopplungswiderstand ist <span class="math inline">\(R'\)</span> wie im <a href="#fig-addopamp" class="quarto-xref">Abbildung&nbsp;3</a> dargestellt ist.</p>
+<div id="fig-addopamp" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-addopamp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/addopamp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Abbildung&nbsp;3: Summierverstärker [@reisch2007]"><img src="images/addopamp.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:50.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-addopamp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Summierverstärker <span class="citation" data-cites="reisch2007"><a href="#ref-reisch2007" role="doc-biblioref">[3]</a></span>
+</figcaption>
+</figure>
+</div>
 <p><strong>Herleitung der Übertragungsfunktion</strong><br>
 1. Knotenregel am invertierenden Eingang (Potenzial <span class="math inline">\(V_- = 0\)</span>):</p>
 <p><span class="math display">\[
-\sum_{i=1}^{m} \frac{V_i - V_-}{R} + \frac{V_{\text{out}} - V_-}{R_f} = 0
+\sum_{i=1}^{m} \frac{V_i - V_-}{R} + \frac{V_{\text{out}} - V_-}{R'} = 0
 \quad \Longrightarrow \quad
-\sum_{i=1}^{m} \frac{V_i}{R} + \frac{V_{\text{out}}}{R_f} = 0.
+\sum_{i=1}^{m} \frac{V_i}{R} + \frac{V_{\text{out}}}{R'} = 0.
 \]</span></p>
 <ol start="2" type="1">
 <li>Auflösen nach <span class="math inline">\(\frac{V_{\text{out}}}{V_i}\)</span>:</li>
 </ol>
 <p><span class="math display">\[
-\frac{V_{\text{out}}}{R_f} = - \sum_{i=1}^{m} \frac{V_i}{R}
+\frac{V_{\text{out}}}{R'} = - \sum_{i=1}^{m} \frac{V_i}{R}
 \quad \Longrightarrow \quad
-V_{\text{out}} = - R_f \sum_{i=1}^{m} \frac{V_i}{R}.
+V_{\text{out}} = - R' \sum_{i=1}^{m} \frac{V_i}{R}.
 \]</span></p>
 <ol start="3" type="1">
-<li>Für gleiche Widerstände (<span class="math inline">\(R_f = R\)</span>) vereinfacht sich das zu:</li>
+<li>Für gleiche Widerstände (<span class="math inline">\(R' = R\)</span>) vereinfacht sich das zu:</li>
 </ol>
 <p><span class="math display">\[
 V_{\text{out}} = - \bigl(V_1 + V_2 + \dots + V_m \bigr).
 \]</span></p>
 <p>Damit addiert der invertierende OP-Amp die Eingangsspannungen und invertiert das Vorzeichen.</p>
+<hr>
+</section>
+<section id="der-invertierende-integrator" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="der-invertierende-integrator">Der Invertierende Integrator</h3>
+<p><a href="#fig-intopamp" class="quarto-xref">Abbildung&nbsp;4</a> zeigt den klassischen invertierenden Integrator:<br>
+- Eingangsspannung <span class="math inline">\(V_1\)</span> über Widerstand <span class="math inline">\(R\)</span> auf den invertierenden Eingang des OP-Amps.<br>
+- Rückkopplung über Kondensator <span class="math inline">\(C\)</span> zwischen Ausgang <span class="math inline">\(V_2\)</span> und invertierendem Eingang.<br>
+- Nichtinvertierender Eingang liegt auf Masse.</p>
+<div id="fig-intopamp" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-intopamp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/intopamp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Abbildung&nbsp;4: Der Integrierer [@reisch2007]"><img src="images/intopamp.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:50.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-intopamp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Der Integrierer <span class="citation" data-cites="reisch2007"><a href="#ref-reisch2007" role="doc-biblioref">[3]</a></span>
+</figcaption>
+</figure>
+</div>
+<section id="zeitbereich" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="zeitbereich">Zeitbereich</h4>
+<p>Mit der Annahme idealer OP-Amp-Eingänge (<span class="math inline">\(V_{-} = V_{+} = 0\)</span>, <span class="math inline">\(I_{-} = 0\)</span>) gilt:<br>
+1. Strom durch <span class="math inline">\(R\)</span>:<br>
+<span class="math display">\[
+   i_1 = \frac{v_1}{R}
+   \]</span> 2. Strom durch <span class="math inline">\(C\)</span>:<br>
+<span class="math display">\[
+   i_2 = C \frac{dv_2}{dt}.
+   \]</span> 3. Knotenregel am invertierenden Eingang (<span class="math inline">\(i_1 + i_2 = 0\)</span>):<br>
+<span class="math display">\[
+   \frac{v_1}{R} + C \frac{dv_2}{dt} = 0
+   \quad\Longrightarrow\quad
+   \frac{dv_2}{dt} = -\frac{1}{R C} v_1.
+   \]</span> 4. Durch Integrieren folgt:<br>
+<span class="math display">\[
+   v_2(t) = v_2(0) - \frac{1}{R C} \int_0^t v_1(t')\, dt'.
+   \]</span></p>
+</section>
+<section id="laplace-bereich" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="laplace-bereich">Laplace-Bereich</h4>
+<p>Im <span class="math inline">\(s\)</span>-Bereich ersetzt man <span class="math inline">\(\frac{d}{dt}\)</span> durch <span class="math inline">\(s\)</span> und Anfangsbedingungen werden für die Übertragungsfunktion vernachlässigt. Dann gilt:<br>
+1. Impedanzen:<br>
+<span class="math display">\[
+   Z_R = R, \quad Z_C = \frac{1}{s C}.
+   \]</span> 2. Knotenregel am invertierenden Eingang (<span class="math inline">\(V_{-} = 0\)</span>):<br>
+<span class="math display">\[
+   \frac{V_1(s) - 0}{R} + \frac{V_2(s) - 0}{1/(s C)} = 0
+   \quad\Longrightarrow\quad
+   \frac{V_1(s)}{R} + s C V_2(s) = 0.
+   \]</span> 3. Nach <span class="math inline">\(\frac{V_2(s)}{V_1(s)}\)</span> auflösen:<br>
+<span class="math display">\[
+   s C V_2(s) = - \frac{V_1(s)}{R}
+   \quad\Longrightarrow\quad
+   \frac{V_2(s)}{V_1(s)} = - \frac{1}{s R C}.
+   \]</span></p>
+<p>Somit lautet die <strong>Übertragungsfunktion des invertierenden Integrators</strong>:</p>
+<p><span class="math display">\[
+H_{\mathrm{int}}(s) = \frac{V_2(s)}{V_1(s)} = - \frac{1}{s R C}.
+\]</span></p>
+<hr>
+</section>
 </section>
 <section id="universeller-aktiver-filter-2.-ordnung-biquad" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="universeller-aktiver-filter-2.-ordnung-biquad"><span class="header-section-number">3.1</span> Universeller aktiver Filter 2. Ordnung (Biquad)</h2>
@@ -427,16 +513,16 @@ V_{\text{out}} = - \bigl(V_1 + V_2 + \dots + V_m \bigr).
 <div id="fig-biquadfilter" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-biquadfilter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/biquad_aslk_exp4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Abbildung&nbsp;3: Zweiter Ordnung Universeller Aktiver Filter."><img src="images/biquad_aslk_exp4.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></a>
+<a href="images/biquad_aslk_exp4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Abbildung&nbsp;5: Zweiter Ordnung Universeller Aktiver Filter."><img src="images/biquad_aslk_exp4.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-biquadfilter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Zweiter Ordnung Universeller Aktiver Filter.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
+Abbildung&nbsp;5: Zweiter Ordnung Universeller Aktiver Filter.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
 </figcaption>
 </figure>
 </div>
 <section id="auswahl-und-berechnung-der-bauteile" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="auswahl-und-berechnung-der-bauteile">Auswahl und Berechnung der Bauteile</h3>
-<p>Ein wichtiger Aspekt der Realisierung der Schaltung, wie wir sie in <a href="#fig-biquadfilter" class="quarto-xref">Abbildung&nbsp;3</a> gesehen haben, liegt in der gezielten Auswahl der <strong>Widerstände (R)</strong> und <strong>Kondensatoren (C)</strong>. Die genaue Dimensionierung dieser Bauteile bestimmt die wesentlichen Filtereigenschaften wie <strong>Grenzfrequenz</strong>, <strong>Gütefaktor</strong> und <strong>Verstärkung</strong>.</p>
+<p>Ein wichtiger Aspekt der Realisierung der Schaltung, wie wir sie in <a href="#fig-biquadfilter" class="quarto-xref">Abbildung&nbsp;5</a> gesehen haben, liegt in der gezielten Auswahl der <strong>Widerstände (R)</strong> und <strong>Kondensatoren (C)</strong>. Die genaue Dimensionierung dieser Bauteile bestimmt die wesentlichen Filtereigenschaften wie <strong>Grenzfrequenz</strong>, <strong>Gütefaktor</strong> und <strong>Verstärkung</strong>.</p>
 <p>Diese Schaltung bildet die Grundlage für die nachfolgenden Messungen und Analysen im Projekt. Verschiedene Filtertypen können durch Anpassung der Einspeisepunkte und Bauteilwerte realisiert werden.</p>
 <p>Die Auswahl der Bauteile für den Biquad-Filter erfolgte nach Vorgabe von zwei unterschiedlichen Kreisfrequenzen gemäß dem ASLK Pro Experiment 4:</p>
 <ul>
@@ -455,14 +541,14 @@ Abbildung&nbsp;3: Zweiter Ordnung Universeller Aktiver Filter.<a href="#fn1" cla
 <div id="fig-gütewiderstand" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-gütewiderstand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/Güte_Faktor.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Abbildung&nbsp;4: Gütefaktor und zuständige Widerstand."><img src="images/Güte_Faktor.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></a>
+<a href="images/Güte_Faktor.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Abbildung&nbsp;6: Gütefaktor und zuständige Widerstand."><img src="images/Güte_Faktor.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gütewiderstand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: Gütefaktor und zuständige Widerstand.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
+Abbildung&nbsp;6: Gütefaktor und zuständige Widerstand.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
 </figcaption>
 </figure>
 </div>
-<p>Wie in Abbildung <a href="#fig-gütewiderstand" class="quarto-xref">Abbildung&nbsp;4</a> dargestellt, wird der <strong>Gütefaktor (<span class="math inline">\(Q\)</span>)</strong> des Filters maßgeblich durch den Widerstand im oberen Zweig der Schaltung (beschriftet mit “<span class="math inline">\(Q \cdot R\)</span>”) bestimmt. Dieser Widerstand legt, zusammen mit den verwendeten Kondensatoren, die Selektivität und Bandbreite des Filters fest. Um einen gewünschten Gütefaktor einzustellen, wird entsprechend der Wert dieses Widerstands angepasst.</p>
+<p>Wie in Abbildung <a href="#fig-gütewiderstand" class="quarto-xref">Abbildung&nbsp;6</a> dargestellt, wird der <strong>Gütefaktor (<span class="math inline">\(Q\)</span>)</strong> des Filters maßgeblich durch den Widerstand im oberen Zweig der Schaltung (beschriftet mit “<span class="math inline">\(Q \cdot R\)</span>”) bestimmt. Dieser Widerstand legt, zusammen mit den verwendeten Kondensatoren, die Selektivität und Bandbreite des Filters fest. Um einen gewünschten Gütefaktor einzustellen, wird entsprechend der Wert dieses Widerstands angepasst.</p>
 <p>Es ist zu beachten, dass bei einer Änderung des Gütefaktors in der Praxis häufig auch der Wert der Kondensatoren (<span class="math inline">\(C\)</span>) mit angepasst werden muss. Nur so bleibt das Zusammenspiel von Mittenfrequenz (<span class="math inline">\(\omega_0 = 1/RC\)</span>) und Gütefaktor (<span class="math inline">\(Q\)</span>) für die gewünschte Filtercharakteristik erhalten.</p>
 <p>Der sogenannte Gütewiderstand ist somit ein zentrales Element für die Feinanpassung der Filtereigenschaften bei universellen aktiven Filterschaltungen wie dem hier gezeigten Biquad-Filter.</p>
 <p>Die in diesem Abschnitt verwendeten Bauteilwerte sind in der folgenden Tabelle übersichtlich zusammengefasst:</p>
@@ -515,14 +601,14 @@ Tabelle&nbsp;1: Dimensionierung der Bauteile
 <section id="simulation-und-aufbau" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="simulation-und-aufbau"><span class="header-section-number">3.2</span> Simulation und Aufbau</h2>
 <p>Nachdem die Bauteilwerte für die gewünschten Filtereigenschaften festgelegt waren, wie in <a href="#tbl-dimensions" class="quarto-xref">Tabelle&nbsp;1</a> zu sehen, wurde die Schaltung in <strong>KiCad 9.0</strong> aufgebaut und simuliert.</p>
-<p>Unser Ziel war es, ein Referenzmodell für das spätere praktische Verhalten des Filters zu erhalten. Mit Hilfe der Bode-Plot-Simulationen konnten die theoretisch zu erwartenden Amplituden- und Phasengänge überprüft werden. Der Filterentwurf in KiCad kann wie in Abbildung <a href="#fig-Kicad" class="quarto-xref">Abbildung&nbsp;5</a> dargestellt aufgebaut werden:</p>
+<p>Unser Ziel war es, ein Referenzmodell für das spätere praktische Verhalten des Filters zu erhalten. Mit Hilfe der Bode-Plot-Simulationen konnten die theoretisch zu erwartenden Amplituden- und Phasengänge überprüft werden. Der Filterentwurf in KiCad kann wie in Abbildung <a href="#fig-Kicad" class="quarto-xref">Abbildung&nbsp;7</a> dargestellt aufgebaut werden:</p>
 <div id="fig-Kicad" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Kicad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/Kicad_Schaltung_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Abbildung&nbsp;5: Simulationsaufbau für den aktiven Biquad-Filter in KiCad."><img src="images/Kicad_Schaltung_2.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%"></a>
+<a href="images/Kicad_Schaltung_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Abbildung&nbsp;7: Simulationsaufbau für den aktiven Biquad-Filter in KiCad."><img src="images/Kicad_Schaltung_2.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Kicad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5: Simulationsaufbau für den aktiven Biquad-Filter in KiCad.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>
+Abbildung&nbsp;7: Simulationsaufbau für den aktiven Biquad-Filter in KiCad.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>
 </figcaption>
 </figure>
 </div>
@@ -534,10 +620,14 @@ Abbildung&nbsp;5: Simulationsaufbau für den aktiven Biquad-Filter in KiCad.<a h
 <div id="fig-bodeQ1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bodeQ1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<<<<<<< Updated upstream
 <a href="simulation\Q1_Plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Abbildung&nbsp;6: Bode-Plot der simulierten Biquad-Schaltung für Q = 1."><img src="simulation\Q1_Plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+=======
+<a href="images/bodeplot_Q1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Abbildung&nbsp;8: Bode-Plot der simulierten Biquad-Schaltung für Q = 1."><img src="images/bodeplot_Q1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+>>>>>>> Stashed changes
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bodeQ1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6: Bode-Plot der simulierten Biquad-Schaltung für <span class="math inline">\(Q = 1\)</span>.
+Abbildung&nbsp;8: Bode-Plot der simulierten Biquad-Schaltung für <span class="math inline">\(Q = 1\)</span>.
 </figcaption>
 </figure>
 </div>
@@ -547,22 +637,26 @@ Abbildung&nbsp;6: Bode-Plot der simulierten Biquad-Schaltung für <span class="m
 <div id="fig-bodeQ10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bodeQ10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<<<<<<< Updated upstream
 <a href="simulation\Q10_Plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Abbildung&nbsp;7: Bode-Plot der simulierten Biquad-Schaltung für Q = 10."><img src="simulation\Q10_Plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+=======
+<a href="images/bodeplot_Q10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Abbildung&nbsp;9: Bode-Plot der simulierten Biquad-Schaltung für Q = 10."><img src="images/bodeplot_Q10.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+>>>>>>> Stashed changes
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bodeQ10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;7: Bode-Plot der simulierten Biquad-Schaltung für <span class="math inline">\(Q = 10\)</span>.
+Abbildung&nbsp;9: Bode-Plot der simulierten Biquad-Schaltung für <span class="math inline">\(Q = 10\)</span>.
 </figcaption>
 </figure>
 </div>
-<p>Wie in den Abbildungen <a href="#fig-bodeQ1" class="quarto-xref">Abbildung&nbsp;6</a> und <a href="#fig-bodeQ10" class="quarto-xref">Abbildung&nbsp;7</a> zu erkennen ist, stimmen die simulierten Amplituden- und Phasengänge gut mit den theoretisch erwarteten Kurven überein. Die Filter zeigen die charakteristischen Eigenschaften entsprechend der gewählten Bauteilwerte und Gütefaktoren.</p>
+<p>Wie in den Abbildungen <a href="#fig-bodeQ1" class="quarto-xref">Abbildung&nbsp;8</a> und <a href="#fig-bodeQ10" class="quarto-xref">Abbildung&nbsp;9</a> zu erkennen ist, stimmen die simulierten Amplituden- und Phasengänge gut mit den theoretisch erwarteten Kurven überein. Die Filter zeigen die charakteristischen Eigenschaften entsprechend der gewählten Bauteilwerte und Gütefaktoren.</p>
 <p>Um einen besseren Vergleich zu ermöglichen, sind in den folgenden Abbildungen die theoretischen Amplituden- und Phasengänge dargestellt. Diese Kurven wurden dem ASLK Pro Manual entnommen und dienen als Referenz, um die Übereinstimmung zwischen Simulation und Theorie zu veranschaulichen.</p>
 <div id="fig-bodetheori" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bodetheori-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/theorie_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Abbildung&nbsp;8: Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual "><img src="images/theorie_plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="images/theorie_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Abbildung&nbsp;10: Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual "><img src="images/theorie_plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bodetheori-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;8: Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>
+Abbildung&nbsp;10: Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>
 </figcaption>
 </figure>
 </div>
@@ -577,10 +671,10 @@ Abbildung&nbsp;8: Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Man
 <div id="fig-Realaufbau" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Realaufbau-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/Realaufbau.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Abbildung&nbsp;9: Aufbau auf dem ASLK PRO Board"><img src="images/Realaufbau.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="images/Realaufbau.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Abbildung&nbsp;11: Aufbau auf dem ASLK PRO Board"><img src="images/Realaufbau.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Realaufbau-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;9: Aufbau auf dem ASLK PRO Board
+Abbildung&nbsp;11: Aufbau auf dem ASLK PRO Board
 </figcaption>
 </figure>
 </div>
@@ -604,10 +698,10 @@ Um im Rahmen dieses Experiments einen Tiefpass dritter Ordnung zu realisieren, w
 <div id="fig-bw3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bw3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/butterworth.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Abbildung&nbsp;10: Butterworth Filter 3. Ordnung"><img src="images/butterworth.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:70.0%"></a>
+<a href="images/butterworth.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Abbildung&nbsp;12: Butterworth Filter 3. Ordnung"><img src="images/butterworth.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:70.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bw3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;10: Butterworth Filter 3. Ordnung
+Abbildung&nbsp;12: Butterworth Filter 3. Ordnung
 </figcaption>
 </figure>
 </div>
@@ -699,10 +793,17 @@ H_{\mathrm{BW3}}(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)} = - \frac{H
 <div id="fig-bpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<<<<<<< Updated upstream
 <a href="Mess_Sim_Vergleich\Q1\Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Abbildung&nbsp;11: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;11: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für <span class="math inline">\(Q = 1\)</span>.
+=======
+<a href="Mess_Sim_Vergleich\Q1\Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Abbildung&nbsp;13: Bode-Plot Vergleich der simulierten- und der auf dem Board Bandpassfilter für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13: Bode-Plot Vergleich der simulierten- und der auf dem Board Bandpassfilter für <span class="math inline">\(Q = 1\)</span>.
+>>>>>>> Stashed changes
 </figcaption>
 </figure>
 </div>
@@ -712,10 +813,17 @@ Abbildung&nbsp;11: Bode-Plot Vergleich des simulierten- und des auf dem Board Ba
 <div id="fig-bsf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bsf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<<<<<<< Updated upstream
 <a href="Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Abbildung&nbsp;12: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bsf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für <span class="math inline">\(Q = 1\)</span>.
+=======
+<a href="Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Abbildung&nbsp;14: Bode-Plot Vergleich der simulierten- und der auf dem Board Bandstopfilter für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bsf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;14: Bode-Plot Vergleich der simulierten- und der auf dem Board Bandstopfilter für <span class="math inline">\(Q = 1\)</span>.
+>>>>>>> Stashed changes
 </figcaption>
 </figure>
 </div>
@@ -725,10 +833,17 @@ Abbildung&nbsp;12: Bode-Plot Vergleich des simulierten- und des auf dem Board Ba
 <div id="fig-hpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<<<<<<< Updated upstream
 <a href="Mess_Sim_Vergleich\Q1\Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Abbildung&nbsp;13: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für <span class="math inline">\(Q = 1\)</span>.
+=======
+<a href="Mess_Sim_Vergleich\Q1\Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Abbildung&nbsp;15: Bode-Plot Vergleich der simulierten- und der auf dem Board Hochpassfilter für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;15: Bode-Plot Vergleich der simulierten- und der auf dem Board Hochpassfilter für <span class="math inline">\(Q = 1\)</span>.
+>>>>>>> Stashed changes
 </figcaption>
 </figure>
 </div>
@@ -738,6 +853,7 @@ Abbildung&nbsp;13: Bode-Plot Vergleich des simulierten- und des auf dem Board Ho
 <div id="fig-tpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<<<<<<< Updated upstream
 <a href="Mess_Sim_Vergleich\Q1\Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Abbildung&nbsp;14: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -797,6 +913,12 @@ Abbildung&nbsp;16: Bode-Plot Vergleich des simulierten- und des auf dem Board Ho
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;17: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für <span class="math inline">\(Q = 10\)</span>.
+=======
+<a href="Mess_Sim_Vergleich\Q1\Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Abbildung&nbsp;16: Bode-Plot Vergleich der simulierten- und der auf dem Board Tiefpassfilter für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;16: Bode-Plot Vergleich der simulierten- und der auf dem Board Tiefpassfilter für <span class="math inline">\(Q = 1\)</span>.
+>>>>>>> Stashed changes
 </figcaption>
 </figure>
 </div>
