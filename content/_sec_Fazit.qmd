@@ -1,5 +1,5 @@
 # Fazit und Ausblick
-Hier schreiben wir Fazit von dem Experiment 
+
 
 Wenn wir nun noch einmal einen Blick darauf werfen, was wir im Verlauf dieses Labor ereicht haben, können wir behaupten, dass dieses ein Erfolg war.
 Wir konnten das Wissen, welches wir uns in vorherigen Semestern angeeignet haben, sinnvoll nutzen, um unser eigenes Platinen Design zu erstellen und haben somit unser Ziel erreicht.
@@ -12,6 +12,4 @@ Ebenso funktioniert der von uns erstellte Butterworth Filter. Die Fehler die wir
 Das wissen was wir uns in diesem Labor angeeignet haben, wird uns auch in Zukunft helfen, wenn wir auf ähnliche Probleme stoßen.
 
 
-Was ist rausgekommen?
-Was lief gut, wo gab’s Schwierigkeiten?
-Was könnte man als Nächstes machen?
+
