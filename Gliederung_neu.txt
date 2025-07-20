@@ -25,10 +25,10 @@ Probleme und wie wir sie gelöst haben
 Dokumentation der Änderungen im Aufbau
 
 # Messungen und Auswertung
-Messdaten Biquad-Filters
+Messdaten Biquad-Filters                 /////////////////////////////////////////erledigt///////////////////////////Mohamad
 Messdaten Butterworth-Filter
 Analyse: Übertragungsfunktionen, Dämpfung, Einfluss von Q
-Abgleich Simulation und Praxis
+Abgleich Simulation und Praxis          /////////////////////////////////////////erledigt///////////////////////////Mohamad
 Diskussion der Ergebnisse
 
 # Leiterplatten-Entwurf (PCB)
