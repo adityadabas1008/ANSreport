@@ -213,7 +213,10 @@ Wie in den Abbildungen @fig-bodeQ1 und @fig-bodeQ10 zu erkennen ist, stimmen die
 
 Um einen besseren Vergleich zu ermöglichen, sind in den folgenden Abbildungen die theoretischen Amplituden- und Phasengänge dargestellt. Diese Kurven wurden dem ASLK Pro Manual entnommen und dienen als Referenz, um die Übereinstimmung zwischen Simulation und Theorie zu veranschaulichen.
 
-![Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual [@aslk] ](images/theorie_plot.png){#fig-bodetheori fig-align="center" width=100%}
+![Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual [^1] ](images/theorie_plot.png){#fig-bodetheori fig-align="center" width=100%}
+
+
+@Adrian
 
 ### Aufbau auf dem ASLK PRO Board {.unnumbered}
 Aufbau von der Schaltung auf ASLK Board mit jumper Wires
