@@ -2,14 +2,9 @@
 
 ### Steckbrett {.unnumbered}
 
-------------------------Zu bearbeiten---------------------------
+Wie häufig bei praktischen Versuchen traten auch hier zunächst unerwartete Probleme auf. Die Messergebnisse des ersten Steckbrett-Aufbaus wichen deutlich von den Simulationen ab. Trotz sorgfältiger Überprüfung der Schaltung – auch mit Unterstützung des Laboringenieurs – ließ sich kein offensichtlicher Fehler finden.
 
-Wie zu erwarten, hat bei uns nicht alles von begin an funktioniert. Wir haben Fehler gemacht und generelle Probleme gehabt, welche wir alle lösen konnten.
-Zu begin stimmten die Messungen des Steckbrettes nicht mit unseren simulierten Ergebnissen überein. Nach überprüfung der Schaltung, ist uns auch mit hilfe des Laboringenieurs, kein Fehler aufgefallen.
-Nachdem wir davon ausgehen konnten, dass die Schaltung funktionieren sollte, haben wir den Entschluss gefasst, die Schaltung auf einem anderen Steckbrett aufzubauen.
-Um weitere Probleme zu vermeiden, haben wir bei dem zweiten Aufbau auf Kabelverlängerungen verzichtet, um jegliche Chanche auf Abweichung zu verringern.
-Nachdem wir die Schaltung auf dem neuen Steckbrett aufgebaut haben, stimmten die Messdaten des Steckbrettes mit unserer Simulation überein.
-Daraus können wir schließen, dass das Steckbrett fehlerhaft war.
+Um mögliche Fehlerquellen auszuschließen, wurde die Schaltung anschließend auf einem neuen Steckbrett ohne zusätzliche Kabelverlängerungen erneut aufgebaut. Nach diesem Neuaufbau stimmten die Messergebnisse mit den Simulationen überein. Dies deutet darauf hin, dass das ursprüngliche Steckbrett fehlerhaft war und die Ursache für die Abweichungen darstellte.
 
 
 9. Schaltungsverhalten unerwartet, dann die Schaltung überprüft (gemerkt: Kabelnstecken ist eine Fehlerquelle)
@@ -25,13 +20,13 @@ Das Steckbrett stellte jedoch nicht die einzige Herausforderung dar. Nach Durchf
 
 ![Bode-Plot des Tiefpassfilters, der eine Dämpfung von 20 dB aufweist.](Mess_Sim_Vergleich\Q10\Tiefpass.png){#fig-dämpfung fig-align="center" width=100%}
 
-------------------------Zu bearbeiten---------------------------
+Wie im Plot zu erkennen ist, liegt die Amplitude des Ausgangssignals etwa 20 dB unter dem erwarteten Wert. Dies deutet darauf hin, dass irgendwo in der Schaltung ein Fehler vorliegt, der zu einer unerwarteten Dämpfung führt. 
 
-Bei der Fehlersuche ist uns mit dem bloßen Auge zunächst nichts aufgefallen. Draufhin haben wir mit Hilfe von einem Multimeter die Widerstände überprüft.
-Dabei haben wir bemerkt, dass der Widerstand R6 10K Ohm anstatt 1K Ohm betragen hat. Dieser Fehler ist uns vermutlich beim bearbeiten einer der Lab Aufgaben unterlaufen. Nachdem wir den Widerstand gewecheselt haben, ist jedoch ein weiterer Fehler aufgetaucht.
-Da keine Dämpfung mehr vorlag, mussten wir den RedPitaya von "Low Voltage" auf "High Voltage" stellen. Ohne diese Änderung könnte der RedPitaya nur von -1 Volt bis 1 Volt messen.
-Nachdem wir den RedPitaya auf "High Voltage" gestellt haben, sahen unsere Messungen so aus wie die Simulation.
-Somit konnten wir das Problem, dass wir eine 20dB Dämpfung haben, beheben.
+Bei der Fehlersuche fiel zunächst mit bloßem Auge kein Problem auf. Daher wurden die Widerstände systematisch mit einem Multimeter überprüft. Dabei stellte sich heraus, dass versehentlich ein $10\,\mathrm{k}\Omega$-Widerstand anstelle des vorgesehenen $1\,\mathrm{k}\Omega$-Widerstands verbaut worden war. Dieser Fehler entstand vermutlich im Zuge einer früheren Laboraufgabe.
+
+Nach dem Austausch des Widerstands trat jedoch ein weiteres Problem auf: Die Dämpfung war zwar behoben, jedoch konnten die Messwerte mit dem RedPitaya im „Low Voltage“-Modus nicht korrekt erfasst werden, da dieser nur einen Messbereich von $-1\,\mathrm{V}$ bis $1\,\mathrm{V}$ abdeckt.
+
+Nach Umstellung auf den „High Voltage“-Modus entsprachen die Messergebnisse schließlich den Simulationen. Damit konnte die Ursache für die unerwartete $20\,\mathrm{dB}$-Dämpfung erfolgreich identifiziert und behoben werden.
 
 
 16. Bode Plot analysiert um Verhalten von Filtern zu überprüfen, -20dB Dämpfung in der Amplitude rausgefunden
