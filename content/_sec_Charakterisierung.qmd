@@ -2,6 +2,8 @@
 
 ### Steckbrett {.unnumbered}
 
+------------------------Zu bearbeiten---------------------------
+
 Wie zu erwarten, hat bei uns nicht alles von begin an funktioniert. Wir haben Fehler gemacht und generelle Probleme gehabt, welche wir alle lösen konnten.
 Zu begin stimmten die Messungen des Steckbrettes nicht mit unseren simulierten Ergebnissen überein. Nach überprüfung der Schaltung, ist uns auch mit hilfe des Laboringenieurs, kein Fehler aufgefallen.
 Nachdem wir davon ausgehen konnten, dass die Schaltung funktionieren sollte, haben wir den Entschluss gefasst, die Schaltung auf einem anderen Steckbrett aufzubauen.
@@ -19,7 +21,12 @@ Daraus können wir schließen, dass das Steckbrett fehlerhaft war.
 
 ### Dämpfung {.unnumbered}
 
-Doch das Steckbrett war nicht unser einziges Problem. Nachdem wir die einzelnen Filter gemessen haben, ist uns aufgefallen, dass eine Dämpfung von 20dB vorliegt.
+Das Steckbrett stellte jedoch nicht die einzige Herausforderung dar. Nach Durchführung der Messungen an den einzelnen Filterschaltungen wurde deutlich, dass eine Dämpfung von 20 dB vorliegt. Zur Verdeutlichung dieses Problems ist im Folgenden ein exemplarischer Plot dargestellt, in dem die 20 dB-Dämpfung sichtbar wird.
+
+![Bode-Plot des Tiefpassfilters, der eine Dämpfung von 20 dB aufweist.](Mess_Sim_Vergleich\Q10\Tiefpass.png){#fig-dämpfung fig-align="center" width=100%}
+
+------------------------Zu bearbeiten---------------------------
+
 Bei der Fehlersuche ist uns mit dem bloßen Auge zunächst nichts aufgefallen. Draufhin haben wir mit Hilfe von einem Multimeter die Widerstände überprüft.
 Dabei haben wir bemerkt, dass der Widerstand R6 10K Ohm anstatt 1K Ohm betragen hat. Dieser Fehler ist uns vermutlich beim bearbeiten einer der Lab Aufgaben unterlaufen. Nachdem wir den Widerstand gewecheselt haben, ist jedoch ein weiterer Fehler aufgetaucht.
 Da keine Dämpfung mehr vorlag, mussten wir den RedPitaya von "Low Voltage" auf "High Voltage" stellen. Ohne diese Änderung könnte der RedPitaya nur von -1 Volt bis 1 Volt messen.

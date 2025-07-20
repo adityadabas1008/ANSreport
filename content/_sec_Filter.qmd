@@ -139,7 +139,7 @@ Im Rahmen dieses Projekts wurde die Biquad-Schaltung nach dem **ASLK Pro Experim
 
 Die folgende Abbildung zeigt die Schaltung des Biquad-Filters, wie sie im ASLK Pro Experiment 4 verwendet wurde:
 
-![Zweiter Ordnung Universeller Aktiver Filter.[^1]](images/biquad_aslk_exp4.png){#fig-biquadfilter fig-align="left" width=80%}
+![Zweiter Ordnung Universeller Aktiver Filter.[@aslk]](images/biquad_aslk_exp4.png){#fig-biquadfilter fig-align="left" width=80%}
 
 
 ### Auswahl und Berechnung der Bauteile {.unnumbered}
@@ -167,9 +167,7 @@ Damit ergibt sich für beide Fälle:
 
 Der Gütefaktor $Q$ wurde jeweils über das Verhältnis der Widerstände in den Rückkopplungszweigen angepasst, entsprechend den Vorgaben des Experiments.
 
-![Gütefaktor und zuständige Widerstand.[^1]](images/Güte_Faktor.png){#fig-gütewiderstand fig-align="left" width=80%}
-
-[^1]: aslk pro manual exp 4
+![Gütefaktor und zuständige Widerstand[@aslk]](images/Güte_Faktor.png){#fig-gütewiderstand fig-align="left" width=80%}
 
 Wie in Abbildung @fig-gütewiderstand dargestellt, wird der **Gütefaktor ($Q$)** des Filters maßgeblich durch den Widerstand im oberen Zweig der Schaltung (beschriftet mit "$Q \cdot R$") bestimmt. Dieser Widerstand legt, zusammen mit den verwendeten Kondensatoren, die Selektivität und Bandbreite des Filters fest. Um einen gewünschten Gütefaktor einzustellen, wird entsprechend der Wert dieses Widerstands angepasst.
 
@@ -196,9 +194,7 @@ Nachdem die Bauteilwerte für die gewünschten Filtereigenschaften festgelegt wa
 Unser Ziel war es, ein Referenzmodell für das spätere praktische Verhalten des Filters zu erhalten. Mit Hilfe der Bode-Plot-Simulationen konnten die theoretisch zu erwartenden Amplituden- und Phasengänge überprüft werden.
 Der Filterentwurf in KiCad kann wie in Abbildung @fig-Kicad dargestellt aufgebaut werden:
 
-![Simulationsaufbau für den aktiven Biquad-Filter in KiCad.[^2]](images/Kicad_Schaltung_2.png){#fig-Kicad fig-align="left" width=100%}
-
-[^2]: Kicad 9.0 Filterentwurf
+![Simulationsaufbau für den aktiven Biquad-Filter in KiCad.[@kicad]](images/Kicad_Schaltung_2.png){#fig-Kicad fig-align="left" width=100%}
 
 ### Simulation der Schaltung (KiCad) {.unnumbered}
 
@@ -217,7 +213,7 @@ Wie in den Abbildungen @fig-bodeQ1 und @fig-bodeQ10 zu erkennen ist, stimmen die
 
 Um einen besseren Vergleich zu ermöglichen, sind in den folgenden Abbildungen die theoretischen Amplituden- und Phasengänge dargestellt. Diese Kurven wurden dem ASLK Pro Manual entnommen und dienen als Referenz, um die Übereinstimmung zwischen Simulation und Theorie zu veranschaulichen.
 
-![Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual [^1] ](images/theorie_plot.png){#fig-bodetheori fig-align="center" width=100%}
+![Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual [@aslk] ](images/theorie_plot.png){#fig-bodetheori fig-align="center" width=100%}
 
 ### Aufbau auf dem ASLK PRO Board {.unnumbered}
 Aufbau von der Schaltung auf ASLK Board mit jumper Wires

@@ -49,4 +49,9 @@ Zur Bewertung der praktischen Umsetzung wurden die Messergebnisse der real aufge
 
 
 ## Interpretation der Messergebnisse
-Hier erklären wir die Unterschiede zwischen Simulation und echte Messwerte
+
+Insgesamt zeigen die Plots, dass die gemessenen Frequenzgänge der realen Schaltung den simulierten Kurven in ihrem grundsätzlichen Verlauf gut entsprechen. Die charakteristischen Eigenschaften der jeweiligen Filtertypen (Bandpass, Bandsperre, Hochpass, Tiefpass) sind sowohl in Simulation als auch in der Messung klar erkennbar.
+
+Die beobachteten Abweichungen zwischen Simulation und Messung sind hauptsächlich auf Bauteiltoleranzen sowie Einflüsse der verwendeten Messkabel zurückzuführen. Nicht ideale Kontakte, Toleranzen der Bauteile oder Kabel können das Messergebnis beeinflussen. Zudem können Unterschiede in der Frequenzauflösung oder fehlende Messwerte in bestimmten Bereichen zu Abweichungen führen, insbesondere wenn Messung und Simulation nicht exakt dieselben Frequenzen abdecken.
+
+Zusammenfassend bestätigen die Messergebnisse die prinzipielle Funktionsweise der Filter, zeigen aber auch die Grenzen idealisierter Simulationen im Vergleich zur realen Schaltungspraxis auf.
