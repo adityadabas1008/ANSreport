@@ -2,6 +2,26 @@
 
 ## Grundlagen zu analogen Filtern
 @Adrian
+
+Zunächst haben wir uns mit dem Aufbau analoger Filter beschäftig, um genauer zu sein mit FIltern welche RLC Glieder haben. Das "R" steht für den Widerstand, das "L" steht für die Last und das "C" für den Kondensator.
+
+Jenachdem wie man die einzelnen Bestandteile anordnet, kann man Vier verschiedene Filter entwerfen, einen Hochpass, einen Tiefpass, einen Bandpass und einen Bandstop.
+
+Ein wichtiger Faktor für diese Filter ist die Kreisfrequenz. Diese Hilft einem dabei den Frequenzbereich, welcher für einen von Interesse ist, zu ermitteln, da an der Kreisfrequenz der Filter eine Änderung, je nach Filter, durchläuft.
+
+Bei einem Hochpassfilter werden jegliche Frequenzen vor der Kreisfrequenz gefilter und jegliche Frequenzen nach der Kreisfrequenz durchgelassen.
+
+Der Tiefpassfilter ist das genaue Gegenteil des Hochpassfilters, jegliche Frequenzen vor der Kreisfrequenz werden durchgelasse und jegliche danach gefilter.
+
+Der Bandpassfilter filtert vor und nach der Kreisfrequenz jegliche Frequenzen und lässt die Kreisfrequenz passieren.
+
+Der Bandstopfilter ist das genaue Gegenteil vom Bandpassfilter und lässt jede Frequenz passieren bis auf die Kreisfrequenz.
+ 
+
+
+
+
+
 1. Filter entwurf mit RLC Glied, TP, HP, BP --nicht berichten
 
 ### Übertragungsfunktionen und verschiedene Filtertypen {.unnumbered}
@@ -33,9 +53,7 @@ $$
 
 Hierbei werden die Koeffizienten $b_i$ und $a_i$ durch die konkrete Wahl der Widerstands- und Kondensatorwerte festgelegt. Die verschiedenen Filtertypen unterscheiden sich lediglich in den spezifischen Koeffizientenwerten, während die zugrunde liegende Schaltungsstruktur identisch bleibt. Beispielsweise resultiert ein reiner Bandpass bei $b_0 = b_2 = 0$, $b_1 \neq 0$, während bei $b_1 = 0$ und $b_0 = b_2 \neq 0$ eine Bandsperre realisiert wird.
 
-Ein wesentlicher Vorteil des Biquad-Konzepts liegt in seiner Modularität. Durch die serielle oder parallele Verschaltung mehrerer identischer Biquad-Stufen lassen sich problemlos Filter höherer Ordnung aufbauen, ohne dass die Komplexität jeder einzelnen Stufe zunimmt. Zudem ermöglicht die separate Kalibrierbarkeit jeder Stufe eine exakte Justierung von Gütefaktor und Grenzfrequenz, wodurch Fertigungstoleranzen gezielt kompensiert werden können. Aufgrund dieser Flexibilität und der vergleichsweise einfachen Implementierung haben sich Biquad-Filter als Standardlösung in vielen Bereichen etabliert, etwa in der Audio- und Messtechnik sowie in der industriellen Signalverarbeitung.
-
-[@FILTERS07]
+Ein wesentlicher Vorteil des Biquad-Konzepts liegt in seiner Modularität. Durch die serielle oder parallele Verschaltung mehrerer identischer Biquad-Stufen lassen sich problemlos Filter höherer Ordnung aufbauen, ohne dass die Komplexität jeder einzelnen Stufe zunimmt. Zudem ermöglicht die separate Kalibrierbarkeit jeder Stufe eine exakte Justierung von Gütefaktor und Grenzfrequenz, wodurch Fertigungstoleranzen gezielt kompensiert werden können. Aufgrund dieser Flexibilität und der vergleichsweise einfachen Implementierung haben sich Biquad-Filter als Standardlösung in vielen Bereichen etabliert, etwa in der Audio- und Messtechnik sowie in der industriellen Signalverarbeitung.[@FILTERS07]
 
 ## Gütefaktor Q und Einfluss
 
@@ -51,8 +69,7 @@ $$
 s_{1,2} \;=\; -\frac{\omega_{0}}{2Q} \;\pm\; j\,\omega_{0}\,\sqrt{\,1 - \frac{1}{4Q^{2}}\,}\;.
 $$
 
-Für den ideal „maximal flachen“ Butterworth-Fall wählt man $Q = 1/\sqrt{2} \approx 0{,}707$, wodurch kein Durchtritts-Peaking auftritt und die Flankensteilheit $-20\ \mathrm{dB/Dekade}$ beträgt (das heißt: Eine Verzehnfachung der Frequenz führt zu einem Pegelabfall von 20 dB). 
-[@lecture20]
+Für den ideal „maximal flachen“ Butterworth-Fall wählt man $Q = 1/\sqrt{2} \approx 0{,}707$, wodurch kein Durchtritts-Peaking auftritt und die Flankensteilheit $-20\ \mathrm{dB/Dekade}$ beträgt (das heißt: Eine Verzehnfachung der Frequenz führt zu einem Pegelabfall von 20 dB). [@lecture20]
 
 In der KHN-Biquad-Topologie wird der Gütefaktor jedes Teilpfads (Tiefpass, Bandpass, Hochpass, Bandsperre) direkt über das Verhältnis ausgewählter Widerstände eingestellt. Durch Variation dieser Widerstandsrelation lässt sich $Q$ unabhängig von der Eckfrequenz $\omega_0$ justieren – man gewinnt also Kontrolle über die Schärfe der Filtercharakteristik, ohne die Mittenfrequenz zu verändern. Ein niedriger $Q$-Wert führt zu einem breiten, sanft abfallenden Übergang, während ein hoher $Q$-Wert die Flanken steiler macht und bei Bandpass- oder Bandsperre-Ausgängen zusätzlich einen ausgeprägten Resonanzbuckel erzeugt.
 

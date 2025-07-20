@@ -2,6 +2,73 @@
 
 Im Folgenden wird die praktische Umsetzung des Biquad-Filters beschrieben. Der Schwerpunkt liegt auf dem gewählten Schaltungsaufbau, der Dimensionierung der Bauteile und der Umsetzung auf dem ASLK Pro Board.
 
+Die universelle Biquad-Topologie lässt sich aus einfachen OP-Amp-Bausteinen aufbauen. Die jeweiligen Teilfilter (Tiefpass, Hochpass, Bandpass, Bandsperre) ergeben sich durch Kombinationen der Grundschaltungen und deren Übertragungsfunktionen.
+
+### Der invertierende Verstärker {.unnumbered}
+
+Die erste Grundschaltung ist der **invertierende Verstärker**, dessen Schaltung in @fig-invopamp gezeigt ist. Ein idealer OP-Amp arbeitet hier mit einem Eingangswiderstand $R_{1}$ und einem Rückkopplungswiderstand $R_{2}$:
+
+![Invertierender Verstärker [@reisch2007]](images/invopamp.png){#fig-invopamp fig-align="left" width=50%}
+
+**Kurzbeschreibung:**  
+- Der Eingang $V_{1}$ wird über $R_{1}$ auf den invertierenden Eingang geführt.  
+- Der nichtinvertierende Eingang liegt auf Masse.  
+- Über $R_{2}$ erfolgt die Rückkopplung vom Ausgang $V_{2}$ in den invertierenden Eingang.  
+
+**Herleitung der Übertragungsfunktion**  
+- Idealer OP-Amp: $V_{+} = V_{-}$, Eingangsströme vernachlässigbar.  
+- Knotenregel am invertierenden Eingang ($V_{-} = 0$):
+
+$$
+\frac{V_{1} - V_{-}}{R_{1}} + \frac{V_{2} - V_{-}}{R_{2}} = 0
+\quad\Longrightarrow\quad
+\frac{V_{1}}{R_{1}} + \frac{V_{2}}{R_{2}} = 0.
+$$
+
+- Umstellen nach $\frac{V_{2}}{V_{1}}$:
+
+$$
+\frac{V_{2}}{V_{1}} = -\frac{R_{2}}{R_{1}}.
+$$
+
+Damit erhält man für den Spannungsübertragungsfaktor des invertierenden Verstärkers:
+
+$$
+H_{\text{inv}}(s) = \frac{V_{2}(s)}{V_{1}(s)} \approx -\frac{R_{2}}{R_{1}}.
+$$
+
+Das Minuszeichen veranschaulicht, dass die Ausgangsspannung eine entgegengesetzte Polarität zur Eingangsspannung aufweist. Diese Schaltungskonfiguration wird daher als invertierender Verstärker oder als Umkehrverstärker bezeichnet. [@reisch2007]
+
+### Der Addierer {.unnumbered}
+
+In der invertierenden Summierschaltung werden mehrere Eingangsspannungen $V_1, V_2, \dots, V_m$ jeweils über gleiche Widerstände $R$ an den invertierenden Eingang eines Operationsverstärkers geführt. Der nichtinvertierende Eingang liegt auf Masse, und der Rückkopplungswiderstand ist $R_f$:
+
+**Herleitung der Übertragungsfunktion**  
+1. Knotenregel am invertierenden Eingang (Potenzial $V_- = 0$):
+
+$$
+\sum_{i=1}^{m} \frac{V_i - V_-}{R} + \frac{V_{\text{out}} - V_-}{R_f} = 0
+\quad \Longrightarrow \quad
+\sum_{i=1}^{m} \frac{V_i}{R} + \frac{V_{\text{out}}}{R_f} = 0.
+$$
+
+2. Auflösen nach $\frac{V_{\text{out}}}{V_i}$:
+
+$$
+\frac{V_{\text{out}}}{R_f} = - \sum_{i=1}^{m} \frac{V_i}{R}
+\quad \Longrightarrow \quad
+V_{\text{out}} = - R_f \sum_{i=1}^{m} \frac{V_i}{R}.
+$$
+
+3. Für gleiche Widerstände ($R_f = R$) vereinfacht sich das zu:
+
+$$
+V_{\text{out}} = - \bigl(V_1 + V_2 + \dots + V_m \bigr).
+$$
+
+Damit addiert der invertierende OP-Amp die Eingangsspannungen und invertiert das Vorzeichen.
+
+
 ## Universeller aktiver Filter 2. Ordnung (Biquad)
 
 Im Rahmen dieses Projekts wurde die Biquad-Schaltung nach dem **ASLK Pro Experiment 4** realisiert. Diese Experimentierplatine ermöglicht die einfache Umsetzung und Untersuchung verschiedener Filterkonfigurationen auf Basis von Operationsverstärkern.
@@ -96,9 +163,9 @@ Aufbau von der Schaltung auf ASLK Board mit jumper Wires
 
 Das Analog System Lab Kit Pro Board (ASLK Pro Board), ist ein Steckbrett auf welchem man Schaltungen simpel und ohne zu Löten umsetzten kann.
 Mit hilfe dieses Steckbretts konnten wir die angegebene Schaltung aus dem Lab Manual, Labor 4, realisieren.
-Doch damit die Umsetzung erfolgreich wird, mussten wir zunächst die Spezifikationen für die Schaltung bestimmen, siehe @tbl-dimensions.
+Doch damit die Umsetzung erfolgreich wurde, mussten wir zunächst die Spezifikationen für die Schaltung bestimmen, siehe @tbl-dimensions.
 
-Daraufhin haben wir damit begonnen die Schaltung auf dem Steckbrett aufzubauen. Dies haben wir Kabeln und steckbaren Widerständen umgesetzt
+Daraufhin haben wir damit begonnen die Schaltung auf dem Steckbrett aufzubauen. Dies haben wir mit Kabeln und steckbaren Widerständen umgesetzt.
 
 ![Aufbau auf dem ASLK PRO Board](images/Realaufbau.jpg){#fig-Realaufbau fig-align="center" width=100%}
 
@@ -106,7 +173,7 @@ Daraufhin haben wir damit begonnen die Schaltung auf dem Steckbrett aufzubauen. 
 Diese Schaltung haben wir mit einem RedPitaya verbunden, mit welchem wir die jeweiligen Filter messen konnten.
 
 
-Nachdem wir die einezlnen Filter gemessen haben, setzten wir die Schaltung in KiCAD um einen Vergleich für die Filter zu erhalten.
+Nachdem wir die einezlnen Filter gemessen haben, setzten wir die Schaltung in KiCAD um, damit wir einen Vergleich für die Filter erhalten.
 
 Zuletzt haben wir das Steckbrett noch für die Aufgaben aus dem Lab Manual benutzt, wodurch wie immer wieder leichte Veränderungen an der Schaltung vornehmen mussten.
 
