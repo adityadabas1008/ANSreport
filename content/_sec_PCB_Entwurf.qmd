@@ -31,7 +31,7 @@ Drittens erlaubt die PCB eine kompakte, übersichtliche Integration aller Filter
 
 ### Design-Verbesserungen und Begründungen {.unnumbered}
 
-1. **Bauteiwertebeschriftung**  
+1. **Bauteilwertebeschriftung**  
    Jeder Widerstand und Kondensator erhielt eine Referenz („R1“, „C3“) und einen Wertaufdruck auf der Silkscreen-Schicht. Fehlt dies, kann beim Bestücken leicht verwechselt werden.
 
 2. **Fehlender GND-Pins**  
@@ -54,7 +54,7 @@ Fertige Bi-Quad Filter Platine
 Mit diesem PCB-Design haben wir eine kompakte, reproduzierbare Plattform geschaffen, um Biquad-Filter mit variabler Güte und Eckfrequenz zu charakterisieren und bei Bedarf um eine Butterworth-Stufe 3. Ordnung zu ergänzen. 
 Für künftige Revisionen empfehlen sich:  
 - Vollständige Beschriftung aller Werte auf der Platine  
-- Einheitliche Testpoints für Ein-/Ausgang und GND  
+- Einheitliche GND Pins 
 - Integration von SMD-Schaltern statt Jumpern 
 
 Damit wird die Platine für die Lehrzwecke gut geeignet.
@@ -203,6 +203,12 @@ In der Simulation führt der Hochpass-Peak knapp vor der Eckfrequenz zu einer le
 ![Bode-Plot Vergleich des simulierten- und des auf dem PCB Tiefpassfilters für $Q = 10$.](platine_sim_vergleich\Q10\Tiefpass.png){#fig-pcbsimtpf10 fig-align="center" width=100%}
 
 Auch beim Tiefpass findet sich in der Simulation ein etwas ausgeprägteres Peak-Overshoot, während die PCB-Messung den Peak minimal verzögert wiedergibt. Die Abfallflanke ist auf beiden Kurven nahezu identisch.
+
+## Butterworth Filter Vergleich:  Simulation vs. PCB {.unnumbered}
+
+![Bode-Plot Vergleich des simulierten- und des auf dem PCB Butterworth-Filters 3. Ordnung.](platine_sim_vergleich\Butter_platine_sim.png){#fig-bwfpcb fig-align="center" width=100%}
+
+Die gemessene PCB-Kurve des Butterworth-Filters folgt der Simulation sehr genau. Die Übergangsfrequenz und die Flankensteilheit stimmen gut überein. Kleine Abweichungen in der Amplitude und eine minimal geglättete Flanke auf der Platine sind auf Messauflösung und parasitäre Effekte zurückzuführen.
 
 **Allgemeine Beobachtung:**  
 Die PCB-Messdaten folgen dem idealen Simulationsverlauf sehr eng, lediglich kleine Frequenzverschiebungen und glattere Flanken auf der Platine fallen auf. Die geringere Tiefe im Bandsperr-Einschnitt und der leicht vor- bzw. nachlaufende Resonanzpeak sind wahrscheinlich auf die endliche Anzahl von Messpunkten und minimale Layout-Parasitär­effekte zurückzuführen.  

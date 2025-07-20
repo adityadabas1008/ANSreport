@@ -1,15 +1,14 @@
 # Fazit und Ausblick
 
+Im Rückblick auf das Labor können wir festhalten, dass wir unsere Ziele erfolgreich erreicht haben. Das im Studium erworbene Wissen konnten wir gezielt einsetzen, um ein eigenes Platinen-Design zu entwickeln. Damit haben wir nicht nur die gestellten Anforderungen erfüllt, sondern auch wertvolle praktische Erfahrungen gesammelt.
 
-Wenn wir nun noch einmal einen Blick darauf werfen, was wir im Verlauf dieses Labor ereicht haben, können wir behaupten, dass dieses ein Erfolg war.
-Wir konnten das Wissen, welches wir uns in vorherigen Semestern angeeignet haben, sinnvoll nutzen, um unser eigenes Platinen Design zu erstellen und haben somit unser Ziel erreicht.
-Natürlich lief nicht immer alles nach Plan. Zu begin hat unsere Steckbrett-Schaltung nicht funktioniert, wodurch wir Zeit für die Fehlersuche aufbringen mussten. Am Ende stellte sich herraus das die Schaltung nicht das Problem war, sondern das Steckbrett.
-Es sind aber auch Fehler aufgetreten, dessen Ursache von uns aus ging. Wir haben einen $10k\Ohm$  Widerstand anstatt einse $1k\Ohm$  Widerstands benutzt, weshalb wir eine Dämpfung in unserer Schaltung vorliegen hatten.
-Auch diesen Fehler konnten wir ausfindig machen und beheben. Diese Probleme haben uns gezeigt, dass nicht immer alles nach Plan laufen kann und auch noch so kleine Fehler einen aufhalten können.
-Doch im Endeffekt sind diese Fehler etwas gutes, da sie uns zeigen, dass man immer alles doppelt und dreifach überprüfen muss und das Unaufmerksamkeiten Folgen mit sich führen.
-Doch wir wollen nicht nur auf das negative einen Blick werfen. Das von uns erstellte Platinen Design funktioniert genauso wie es soll, die einzelnen Filter geben den gewünschten Verlauf aus und haben keine Dämpfung.
-Ebenso funktioniert der von uns erstellte Butterworth Filter. Die Fehler die wir zu beginn des Labores gemacht haben, zeigten uns, vorauf wir im weitern Verlauf achten mussten.
-Das wissen was wir uns in diesem Labor angeeignet haben, wird uns auch in Zukunft helfen, wenn wir auf ähnliche Probleme stoßen.
+Natürlich verlief nicht alles reibungslos. Zu Beginn funktionierte unsere Steckbrett-Schaltung nicht, was uns zur Fehlersuche zwang. Letztlich stellte sich heraus, dass das Problem nicht an der Schaltung selbst, sondern am Steckbrett lag.
+
+Leider mussten wir feststellen, dass eigene Fehler aufgetreten sind. So verwendeten wir versehentlich einen $10\,k\Omega$-Widerstand anstelle eines $1\,k\Omega$-Widerstands, was zu einer unerwünschten Dämpfung führte. Nachdem wir diesen Fehler identifiziert hatten, konnten wir ihn beheben. Solche Erfahrungen haben uns gezeigt, wie wichtig sorgfältiges Arbeiten und wiederholtes Überprüfen sind – selbst kleine Unachtsamkeiten können große Auswirkungen haben.
+
+Trotz dieser Herausforderungen überwiegen die positiven Ergebnisse. Unser Platinen-Design funktioniert wie geplant, und die einzelnen Filter zeigen den gewünschten Frequenzverlauf – unerwünschte Dämpfungen im Signal sind dabei nicht aufgetreten. Auch der von uns entwickelte Butterworth-Filter arbeitet zuverlässig. Die anfänglichen Fehler haben uns sensibilisiert und unsere Aufmerksamkeit für Details geschärft.
+
+Das im Labor erworbene Wissen wird uns auch in zukünftigen Projekten von Nutzen sein, insbesondere beim Umgang mit ähnlichen Problemstellungen.
 
 
 

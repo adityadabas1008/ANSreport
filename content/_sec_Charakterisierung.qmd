@@ -6,14 +6,6 @@ Wie häufig bei praktischen Versuchen traten auch hier zunächst unerwartete Pro
 
 Um mögliche Fehlerquellen auszuschließen, wurde die Schaltung anschließend auf einem neuen Steckbrett ohne zusätzliche Kabelverlängerungen erneut aufgebaut. Nach diesem Neuaufbau stimmten die Messergebnisse mit den Simulationen überein. Dies deutet darauf hin, dass das ursprüngliche Steckbrett fehlerhaft war und die Ursache für die Abweichungen darstellte.
 
-
-9. Schaltungsverhalten unerwartet, dann die Schaltung überprüft (gemerkt: Kabelnstecken ist eine Fehlerquelle)
-10. Messung erneut düchgeführt, mussten nochmal schaltüng überprüfen
-11. Das Problem war ASLK Board und nicht der Aufbau, rausgefunden indem: die Schaltung vom Laboring überprüfen lassen
-12. Die Schaltung neu aufbaut, mit dem neuen Board und ohne Kabeln zu verlängern (keine 2 Kabeln zusammengesteckt)
-13. Nochmal gemessen und erwartete Ergebnisse bekommen. (Bestätigt - Board war das Problem)
-
-
 ### Dämpfung {.unnumbered}
 
 Das Steckbrett stellte jedoch nicht die einzige Herausforderung dar. Nach Durchführung der Messungen an den einzelnen Filterschaltungen wurde deutlich, dass eine Dämpfung von 20 dB vorliegt. Zur Verdeutlichung dieses Problems ist im Folgenden ein exemplarischer Plot dargestellt, in dem die 20 dB-Dämpfung sichtbar wird.
@@ -27,9 +19,3 @@ Bei der Fehlersuche fiel zunächst mit bloßem Auge kein Problem auf. Daher wurd
 Nach dem Austausch des Widerstands trat jedoch ein weiteres Problem auf: Die Dämpfung war zwar behoben, jedoch konnten die Messwerte mit dem RedPitaya im „Low Voltage“-Modus nicht korrekt erfasst werden, da dieser nur einen Messbereich von $-1\,\mathrm{V}$ bis $1\,\mathrm{V}$ abdeckt.
 
 Nach Umstellung auf den „High Voltage“-Modus entsprachen die Messergebnisse schließlich den Simulationen. Damit konnte die Ursache für die unerwartete $20\,\mathrm{dB}$-Dämpfung erfolgreich identifiziert und behoben werden.
-
-
-16. Bode Plot analysiert um Verhalten von Filtern zu überprüfen, -20dB Dämpfung in der Amplitude rausgefunden
-17. Fehler Suche: Wiederstände überprüft und die auf dem Board gemessen mit Multimeter, festgestellt: R6 war 10k Ohm anstatt 1k Ohm
-18. RedPitaya auf HV gestellt, um Peak Messwerte richtig zu bekommen
-19. Messungen erneut aufgenommen, Fehler beseitigt

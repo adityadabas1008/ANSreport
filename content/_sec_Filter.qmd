@@ -215,9 +215,6 @@ Um einen besseren Vergleich zu ermöglichen, sind in den folgenden Abbildungen d
 
 ![Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual [@aslk] ](images/theorie_plot.png){#fig-bodetheori fig-align="center" width=100%}
 
-
-@Adrian
-
 ### Aufbau auf dem ASLK PRO Board {.unnumbered}
 Aufbau von der Schaltung auf ASLK Board mit jumper Wires
 
@@ -236,15 +233,6 @@ Diese Schaltung haben wir mit einem RedPitaya verbunden, mit welchem wir die jew
 Nachdem wir die einezlnen Filter gemessen haben, setzten wir die Schaltung in KiCAD um, damit wir einen Vergleich für die Filter erhalten.
 
 Zuletzt haben wir das Steckbrett noch für die Aufgaben aus dem Lab Manual benutzt, wodurch wie immer wieder leichte Veränderungen an der Schaltung vornehmen mussten.
-
-
-4. ASLK Lab Manual - Labor 4 gelesen, Spezifikation gelesen, Schaltung gesehen, Ziel des Projekts festgelegt
-5. Spezifikation für die Schaltung: Durch Kreisfrequenzen R , C werte und Kreisfrequenz f berechnet, Güte Faktor miteinbezogen 
-6. Simulation auf KiCAD durchgeführt, Plots mit dem Manual verglichen
-7. Schaltungsaufbau auf dem ASLK Board mit Kabeln
-8. RedPitaya integriert für Messung und Auswertung der Schaltung (Bode-Plot und Messwerte)
-
-15. Nach ASLK Manual Aufgaben gemacht und die Messwerte aufgenommen, leichte änderung an der Schaltung je nach Aufgabenstellung
 
 ## Butterworth 3. Ordnung: Entwurf und Erweiterung
 
@@ -307,6 +295,11 @@ $$
 H_{\mathrm{BW3}}(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)} = - \frac{H_{0} \,\omega_{0}^{3}}{s^{3} + \left(1 + \frac{1}{Q}\right) \omega_{0} s^{2} + \left(1 + \frac{1}{Q}\right) \omega_{0}^{2} s + \omega_{0}^{3}}
 }.
 $$
+
+##### Simulationsergebnis des Butterworth-Tiefpasses 3. Ordnung {.unnumbered}
+Die Abbildung zeigt den simulierten Amplituden- und Phasengang der realisierten Schaltung. Die charakteristische Flankensteilheit und das Übertragungsverhalten entsprechen den theoretischen Erwartungen für einen Butterworth-Filter dieser Ordnung. 
+
+![Butterworth Filter 3. Ordnung Simulation](simulation/Butter_Tiefpass_Sim_Plot.png){#fig-bwf fig-align="center" width=100%}
 
 
 

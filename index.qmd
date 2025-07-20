@@ -34,7 +34,7 @@ keyword:
   - PCB
 
 abstract: |
-    Lorem ipsum 
+  In diesem Projekt wurde ein universeller Biquad-Filter entworfen und als Leiterplatte (PCB) umgesetzt. Ziel war es, die theoretischen Grundlagen zu analysieren, verschiedene Filtertypen zu simulieren und die praktische Realisierung zu dokumentieren. Die Charakterisierung und Messauswertung des aufgebauten Filters zeigen die Übereinstimmung zwischen Theorie und Praxis. Der gesamte Entwicklungsprozess – von der Schaltungsauslegung bis zum fertigen PCB – wird nachvollziehbar dargestellt.
 
 date: last-modified
 bibliography: references.bib
