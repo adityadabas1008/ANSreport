@@ -230,7 +230,14 @@ window.Quarto = {
   <li><a href="#messung-und-analyse" id="toc-messung-und-analyse" class="nav-link" data-scroll-target="#messung-und-analyse"><span class="header-section-number">5</span> Messung und Analyse</a>
   <ul class="collapse">
   <li><a href="#messungsschritte" id="toc-messungsschritte" class="nav-link" data-scroll-target="#messungsschritte">Messungsschritte</a></li>
-  <li><a href="#vergleich-simulation-vs.-diskret" id="toc-vergleich-simulation-vs.-diskret" class="nav-link" data-scroll-target="#vergleich-simulation-vs.-diskret"><span class="header-section-number">5.1</span> Vergleich Simulation vs.&nbsp;Diskret</a></li>
+  <li><a href="#vergleich-simulation-vs.-diskret" id="toc-vergleich-simulation-vs.-diskret" class="nav-link" data-scroll-target="#vergleich-simulation-vs.-diskret"><span class="header-section-number">5.1</span> Vergleich Simulation vs.&nbsp;Diskret</a>
+  <ul class="collapse">
+  <li><a href="#für-q1" id="toc-für-q1" class="nav-link" data-scroll-target="#für-q1">Für <span class="math inline">\(Q=1\)</span></a></li>
+  <li><a href="#bandpass" id="toc-bandpass" class="nav-link" data-scroll-target="#bandpass">-Bandpass</a></li>
+  <li><a href="#bandstop" id="toc-bandstop" class="nav-link" data-scroll-target="#bandstop">-Bandstop</a></li>
+  <li><a href="#hochpass" id="toc-hochpass" class="nav-link" data-scroll-target="#hochpass">-Hochpass</a></li>
+  <li><a href="#tiefpass" id="toc-tiefpass" class="nav-link" data-scroll-target="#tiefpass">-Tiefpass</a></li>
+  </ul></li>
   <li><a href="#interpretation-der-messergebnisse" id="toc-interpretation-der-messergebnisse" class="nav-link" data-scroll-target="#interpretation-der-messergebnisse"><span class="header-section-number">5.2</span> Interpretation der Messergebnisse</a></li>
   </ul></li>
   <li><a href="#umsetzung-als-leiterplatte" id="toc-umsetzung-als-leiterplatte" class="nav-link" data-scroll-target="#umsetzung-als-leiterplatte"><span class="header-section-number">6</span> Umsetzung als Leiterplatte</a>
@@ -470,7 +477,7 @@ Abbildung&nbsp;7: Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Man
 <section id="aufbau-auf-dem-aslk-pro-board" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="aufbau-auf-dem-aslk-pro-board">Aufbau auf dem ASLK PRO Board</h3>
 <p>Aufbau von der Schaltung auf ASLK Board mit jumper Wires</p>
-<p>Das Analog System Lab Kit Pro Board (ASLK Pro Board), ist ein Steckbrett auf welchem man Schaltungen simpel und ohne zu Löten umsetzten kann. Mit hilfe dieses Steckbretts konnten wir die angegebene Schaltung aus dem Lab Manual, Labor 4, realisieren. Doch damit die Umsetzung erfolgreich wird, mussten wir zunächst die Spezifikationen für die Schaltung bestimmen, siehe Tabelle.</p>
+<p>Das Analog System Lab Kit Pro Board (ASLK Pro Board), ist ein Steckbrett auf welchem man Schaltungen simpel und ohne zu Löten umsetzten kann. Mit hilfe dieses Steckbretts konnten wir die angegebene Schaltung aus dem Lab Manual, Labor 4, realisieren. Doch damit die Umsetzung erfolgreich wird, mussten wir zunächst die Spezifikationen für die Schaltung bestimmen, siehe <a href="#tbl-dimensions" class="quarto-xref">Tabelle&nbsp;1</a>.</p>
 <p>Daraufhin haben wir damit begonnen die Schaltung auf dem Steckbrett aufzubauen. Dies haben wir Kabeln und steckbaren Widerständen umgesetzt</p>
 <div id="fig-Realaufbau" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -580,13 +587,70 @@ H_{\mathrm{BW3}}(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)} = - \frac{H
 <section id="messung-und-analyse" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Messung und Analyse</h1>
 <p><span class="citation" data-cites="Mohamad">(<a href="#ref-Mohamad" role="doc-biblioref"><strong>Mohamad?</strong></a>)</span></p>
-<p>Plots and fancy curves</p>
+<p>Nachdem wir die Biquad-Filter-Schaltung bereits erfolgreich auf dem ASLK Pro Board aufgebaut haben, lag der Fokus dieses Abschnitts auf der Durchführung der Messungen und der anschließenden Auswertung der Ergebnisse. Ziel war es, die realen Frequenzgänge der verschiedenen Filtertypen experimentell zu erfassen und diese mit den zuvor durchgeführten Simulationen zu vergleichen.</p>
 <section id="messungsschritte" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="messungsschritte">Messungsschritte</h3>
+<p>Für die experimentelle Ermittlung des Frequenzgangs wurde die Schaltung mithilfe der grafischen Oberfläche des Red Pitaya vermessen.</p>
+<p>Die so gewonnenen Messdaten wurden im Anschluss exportiert und zur weiteren Analyse mit einem eigens entwickelten Python-Skript ausgewertet. Dadurch war es möglich, die Amplituden- und Phasengänge der real aufgebauten Schaltung systematisch mit den Simulationskurven zu vergleichen.</p>
 </section>
 <section id="vergleich-simulation-vs.-diskret" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="vergleich-simulation-vs.-diskret"><span class="header-section-number">5.1</span> Vergleich Simulation vs.&nbsp;Diskret</h2>
-<p>hier machen wir ein vergleich zwischen Simulation und die auf dem Board aufgebaute Schaltung mit Plots</p>
+<p>Zur Bewertung der praktischen Umsetzung wurden die Messergebnisse der real aufgebauten Schaltung mit den zuvor durchgeführten Simulationen verglichen. Für beide Gütefaktoren (<span class="math inline">\(Q=1\)</span> und <span class="math inline">\(Q=10\)</span>) wurden jeweils die Frequenzgänge der vier Filtertypen (Tiefpass, Hochpass, Bandpass und Bandsperre) aufgenommen und grafisch gegenübergestellt.</p>
+<section id="für-q1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="für-q1">Für <span class="math inline">\(Q=1\)</span></h3>
+</section>
+<section id="bandpass" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="bandpass">-Bandpass</h3>
+<div id="fig-bpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Mess_Sim_Vergleich\Q1\Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Abbildung&nbsp;10: Bode-Plot Vergleich der simulierten- und der auf dem Board Bandpassfilter für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;10: Bode-Plot Vergleich der simulierten- und der auf dem Board Bandpassfilter für <span class="math inline">\(Q = 1\)</span>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="bandstop" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="bandstop">-Bandstop</h3>
+<div id="fig-bsf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bsf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Abbildung&nbsp;11: Bode-Plot Vergleich der simulierten- und der auf dem Board Bandstopfilter für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bsf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;11: Bode-Plot Vergleich der simulierten- und der auf dem Board Bandstopfilter für <span class="math inline">\(Q = 1\)</span>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="hochpass" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="hochpass">-Hochpass</h3>
+<div id="fig-hpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Mess_Sim_Vergleich\Q1\Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Abbildung&nbsp;12: Bode-Plot Vergleich der simulierten- und der auf dem Board Hochpassfilter für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;12: Bode-Plot Vergleich der simulierten- und der auf dem Board Hochpassfilter für <span class="math inline">\(Q = 1\)</span>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="tiefpass" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="tiefpass">-Tiefpass</h3>
+<div id="fig-tpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Mess_Sim_Vergleich\Q1\Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Abbildung&nbsp;13: Bode-Plot Vergleich der simulierten- und der auf dem Board Tiefpassfilter für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13: Bode-Plot Vergleich der simulierten- und der auf dem Board Tiefpassfilter für <span class="math inline">\(Q = 1\)</span>.
+</figcaption>
+</figure>
+</div>
+</section>
 </section>
 <section id="interpretation-der-messergebnisse" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="interpretation-der-messergebnisse"><span class="header-section-number">5.2</span> Interpretation der Messergebnisse</h2>

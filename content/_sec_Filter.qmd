@@ -96,7 +96,7 @@ Aufbau von der Schaltung auf ASLK Board mit jumper Wires
 
 Das Analog System Lab Kit Pro Board (ASLK Pro Board), ist ein Steckbrett auf welchem man Schaltungen simpel und ohne zu Löten umsetzten kann.
 Mit hilfe dieses Steckbretts konnten wir die angegebene Schaltung aus dem Lab Manual, Labor 4, realisieren.
-Doch damit die Umsetzung erfolgreich wird, mussten wir zunächst die Spezifikationen für die Schaltung bestimmen, siehe Tabelle.
+Doch damit die Umsetzung erfolgreich wird, mussten wir zunächst die Spezifikationen für die Schaltung bestimmen, siehe @tbl-dimensions.
 
 Daraufhin haben wir damit begonnen die Schaltung auf dem Steckbrett aufzubauen. Dies haben wir Kabeln und steckbaren Widerständen umgesetzt
 
