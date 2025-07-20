@@ -320,16 +320,13 @@ Abbildung&nbsp;1: Fertige Leiterplatte mit universellem Biquad-Filterentwurf.
 <h1 data-number="2"><span class="header-section-number">2</span> Theoretischer Hintergrund</h1>
 <section id="grundlagen-zu-analogen-filtern" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="grundlagen-zu-analogen-filtern"><span class="header-section-number">2.1</span> Grundlagen zu analogen Filtern</h2>
-<p>Zunächst haben wir uns mit dem Aufbau analoger Filter beschäftig, um genauer zu sein mit FIltern welche RLC Glieder haben. Das “R” steht für den Widerstand, das “L” steht für die Last und das “C” für den Kondensator.</p>
+<p>Zunächst haben wir uns mit dem Aufbau analoger Filter beschäftig, um genauer zu sein mit FIltern welche RLC Glieder haben. Das <span class="math inline">\(R\)</span> steht für den Widerstand, das <span class="math inline">\(L\)</span> steht für die Induktivität und das <span class="math inline">\(C\)</span> für den Kondensator.</p>
 <p>Jenachdem wie man die einzelnen Bestandteile anordnet, kann man Vier verschiedene Filter entwerfen, einen Hochpass, einen Tiefpass, einen Bandpass und einen Bandstop.</p>
 <p>Ein wichtiger Faktor für diese Filter ist die Kreisfrequenz. Diese Hilft einem dabei den Frequenzbereich, welcher für einen von Interesse ist, zu ermitteln, da an der Kreisfrequenz der Filter eine Änderung, je nach Filter, durchläuft.</p>
 <p>Bei einem Hochpassfilter werden jegliche Frequenzen vor der Kreisfrequenz gefilter und jegliche Frequenzen nach der Kreisfrequenz durchgelassen.</p>
 <p>Der Tiefpassfilter ist das genaue Gegenteil des Hochpassfilters, jegliche Frequenzen vor der Kreisfrequenz werden durchgelasse und jegliche danach gefilter.</p>
 <p>Der Bandpassfilter filtert vor und nach der Kreisfrequenz jegliche Frequenzen und lässt die Kreisfrequenz passieren.</p>
 <p>Der Bandstopfilter ist das genaue Gegenteil vom Bandpassfilter und lässt jede Frequenz passieren bis auf die Kreisfrequenz.</p>
-<ol type="1">
-<li>Filter entwurf mit RLC Glied, TP, HP, BP –nicht berichten</li>
-</ol>
 <section id="übertragungsfunktionen-und-verschiedene-filtertypen" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="übertragungsfunktionen-und-verschiedene-filtertypen">Übertragungsfunktionen und verschiedene Filtertypen</h3>
 </section>
@@ -922,7 +919,7 @@ Das erste Layout maß ca. 5 cm × 7 cm (siehe <a href="#fig-pcbv1" class="quarto
 <div id="fig-pcbv1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcbv1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/pcbv1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Abbildung&nbsp;21: PCB-Design Version 1"><img src="images/pcbv1.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:60.0%"></a>
+<a href="images/pcbv1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Abbildung&nbsp;21: PCB-Design Version 1"><img src="images/pcbv1.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pcbv1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;21: PCB-Design Version 1
@@ -948,7 +945,7 @@ Die mechanischen Jumper auf dem Board sind zwar flexibel, können aber ähnliche
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/pcbv2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Fertiges PCB-Design"><img src="images/pcbv2.png" class="img-fluid figure-img" style="width:90.0%"></a></p>
+<p><a href="images/pcbv2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Fertiges PCB-Design"><img src="images/pcbv2.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
 <figcaption>Fertiges PCB-Design</figcaption>
 </figure>
 </div>
@@ -956,7 +953,7 @@ Die mechanischen Jumper auf dem Board sind zwar flexibel, können aber ähnliche
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/platine.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Fertige PCB"><img src="images/platine.jpg" class="img-fluid figure-img" style="width:90.0%"></a></p>
+<p><a href="images/platine.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Fertige PCB"><img src="images/platine.jpg" class="img-fluid figure-img" style="width:100.0%"></a></p>
 <figcaption>Fertige PCB</figcaption>
 </figure>
 </div>
@@ -1014,7 +1011,7 @@ Abbildung&nbsp;24: Bode-Plot Vergleich des auf dem Board- und des auf dem PCB Ba
 </figcaption>
 </figure>
 </div>
-<p>Der Bandsperre-Einbruch auf der Platine verläuft besonders tief und mit flachen, sauberen Flanken. Im diskreten Aufbau ist die Dämpfung ähnlich, jedoch treten an den Randbereichen leichte Sprünge und kleine Unebenheiten auf.</p>
+<p>Der Einbruch der Bandsperre auf der Platine zeichnet sich durch eine besondere Tiefe und flache, saubere Flanken aus. Bei einem diskreten Aufbau ist die Dämpfung durchaus vergleichbar, jedoch treten an den Rändern leichte Sprünge und geringfügige Ungenauigkeiten auf.</p>
 </section>
 <section id="hochpass-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="hochpass-2">-Hochpass</h3>
@@ -1262,6 +1259,7 @@ Die PCB-Messdaten folgen dem idealen Simulationsverlauf sehr eng, lediglich klei
 <section id="fazit-und-ausblick" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Fazit und Ausblick</h1>
 <p>Hier schreiben wir Fazit von dem Experiment</p>
+<p>Wenn wir nun noch einmal einen Blick darauf werfen, was wir im Verlauf dieses Labor ereicht haben, können wir behaupten, dass dieses ein Erfolg war. Wir konnten das Wissen, welches wir uns in vorherigen Semestern angeeignet haben, sinnvoll nutzen, um unsere eigenes Platinen Design zu erstellen und haben somit unser Ziel erreicht. Natürlich lief aber nicht immer alles nach Plan. Zu begin hat unsere Steckbrett-Schaltung nicht funktioniert, wodurch wir Zeit für die Fehlersuche aufbringen mussten. Am Ende stellte sich herraus das die Schaltung nicht das Problem war, sondern das Steckbrett. Es sind aber auch Fehler aufgetreten, dessen Ursache von uns aus ging. Wir haben einen <span class="math inline">\(10k\omega\)</span> Widerstand anstatt einse <span class="math inline">\(1k\omega\)</span> Widerstands benutzt, weshalb wir eine Dämpfung in unserer Schaltung vorliegen hatten. Auch diesen Fehler konnten wir ausfindig machen und beheben. Diese Probleme haben uns gezeigt, dass nicht immer alles nach Plan laufen kann und auch noch so kleine Fehler einen aufhalten können. Doch im Endeffekt sind diese Fehler etwas gutes, da sie uns zeigen, dass man immer alles doppelt und dreifach überprüfen muss und das Unaufmerksamkeiten Folgen mit sich führen. Doch wir wollen nicht nur auf das negative einen Blick werfen. Das von uns erstellte Platinen Design funktioniert genauso wie es soll, die einzelnen Filter geben den gewünschten Verlauf aus und haben keine Dämpfung. Ebenso funktioniert der von uns erstellte Butterworth Filter auf der Platine so wie es zu erwarten war. Die Fehler die wir zu beginn des Labores gemacht haben, zeigten uns, vorauf wir im weitern Verlauf achten mussten. Das wissen was wir uns in diesem Labor angeeignet haben, wird uns auch in Zukunft helfen, wenn wir auf ähnliche Probleme stoßen.</p>
 <p>Was ist rausgekommen? Was lief gut, wo gab’s Schwierigkeiten? Was könnte man als Nächstes machen?</p>
 </section>
 <section id="literaturverzeichnis" class="level1 unnumbered">
