@@ -25,7 +25,7 @@ Drittens erlaubt die PCB eine kompakte, übersichtliche Integration aller Filter
    - **Layernutzung**: Das Top-Layer für Signal- und Strompfade, das Bottom-Layer vollständig als durchgehende Massefläche („Ground Plane“) reserviert. So entfallen separate GND-Drähte. 
    - **Decoupling**: An jeder Spannungsversorgung des TL082 wurde $100\,\mathrm{nF}$ Kondensatoren nahe den OP-Amp-Pins platziert, um Versorgungsspannungsspitzen und Rauschen zu unterdrücken.
 
-   ![PCB-Design Version 1](images/pcbv1.png){#fig-pcbv1 fig-align="left" width=60%}
+   ![PCB-Design Version 1](images/pcbv1.png){#fig-pcbv1 fig-align="left" width=80%}
 
 ---
 
@@ -42,9 +42,9 @@ Drittens erlaubt die PCB eine kompakte, übersichtliche Integration aller Filter
 
 ::: {#fig-pcbs layout-ncol=2}
 
-![Fertiges PCB-Design](images/pcbv2.png){#fig:pcbv2 width=90%}
+![Fertiges PCB-Design](images/pcbv2.png){#fig:pcbv2 width=100%}
 
-![Fertige PCB](images/platine.jpg){#fig:pcb width=90%}
+![Fertige PCB](images/platine.jpg){#fig:pcb width=100%}
 
 Fertige Bi-Quad Filter Platine
 :::
