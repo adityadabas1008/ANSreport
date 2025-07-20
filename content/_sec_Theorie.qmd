@@ -7,7 +7,7 @@ Zunächst haben wir uns mit dem Aufbau analoger Filter beschäftig, um genauer z
 
 Jenachdem wie man die einzelnen Bestandteile anordnet, kann man Vier verschiedene Filter entwerfen, einen Hochpass, einen Tiefpass, einen Bandpass und einen Bandstop.
 
-Ein wichtiger Faktor für diese Filter ist die Kreisfrequenz. Diese Hilft einem dabei den Frequenzbereich, welcher für einen von Interesse ist, zu ermitteln, da an der Kreisfrequenz der Filter eine Änderung, je nach Filter, durchläuft.
+Ein wichtiger Faktor für diese Filter ist die Grenzfrequenz. Diese Hilft einem dabei den Frequenzbereich, welcher für einen von Interesse ist, zu ermitteln, da an der Grenzfrequenz der Filter eine Änderung, je nach Filter, durchläuft.
 
 Bei einem Hochpassfilter werden jegliche Frequenzen vor der Grenzfrequenz gefilter und jegliche Frequenzen nach der Grenzfrequenz durchgelassen.
 
