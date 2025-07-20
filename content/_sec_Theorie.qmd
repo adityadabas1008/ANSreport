@@ -9,13 +9,13 @@ Jenachdem wie man die einzelnen Bestandteile anordnet, kann man Vier verschieden
 
 Ein wichtiger Faktor für diese Filter ist die Kreisfrequenz. Diese Hilft einem dabei den Frequenzbereich, welcher für einen von Interesse ist, zu ermitteln, da an der Kreisfrequenz der Filter eine Änderung, je nach Filter, durchläuft.
 
-Bei einem Hochpassfilter werden jegliche Frequenzen vor der Kreisfrequenz gefilter und jegliche Frequenzen nach der Kreisfrequenz durchgelassen.
+Bei einem Hochpassfilter werden jegliche Frequenzen vor der Grenzfrequenz gefilter und jegliche Frequenzen nach der Grenzfrequenz durchgelassen.
 
-Der Tiefpassfilter ist das genaue Gegenteil des Hochpassfilters, jegliche Frequenzen vor der Kreisfrequenz werden durchgelasse und jegliche danach gefilter.
+Der Tiefpassfilter ist das genaue Gegenteil des Hochpassfilters, jegliche Frequenzen vor der Grenzfrequenz werden durchgelasse und jegliche danach gefilter.
 
-Der Bandpassfilter filtert vor und nach der Kreisfrequenz jegliche Frequenzen und lässt die Kreisfrequenz passieren.
+Der Bandpassfilter filtert vor und nach der Grenzfrequenz jegliche Frequenzen und lässt die Grenzfrequenz passieren.
 
-Der Bandstopfilter ist das genaue Gegenteil vom Bandpassfilter und lässt jede Frequenz passieren bis auf die Kreisfrequenz.
+Der Bandstopfilter ist das genaue Gegenteil vom Bandpassfilter und lässt jede Frequenz passieren bis auf die Grenzfrequenz.
  
 
 ### Übertragungsfunktionen und verschiedene Filtertypen {.unnumbered}
@@ -26,7 +26,7 @@ Nachdem die Grundlegenden Eigenschafften der Filter bestimmt waren, haben wir un
 
 
 Es ist zu sehen, dass der Hochpass- und Tiefpassfilter sich in der Anordnung unterscheiden, R und C werden miteinander ausgetauscht.
-Daraufhin haben wir die Übertragungsfunktionen der beiden Filter berechnet
+Daraufhin haben wir die Übertragungsfunktionen der beiden Filter bestimmt.
 
 Dabei ist die folgende Übertragungsfunktion für den Hochpassfilter herausgekommen:
 $$
