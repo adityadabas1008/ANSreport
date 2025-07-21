@@ -10,7 +10,7 @@ Um mögliche Fehlerquellen auszuschließen, wurde die Schaltung anschließend au
 
 Das Steckbrett stellte jedoch nicht die einzige Herausforderung dar. Nach Durchführung der Messungen an den einzelnen Filterschaltungen wurde deutlich, dass eine Dämpfung von 20 dB vorliegt. Zur Verdeutlichung dieses Problems ist im Folgenden ein exemplarischer Plot dargestellt, in dem die 20 dB-Dämpfung sichtbar wird.
 
-![Bode-Plot des Tiefpassfilters, der eine Dämpfung von 20 dB aufweist.](Mess_Sim_Vergleich\Q10\Tiefpass.png){#fig-dämpfung fig-align="center" width=100%}
+![Bode-Plot des Tiefpassfilters, der eine Dämpfung von 20 dB aufweist.](Mess_Sim_Vergleich/Q10/Tiefpass.png){#fig-dämpfung fig-align="center" width=100%}
 
 Wie im Plot zu erkennen ist, liegt die Amplitude des Ausgangssignals etwa 20 dB unter dem erwarteten Wert. Dies deutet darauf hin, dass irgendwo in der Schaltung ein Fehler vorliegt, der zu einer unerwarteten Dämpfung führt. 
 

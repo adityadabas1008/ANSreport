@@ -1,14 +1,14 @@
 ---
 title: "Entwurf und PCB Design eines universellen Biquad Filters"
 author: 
-  - name: Aditya Dabas (5230565)
+  - name: Aditya Dabas
     orcid: 0009-0001-5679-9910
     email: adabas@stud.hs-bremen.de
     corresponding: true
     roles: "Lead author"
     affiliation: Hochschule Bremen - City University of Applied Sciences (HSB)
 
-  - name: Mohamad Wehbi (5235487)
+  - name: Mohamad Wehbi
     orcid: 
     email: mwehbi@stud.hs-bremen.de
     corresponding: true
@@ -16,7 +16,7 @@ author:
     affiliation: Hochschule Bremen - City University of Applied Sciences (HSB)
 
 
-  - name: Adrian Jauch (5178618)
+  - name: Adrian Jauch
     orcid: 
     email: ajauch@stud.hs-bremen.de
     corresponding: false
@@ -38,8 +38,8 @@ abstract: |
 
 date: last-modified
 bibliography: references.bib
-csl: ieee-with-url.csl
-fig-numbering: true 
+# csl: ieee-with-url.csl
+# fig-numbering: true 
 ---
 
 {{< include content/_sec_Motivation.qmd >}}

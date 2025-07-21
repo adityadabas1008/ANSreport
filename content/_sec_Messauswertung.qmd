@@ -2,7 +2,7 @@
 
 Nachdem wir die Biquad-Filter-Schaltung bereits erfolgreich auf dem ASLK Pro Board aufgebaut haben, lag der Fokus dieses Abschnitts auf der Durchführung der Messungen und der anschließenden Auswertung der Ergebnisse. Ziel war es, die realen Frequenzgänge der verschiedenen Filtertypen experimentell zu erfassen und diese mit den zuvor durchgeführten Simulationen zu vergleichen.
 
-### Messungsschritte {.unnumbered}
+## Messungsschritte {.unnumbered}
 
 Für die experimentelle Ermittlung des Frequenzgangs wurde die Schaltung mithilfe der grafischen Oberfläche des Red Pitaya vermessen.
 
@@ -15,25 +15,25 @@ Zur Bewertung der praktischen Umsetzung wurden die Messergebnisse der real aufge
 
 ### -Bandpass {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für $Q = 1$.](Mess_Sim_Vergleich\Q1\Bandpass.png){#fig-bpf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für $Q = 1$.](Mess_Sim_Vergleich/Q1/Bandpass.png){#fig-bpf1 fig-align="center" width=100%}
 
 Die Simulation-Messung liefert einen klar definierten Resonanzpeak mit sehr gleichmäßigen Flanken. Die diskrete Variante zeigt den Peak geringfügig verschoben und weist an den Flanken kleine Unregelmäßigkeiten auf, wodurch der Verlauf etwas unschärfer erscheint.
 
 ### -Bandstop {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für $Q = 1$.](Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png){#fig-bsf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für $Q = 1$.](Mess_Sim_Vergleich/Q1/Bandstop_richtig_R6.png){#fig-bsf1 fig-align="center" width=100%}
 
 Der Einbruch der Bandsperre zeichnet sich durch eine besondere Tiefe und flache, saubere Flanken aus. Bei einem diskreten Aufbau ist die Dämpfung durchaus vergleichbar, jedoch treten an den Rändern leichte Sprünge und geringfügige Ungenauigkeiten auf.
 
 ### -Hochpass {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für $Q = 1$.](Mess_Sim_Vergleich\Q1\Hochpass.png){#fig-hpf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für $Q = 1$.](Mess_Sim_Vergleich/Q1/Hochpass.png){#fig-hpf1 fig-align="center" width=100%}
 
 Der Hochpass auf der Simulation steigt bis zur Eckfrequenz ohne Störungen an und fällt danach konstant mit –20 dB/Dekade ab. Der diskrete Versuchsaufbau hinkt diesem Anstieg minimal hinterher und zeigt punktuelle Ausreißer bei etwa $50 Hz$ und $100 Hz$.
 
 ### -Tiefpass {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für $Q = 1$.](Mess_Sim_Vergleich\Q1\Tiefpass.png){#fig-tpf1 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für $Q = 1$.](Mess_Sim_Vergleich/Q1/Tiefpass.png){#fig-tpf1 fig-align="center" width=100%}
 
 Beim Tiefpass fällt die Simulation-Kurve bis zur Eckfrequenz ideal flach ab und nimmt dann homogen –40 dB/Dekade an. Die diskrete Schaltung weist um die Eckfrequenz ein leichtes Überschwingen und vereinzelt kleine Unebenheiten im Sperrbereich auf.
 
@@ -41,25 +41,25 @@ Beim Tiefpass fällt die Simulation-Kurve bis zur Eckfrequenz ideal flach ab und
 
 ### -Bandpass {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für $Q = 10$.](Mess_Sim_Vergleich\Q10\Bandpass_ohne_Dämpfung.png){#fig-bpf10 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für $Q = 10$.](Mess_Sim_Vergleich/Q10/Bandpass_ohne_Dämpfung.png){#fig-bpf10 fig-align="center" width=100%}
 
 Der starke Resonanzpeak ist deutlich ausgeprägt, jedoch sehr gleichmäßig. Im diskreten Aufbau fällt der Peak minimal tiefer aus, wirkt aber an der Spitze etwas unruhig und leicht gezackt.
 
 ### -Bandstop {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für $Q = 10$.](Mess_Sim_Vergleich\Q10\Bandstop_ohne_Dämpfung.png){#fig-bsf10 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für $Q = 10$.](Mess_Sim_Vergleich/Q10/Bandstop_ohne_Dämpfung.png){#fig-bsf10 fig-align="center" width=100%}
 
 Bei der Bandsperre ist der Einbruch auf der Board geringfügig flacher, dafür allerdings äußerst stabil und glatt. Die Simulation Kurve erreicht eine etwas tiefere Dämpfung.
 
 ### -Hochpass {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für $Q = 10$.](Mess_Sim_Vergleich\Q10\Hochpass_ohne_Dämpfung.png){#fig-hpf10 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für $Q = 10$.](Mess_Sim_Vergleich/Q10/Hochpass_ohne_Dämpfung.png){#fig-hpf10 fig-align="center" width=100%}
 
 Die Simulation zeigt einen idealen Anstieg bis zur Grenzfrequenz und einen konstanten Verlauf darüber hinaus. Im diskreten Aufbau ist der Anstieg etwas flacher, und es treten leichte Unregelmäßigkeiten im Bereich um $100\,\mathrm{Hz}$ auf.
 
 ### -Tiefpass {.unnumbered}
 
-![Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für $Q = 10$.](Mess_Sim_Vergleich\Q10\Tiefpass_ohne_Dämpfung.png){#fig-tpf10 fig-align="center" width=100%}
+![Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für $Q = 10$.](Mess_Sim_Vergleich/Q10/Tiefpass_ohne_Dämpfung.png){#fig-tpf10 fig-align="center" width=100%}
 
 Die Simulation zeigt einen idealen Abfall nach der Grenzfrequenz mit einer Steilheit von –40 dB/Dekade. Im diskreten Aufbau ist der Abfall etwas weniger steil, und es treten leichte Unregelmäßigkeiten im Sperrbereich auf.
 

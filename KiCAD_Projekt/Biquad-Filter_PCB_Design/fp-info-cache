@@ -1,0 +1,183 @@
+45469196351518
+000_Often_Used_Footprints
+1-10uF
+
+
+0
+2
+2
+000_Often_Used_Footprints
+1N4001
+
+
+0
+2
+2
+000_Often_Used_Footprints
+10 nf Capacitor Ceramic
+
+
+0
+2
+2
+000_Often_Used_Footprints
+100nF
+
+
+0
+2
+2
+000_Often_Used_Footprints
+Connector 2 Pin 2.54mm
+Through hole straight socket strip, 1x02, 2.54mm pitch, single row (from Kicad 4.0.7), script generated
+Through hole socket strip THT 1x02 2.54mm single row
+0
+2
+2
+000_Often_Used_Footprints
+Connector 3 Pin 2,54mm
+
+
+0
+3
+3
+000_Often_Used_Footprints
+DIP 4
+
+
+0
+4
+4
+000_Often_Used_Footprints
+DIP 8
+
+
+0
+8
+8
+000_Often_Used_Footprints
+DIP 20
+
+
+0
+20
+20
+000_Often_Used_Footprints
+Digi Poti adapter
+14-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), LongPads
+THT DIP DIL PDIP 2.54mm 7.62mm 300mil LongPads
+0
+14
+14
+000_Often_Used_Footprints
+ESP-01
+
+
+0
+8
+8
+000_Often_Used_Footprints
+ESP32-DEVKIT-C-V4
+
+
+0
+38
+38
+000_Often_Used_Footprints
+Fuseholder Clip 20x5
+Fuseholder Clips, 5x20mm Cylinder Fuse, Pins Inline, Horizontal, Littelfuse 111, https://m.littelfuse.com/~/media/electronics/datasheets/fuse_clips/littelfuse_fuse_clip_111_519_datasheet.pdf.pdf
+fuse clip open
+0
+4
+2
+000_Often_Used_Footprints
+LM2596 DC-DC Converter
+
+
+0
+4
+4
+000_Often_Used_Footprints
+Resistor
+Resistor, Axial_DIN0309 series, Axial, Horizontal, pin pitch=12.7mm, 0.5W = 1/2W, length*diameter=9*3.2mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
+Resistor Axial_DIN0309 series Axial Horizontal pin pitch 12.7mm 0.5W = 1/2W length 9mm diameter 3.2mm
+0
+2
+2
+000_Often_Used_Footprints
+TO-220-3_Vertical
+TO-220-3, Vertical, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf
+TO-220-3 Vertical RM 2.54mm
+0
+3
+3
+000_Often_Used_Footprints
+Terminal 2 Pol
+
+
+0
+2
+2
+000_Often_Used_Footprints
+Terminal 3 Pol
+
+
+0
+3
+3
+000_Often_Used_Footprints
+Terminal 4 Pol
+
+
+0
+4
+4
+000_Often_Used_Footprints
+Terminal 5 Pol
+
+
+0
+6
+6
+000_Often_Used_Footprints
+Terminal 6 Pol
+
+
+0
+6
+6
+000_Often_Used_Footprints
+TestPoint
+THT pad as test Point, diameter 2.0mm, hole diameter 1.0mm
+test point THT pad
+0
+1
+1
+000_Often_Used_Footprints
+Trimmer Rund
+
+
+0
+3
+3
+000_Often_Used_Footprints
+Trimmer straight
+
+
+0
+3
+3
+000_Often_Used_Footprints
+WEMOS_D1_mini
+16-pin module, column spacing 22.86 mm (900 mils), https://wiki.wemos.cc/products:d1:d1_mini, https://c1.staticflickr.com/1/734/31400410271_f278b087db_z.jpg
+ESP8266 WiFi microcontroller
+0
+16
+16
+000_Often_Used_Footprints
+hsb_logo
+
+
+0
+0
+0

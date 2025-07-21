@@ -22,7 +22,7 @@ Der Bandstopfilter ist das genaue Gegenteil vom Bandpassfilter und lässt jede F
 
 Nachdem die Grundlegenden Eigenschafften der Filter bestimmt waren, haben wir uns noch um die Übertragungsfunktion und der RC Schaltung von dem Tiefpass- und HochpassFilter beschäftigt.
 
-![RC Schaltung von Hoch-und Tiefpassfilter.[@RCSchaltung]](images\Hochpass_Tiefpass_RCSchaltung.png){#fig-RCSchaltung fig-align="center" width=100%}
+![RC Schaltung von Hoch- und Tiefpassfilter.[@RCSchaltung]](images/Hochpass/Tiefpass_RCSchaltung.png){#fig-RCSchaltung fig-align="center" width=100%}
 
 
 Es ist zu sehen, dass der Hochpass- und Tiefpassfilter sich in der Anordnung unterscheiden, R und C werden miteinander ausgetauscht.
@@ -86,5 +86,4 @@ Für den ideal „maximal flachen“ Butterworth-Fall wählt man $Q = 1/\sqrt{2}
 
 In der KHN-Biquad-Topologie wird der Gütefaktor jedes Teilpfads (Tiefpass, Bandpass, Hochpass, Bandsperre) direkt über das Verhältnis ausgewählter Widerstände eingestellt. Durch Variation dieser Widerstandsrelation lässt sich $Q$ unabhängig von der Eckfrequenz $\omega_0$ justieren – man gewinnt also Kontrolle über die Schärfe der Filtercharakteristik, ohne die Mittenfrequenz zu verändern. Ein niedriger $Q$-Wert führt zu einem breiten, sanft abfallenden Übergang, während ein hoher $Q$-Wert die Flanken steiler macht und bei Bandpass- oder Bandsperre-Ausgängen zusätzlich einen ausgeprägten Resonanzbuckel erzeugt.
 
-In diesem Versuch wurden die Gütefaktoren $Q = 1$ und $Q = 10$ eingestellt und das jeweilige Verhalten der Filterausgänge entsprechend beobachtet.  
-
+In diesem Versuch wurden die Gütefaktoren $Q = 1$ und $Q = 10$ eingestellt und das jeweilige Verhalten der Filterausgänge entsprechend beobachtet.

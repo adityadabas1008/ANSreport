@@ -38,6 +38,6 @@ format:
   epub:
     theme: flatly
     output-file: ans_bericht
-  pptx:
-    reference-doc: HSB-vorlage.potx
-    output-file: ans_bericht.pptx
+#  pptx:
+#    reference-doc: HSB-vorlage.potx
+#    output-file: ans_bericht.pptx

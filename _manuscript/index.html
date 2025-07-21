@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Aditya Dabas (5230565)">
-<meta name="author" content="Mohamad Wehbi (5235487)">
-<meta name="author" content="Adrian Jauch (5178618)">
+<meta name="author" content="Aditya Dabas">
+<meta name="author" content="Mohamad Wehbi">
+<meta name="author" content="Adrian Jauch">
 
 <title>Entwurf und PCB Design eines universellen Biquad Filters</title>
 <style>
@@ -53,10 +53,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6e5ff12f349f7d7ee99023e5a7f49be9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-769b268fb290e116fe386cf5612ac759.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -94,36 +94,36 @@ window.Quarto = {
 <meta name="citation_title" content="Entwurf und PCB Design eines universellen Biquad Filters">
 <meta name="citation_abstract" content="In diesem Projekt wurde ein universeller Biquad-Filter entworfen und als Leiterplatte (PCB) umgesetzt. Ziel war es, die theoretischen Grundlagen zu analysieren, verschiedene Filtertypen zu simulieren und die praktische Realisierung zu dokumentieren. Die Charakterisierung und Messauswertung des aufgebauten Filters zeigen die Übereinstimmung zwischen Theorie und Praxis. Der gesamte Entwicklungsprozess – von der Schaltungsauslegung bis zum fertigen PCB – wird nachvollziehbar dargestellt.
 ">
-<meta name="citation_author" content="Aditya Dabas (5230565)">
-<meta name="citation_author" content="Mohamad Wehbi (5235487)">
-<meta name="citation_author" content="Adrian Jauch (5178618)">
+<meta name="citation_author" content="Aditya Dabas">
+<meta name="citation_author" content="Mohamad Wehbi">
+<meta name="citation_author" content="Adrian Jauch">
 <meta name="citation_publication_date" content="2025-07-21">
 <meta name="citation_cover_date" content="2025-07-21">
 <meta name="citation_year" content="2025">
 <meta name="citation_online_date" content="2025-07-21">
 <meta name="citation_language" content="de">
-<meta name="citation_reference" content="citation_title=CMOS: Circuit design, layout, and simulation;,citation_author=R. Jacob Baker;,citation_publication_date=2010-10;,citation_cover_date=2010-10;,citation_year=2010;,citation_doi=10.1002/9780470891179;,citation_isbn=9780470891179;">
+<meta name="citation_reference" content="citation_title=CMOS: Circuit Design, Layout, and Simulation;,citation_author=R. Jacob Baker;,citation_publication_date=2010-10;,citation_cover_date=2010-10;,citation_year=2010;,citation_doi=10.1002/9780470891179;,citation_isbn=9780470891179;">
 <meta name="citation_reference" content="citation_title=CMOSedu;,citation_author=R. Jacob Baker;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_fulltext_html_url=http://www.cmosedu.com;,citation_publisher=Website;">
-<meta name="citation_reference" content="citation_title=Switch-mode power supplies: SPICE simulations and practical designs;,citation_author=Christophe P. Basso;,citation_publication_date=2008;,citation_cover_date=2008;,citation_year=2008;,citation_isbn=9780071508582;,citation_series_title=Electronic engineering;">
-<meta name="citation_reference" content="citation_title=Op amps for everyone;,citation_author=Bruce Carter;,citation_publication_date=2013;,citation_cover_date=2013;,citation_year=2013;,citation_fulltext_html_url=http://www.sciencedirect.com/science/article/pii/B9780123914958000015;,citation_doi=10.1016/B978-0-12-391495-8.00001-5;,citation_isbn=978-0-12-391495-8;">
-<meta name="citation_reference" content="citation_title=Open-source design of integrated circuits: Ein quelloffener 1,44-MS/s 703-μW 12-bit nichtbinärer SAR-ADC mit 448-aF kondensatoren in einem 130-nm CMOS-prozess;,citation_author=Patrick Fath;,citation_author=Manuel Moser;,citation_author=Georg Zachl;,citation_author=Harald Pretl;,citation_publication_date=2024-01;,citation_cover_date=2024-01;,citation_year=2024;,citation_issue=1;,citation_doi=10.1007/s00502-023-01195-5;,citation_issn=1613-7620;,citation_volume=141;,citation_journal_title=Elektrotechnik und Informationstechnik;,citation_publisher=Springer Science; Business Media LLC;">
+<meta name="citation_reference" content="citation_title=Switch-Mode Power Supplies: SPICE Simulations and Practical Designs;,citation_author=Christophe P. Basso;,citation_publication_date=2008;,citation_cover_date=2008;,citation_year=2008;,citation_isbn=9780071508582;,citation_series_title=Electronic Engineering;">
+<meta name="citation_reference" content="citation_title=Op Amps for Everyone;,citation_author=Bruce Carter;,citation_publication_date=2013;,citation_cover_date=2013;,citation_year=2013;,citation_fulltext_html_url=http://www.sciencedirect.com/science/article/pii/B9780123914958000015;,citation_doi=10.1016/B978-0-12-391495-8.00001-5;,citation_isbn=978-0-12-391495-8;">
+<meta name="citation_reference" content="citation_title=Open-source design of integrated circuits: Ein quelloffener 1,44-MS/s 703-μW 12-bit nichtbinärer SAR-ADC mit 448-aF Kondensatoren in einem 130-nm CMOS-Prozess;,citation_author=Patrick Fath;,citation_author=Manuel Moser;,citation_author=Georg Zachl;,citation_author=Harald Pretl;,citation_publication_date=2024-01;,citation_cover_date=2024-01;,citation_year=2024;,citation_issue=1;,citation_doi=10.1007/s00502-023-01195-5;,citation_issn=1613-7620;,citation_volume=141;,citation_journal_title=Elektrotechnik und Informationstechnik;,citation_publisher=Springer Science; Business Media LLC;">
 <meta name="citation_reference" content="citation_title=Tiny Tapeout hit as eFabless closes;,citation_author=Nick Flaherty;,citation_publication_date=2025-03;,citation_cover_date=2025-03;,citation_year=2025;,citation_fulltext_html_url=https://www.eenewseurope.com/en/tiny-tapeout-hit-as-efabless-closes/;,citation_journal_title=eeNews EUROPE;">
-<meta name="citation_reference" content="citation_title=Fundamentals of layout design for electronic circuits;,citation_author=Jens Lienig;,citation_author=Juergen Scheible;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_doi=10.1007/978-3-030-39284-0;,citation_isbn=9783030392840;">
-<meta name="citation_reference" content="citation_title=Grundlagen des layoutentwurfs elektronischer schaltungen;,citation_author=Jens Lienig;,citation_author=Jürgen Scheible;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_doi=10.1007/978-3-031-15768-4;,citation_isbn=9783031157684;">
-<meta name="citation_reference" content="citation_title=Op amps for everyone;,citation_author=Ron Mancini;,citation_publication_date=2002-08;,citation_cover_date=2002-08;,citation_year=2002;,citation_fulltext_html_url=https://web.mit.edu/6.101/www/reference/op_amps_everyone.pdf;,citation_technical_report_institution=Texas Instruments Incorporation;,citation_technical_report_number=SLOD006B;">
-<meta name="citation_reference" content="citation_title=Leistungselektronik: Einführung in schaltungen und deren verhalten;,citation_author=Manfred Michel;,citation_publication_date=2011;,citation_cover_date=2011;,citation_year=2011;,citation_doi=10.1007/978-3-642-15984-8;,citation_isbn=978-3-642-15983-1;">
+<meta name="citation_reference" content="citation_title=Fundamentals of Layout Design for Electronic Circuits;,citation_author=Jens Lienig;,citation_author=Juergen Scheible;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_doi=10.1007/978-3-030-39284-0;,citation_isbn=9783030392840;">
+<meta name="citation_reference" content="citation_title=Grundlagen des Layoutentwurfs elektronischer Schaltungen;,citation_author=Jens Lienig;,citation_author=Jürgen Scheible;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_doi=10.1007/978-3-031-15768-4;,citation_isbn=9783031157684;">
+<meta name="citation_reference" content="citation_title=Op Amps for Everyone;,citation_author=Ron Mancini;,citation_publication_date=2002-08;,citation_cover_date=2002-08;,citation_year=2002;,citation_fulltext_html_url=https://web.mit.edu/6.101/www/reference/op_amps_everyone.pdf;,citation_technical_report_institution=Texas Instruments Incorporation;,citation_technical_report_number=SLOD006B;">
+<meta name="citation_reference" content="citation_title=Leistungselektronik: Einführung in Schaltungen und deren Verhalten;,citation_author=Manfred Michel;,citation_publication_date=2011;,citation_cover_date=2011;,citation_year=2011;,citation_doi=10.1007/978-3-642-15984-8;,citation_isbn=978-3-642-15983-1;">
 <meta name="citation_reference" content="citation_title=Analog Circuit Design;,citation_author=Harald Pretl;,citation_author=Michael Koefinger;,citation_author=Simon Dorrer;,citation_publication_date=2024-12;,citation_cover_date=2024-12;,citation_year=2024;,citation_fulltext_html_url=https://iic-jku.github.io/analog-circuit-design;,citation_doi=10.5281/zenodo.14387481;,citation_language=en-us;">
 <meta name="citation_reference" content="citation_title=GitHub repository of the IIC-OSIC-TOOLS;,citation_author=Harald Pretl;,citation_author=Georg Zachl;,citation_publication_date=2025-01;,citation_cover_date=2025-01;,citation_year=2025;,citation_fulltext_html_url=https://github.com/iic-jku/IIC-OSIC-TOOLS;,citation_doi=10.5281/zenodo.14634518;,citation_publisher=Zenodo;">
-<meta name="citation_reference" content="citation_title=From code to chip: Open-source automated analog layout design;,citation_author=Jakob Ratschenberger;,citation_author=Harald Pretl;,citation_publication_date=2025;,citation_cover_date=2025;,citation_year=2025;,citation_doi=10.1007/978-3-031-68562-0;,citation_isbn=9783031685620;,citation_issn=2690-0327;,citation_book_title=Synthesis Lectures on Engineering, Science, and Technology;,citation_series_title=Synthesis lectures on engineering, science, and technology;">
-<meta name="citation_reference" content="citation_title=Schaltnetzteile und ihre peripherie: Dimensionierung, einsatz, EMV;,citation_author=Ulrich Schlienz;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_doi=10.1007/978-3-658-29490-8;,citation_isbn=9783658294908;">
-<meta name="citation_reference" content="citation_title=Leistungselektronische schaltungen;,citation_editor=Dierk Schröder;,citation_editor=Rainer Marquardt;,citation_publication_date=2019;,citation_cover_date=2019;,citation_year=2019;,citation_doi=10.1007/978-3-662-55325-1;">
+<meta name="citation_reference" content="citation_title=From Code to Chip: Open-Source Automated Analog Layout Design;,citation_author=Jakob Ratschenberger;,citation_author=Harald Pretl;,citation_publication_date=2025;,citation_cover_date=2025;,citation_year=2025;,citation_doi=10.1007/978-3-031-68562-0;,citation_isbn=9783031685620;,citation_issn=2690-0327;,citation_book_title=Synthesis Lectures on Engineering, Science, and Technology;,citation_series_title=Synthesis Lectures on Engineering, Science, and Technology;">
+<meta name="citation_reference" content="citation_title=Schaltnetzteile und ihre Peripherie: Dimensionierung, Einsatz, EMV;,citation_author=Ulrich Schlienz;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_doi=10.1007/978-3-658-29490-8;,citation_isbn=9783658294908;">
+<meta name="citation_reference" content="citation_title=Leistungselektronische Schaltungen;,citation_editor=Dierk Schröder;,citation_editor=Rainer Marquardt;,citation_publication_date=2019;,citation_cover_date=2019;,citation_year=2019;,citation_doi=10.1007/978-3-662-55325-1;">
 <meta name="citation_reference" content="citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_issue=2;,citation_doi=10.1109/mssc.2024.3400568;,citation_issn=1943-0590;,citation_volume=16;,citation_journal_title=IEEE Solid-State Circuits Magazine;,citation_publisher=Institute of Electrical; Electronics Engineers (IEEE);">
-<meta name="citation_reference" content="citation_title=Analog building blocks of dc-dc converters: Examining fundamental concepts;,citation_author=Bernhard Wicht;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_issue=3;,citation_doi=10.1109/mssc.2020.3002141;,citation_volume=12;,citation_journal_title=IEEE Solid-State Circuits Magazine;,citation_publisher=institution of Electrical; Electronics Engineers (IEEE);">
-<meta name="citation_reference" content="citation_title=Design of power management integrated circuits;,citation_author=Bernhard Wicht;,citation_publication_date=2024-05;,citation_cover_date=2024-05;,citation_year=2024;,citation_doi=10.1002/9781119123095;,citation_isbn=9781119123095;">
-<meta name="citation_reference" content="citation_title=Introduction to digital filters with audio applications;,citation_author=Julius O. Smith;,citation_publication_date=2007;,citation_cover_date=2007;,citation_year=2007;,citation_isbn=978-0-9745607-1-7;">
-<meta name="citation_reference" content="citation_title=Analoge filter design;,citation_author=Mirco Meiners;,citation_publication_date=2025;,citation_cover_date=2025;,citation_year=2025;,citation_publisher=Vorlesungsskript: Lecture-20, Hochschule Bremen;">
-<meta name="citation_reference" content="citation_title=Elektronische bauelemente;,citation_author=Michael Reisch;,citation_publication_date=2007-05;,citation_cover_date=2007-05;,citation_year=2007;,citation_isbn=3-540-34010-9;">
-<meta name="citation_reference" content="citation_title=ASLK pro experiment 4: Zweiter ordnung universeller aktiver filter;,citation_author=Harald Pretl;,citation_author=Michael Koefinger;,citation_author=Simon Dorrer;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://iic-jku.github.io/aslk-pro-exp-4/;,citation_doi=10.5281/zenodo.14387234;,citation_language=en-us;">
+<meta name="citation_reference" content="citation_title=Analog Building Blocks of dc-dc Converters: Examining Fundamental Concepts;,citation_author=Bernhard Wicht;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_issue=3;,citation_doi=10.1109/mssc.2020.3002141;,citation_volume=12;,citation_journal_title=IEEE Solid-State Circuits Magazine;,citation_publisher=institution of Electrical; Electronics Engineers (IEEE);">
+<meta name="citation_reference" content="citation_title=Design of Power Management Integrated Circuits;,citation_author=Bernhard Wicht;,citation_publication_date=2024-05;,citation_cover_date=2024-05;,citation_year=2024;,citation_doi=10.1002/9781119123095;,citation_isbn=9781119123095;">
+<meta name="citation_reference" content="citation_title=Introduction to Digital Filters with Audio Applications;,citation_author=Julius O. Smith;,citation_publication_date=2007;,citation_cover_date=2007;,citation_year=2007;,citation_isbn=978-0-9745607-1-7;">
+<meta name="citation_reference" content="citation_title=Analoge Filter Design;,citation_author=Mirco Meiners;,citation_publication_date=2025;,citation_cover_date=2025;,citation_year=2025;,citation_publisher=Vorlesungsskript: Lecture-20, Hochschule Bremen;">
+<meta name="citation_reference" content="citation_title=Elektronische Bauelemente;,citation_author=Michael Reisch;,citation_publication_date=2007-05;,citation_cover_date=2007-05;,citation_year=2007;,citation_isbn=3-540-34010-9;">
+<meta name="citation_reference" content="citation_title=ASLK Pro Experiment 4: Zweiter Ordnung Universeller Aktiver Filter;,citation_author=Harald Pretl;,citation_author=Michael Koefinger;,citation_author=Simon Dorrer;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://iic-jku.github.io/aslk-pro-exp-4/;,citation_doi=10.5281/zenodo.14387234;,citation_language=en-us;">
 <meta name="citation_reference" content="citation_title=KiCad EDA 9.0;,citation_author=KiCad Development Team;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://www.kicad.org/;">
 <meta name="citation_reference" content="citation_title=RCSchaltung;,citation_fulltext_html_url=https://www.rahner-edu.de/s/cc_images/cache_4775273.jpg?t=1523436560;">
 </head>
@@ -144,7 +144,7 @@ window.Quarto = {
           <div class="quarto-title-meta-heading">Zugehörigkeit</div>
           
                 <div class="quarto-title-meta-contents">
-            <p class="author">Aditya Dabas (5230565) <a href="mailto:adabas@stud.hs-bremen.de" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0009-0001-5679-9910" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+            <p class="author">Aditya Dabas <a href="mailto:adabas@stud.hs-bremen.de" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0009-0001-5679-9910" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
           </div>
                 <div class="quarto-title-meta-contents">
                     <p class="affiliation">
@@ -152,7 +152,7 @@ window.Quarto = {
                       </p>
                   </div>
                       <div class="quarto-title-meta-contents">
-            <p class="author">Mohamad Wehbi (5235487) <a href="mailto:mwehbi@stud.hs-bremen.de" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+            <p class="author">Mohamad Wehbi <a href="mailto:mwehbi@stud.hs-bremen.de" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
           </div>
                 <div class="quarto-title-meta-contents">
                     <p class="affiliation">
@@ -160,7 +160,7 @@ window.Quarto = {
                       </p>
                   </div>
                       <div class="quarto-title-meta-contents">
-            <p class="author">Adrian Jauch (5178618) <a href="mailto:ajauch@stud.hs-bremen.de" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+            <p class="author">Adrian Jauch <a href="mailto:ajauch@stud.hs-bremen.de" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
           </div>
                 <div class="quarto-title-meta-contents">
                     <p class="affiliation">
@@ -183,7 +183,7 @@ window.Quarto = {
               </div>
       </div>
       <div class="quarto-title-meta-column-end quarto-other-formats-target">
-      <div class="quarto-alternate-formats"><div class="quarto-title-meta-heading">Andere Formate</div><div class="quarto-title-meta-contents"><p><a href="ans_bericht.pdf"><i class="bi bi-file-pdf"></i>PDF</a></p></div><div class="quarto-title-meta-contents"><p><a href="ans_bericht.epub"><i class="bi bi-file"></i>ePub</a></p></div><div class="quarto-title-meta-contents"><p><a href="ans_bericht.pptx"><i class="bi bi-file-slides"></i>Powerpoint</a></p></div></div></div>
+      <div class="quarto-alternate-formats"><div class="quarto-title-meta-heading">Andere Formate</div><div class="quarto-title-meta-contents"><p><a href="ans_bericht.pdf"><i class="bi bi-file-pdf"></i>PDF</a></p></div><div class="quarto-title-meta-contents"><p><a href="ans_bericht.epub"><i class="bi bi-file"></i>ePub</a></p></div></div></div>
     </div>
 
     <div>
@@ -292,7 +292,7 @@ window.Quarto = {
   <li><a href="#fazit-und-ausblick" id="toc-fazit-und-ausblick" class="nav-link" data-scroll-target="#fazit-und-ausblick"><span class="header-section-number">7</span> Fazit und Ausblick</a></li>
   <li><a href="#literaturverzeichnis" id="toc-literaturverzeichnis" class="nav-link" data-scroll-target="#literaturverzeichnis">Literaturverzeichnis</a></li>
   </ul>
-<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="content\references-preview.html"><i class="bi bi-journal-code"></i>Literaturverzeichnis</a></li></ul></div></nav>
+<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="content/references-preview.html"><i class="bi bi-journal-code"></i>Literaturverzeichnis</a></li></ul></div></nav>
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
@@ -327,25 +327,25 @@ Abbildung&nbsp;1: Fertige Leiterplatte mit universellem Biquad-Filterentwurf.
 <h2 data-number="2.1" class="anchored" data-anchor-id="grundlagen-zu-analogen-filtern"><span class="header-section-number">2.1</span> Grundlagen zu analogen Filtern</h2>
 <p>Zunächst haben wir uns mit dem Aufbau analoger Filter beschäftig, um genauer zu sein mit FIltern welche RLC Glieder haben. Das <span class="math inline">\(R\)</span> steht für den Widerstand, das <span class="math inline">\(L\)</span> steht für die Induktivität und das <span class="math inline">\(C\)</span> für den Kondensator.</p>
 <p>Jenachdem wie man die einzelnen Bestandteile anordnet, kann man Vier verschiedene Filter entwerfen, einen Hochpass, einen Tiefpass, einen Bandpass und einen Bandstop.</p>
-<p>Ein wichtiger Faktor für diese Filter ist die Kreisfrequenz. Diese Hilft einem dabei den Frequenzbereich, welcher für einen von Interesse ist, zu ermitteln, da an der Kreisfrequenz der Filter eine Änderung, je nach Filter, durchläuft.</p>
-<p>Bei einem Hochpassfilter werden jegliche Frequenzen vor der Kreisfrequenz gefilter und jegliche Frequenzen nach der Kreisfrequenz durchgelassen.</p>
-<p>Der Tiefpassfilter ist das genaue Gegenteil des Hochpassfilters, jegliche Frequenzen vor der Kreisfrequenz werden durchgelasse und jegliche danach gefilter.</p>
-<p>Der Bandpassfilter filtert vor und nach der Kreisfrequenz jegliche Frequenzen und lässt die Kreisfrequenz passieren.</p>
-<p>Der Bandstopfilter ist das genaue Gegenteil vom Bandpassfilter und lässt jede Frequenz passieren bis auf die Kreisfrequenz.</p>
+<p>Ein wichtiger Faktor für diese Filter ist die Grenzfrequenz. Diese Hilft einem dabei den Frequenzbereich, welcher für einen von Interesse ist, zu ermitteln, da an der Grenzfrequenz der Filter eine Änderung, je nach Filter, durchläuft.</p>
+<p>Bei einem Hochpassfilter werden jegliche Frequenzen vor der Grenzfrequenz gefilter und jegliche Frequenzen nach der Grenzfrequenz durchgelassen.</p>
+<p>Der Tiefpassfilter ist das genaue Gegenteil des Hochpassfilters, jegliche Frequenzen vor der Grenzfrequenz werden durchgelasse und jegliche danach gefilter.</p>
+<p>Der Bandpassfilter filtert vor und nach der Grenzfrequenz jegliche Frequenzen und lässt die Grenzfrequenz passieren.</p>
+<p>Der Bandstopfilter ist das genaue Gegenteil vom Bandpassfilter und lässt jede Frequenz passieren bis auf die Grenzfrequenz.</p>
 <section id="übertragungsfunktionen-und-verschiedene-filtertypen" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="übertragungsfunktionen-und-verschiedene-filtertypen">Übertragungsfunktionen und verschiedene Filtertypen</h3>
 <p>Nachdem die Grundlegenden Eigenschafften der Filter bestimmt waren, haben wir uns noch um die Übertragungsfunktion und der RC Schaltung von dem Tiefpass- und HochpassFilter beschäftigt.</p>
 <div id="fig-RCSchaltung" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-RCSchaltung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images\Hochpass_Tiefpass_RCSchaltung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Abbildung&nbsp;2: RC Schaltung von Hoch-und Tiefpassfilter.[@RCSchaltung]"><img src="images\Hochpass_Tiefpass_RCSchaltung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="images/Hochpass/Tiefpass_RCSchaltung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Abbildung&nbsp;2: RC Schaltung von Hoch- und Tiefpassfilter.[@RCSchaltung]"><img src="images/Hochpass/Tiefpass_RCSchaltung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-RCSchaltung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: RC Schaltung von Hoch-und Tiefpassfilter.<span class="citation" data-cites="RCSchaltung"><a href="#ref-RCSchaltung" role="doc-biblioref">[1]</a></span>
+Abbildung&nbsp;2: RC Schaltung von Hoch- und Tiefpassfilter.<span class="citation" data-cites="RCSchaltung">(<a href="#ref-RCSchaltung" role="doc-biblioref"><span>„RCSchaltung“</span>, o.&nbsp;J.</a>)</span>
 </figcaption>
 </figure>
 </div>
-<p>Es ist zu sehen, dass der Hochpass- und Tiefpassfilter sich in der Anordnung unterscheiden, R und C werden miteinander ausgetauscht. Daraufhin haben wir die Übertragungsfunktionen der beiden Filter berechnet</p>
+<p>Es ist zu sehen, dass der Hochpass- und Tiefpassfilter sich in der Anordnung unterscheiden, R und C werden miteinander ausgetauscht. Daraufhin haben wir die Übertragungsfunktionen der beiden Filter bestimmt.</p>
 <p>Dabei ist die folgende Übertragungsfunktion für den Hochpassfilter herausgekommen: <span class="math display">\[
 H(s) = \frac{sRC}{1 + sRC}
 \]</span></p>
@@ -371,7 +371,7 @@ H(s) = \frac{1}{1 + sRC}
 H(s) = \frac{b_0 + b_1 s + b_2 s^2}{a_0 + a_1 s + a_2 s^2}
 \]</span></p>
 <p>Hierbei werden die Koeffizienten <span class="math inline">\(b_i\)</span> und <span class="math inline">\(a_i\)</span> durch die konkrete Wahl der Widerstands- und Kondensatorwerte festgelegt. Die verschiedenen Filtertypen unterscheiden sich lediglich in den spezifischen Koeffizientenwerten, während die zugrunde liegende Schaltungsstruktur identisch bleibt. Beispielsweise resultiert ein reiner Bandpass bei <span class="math inline">\(b_0 = b_2 = 0\)</span>, <span class="math inline">\(b_1 \neq 0\)</span>, während bei <span class="math inline">\(b_1 = 0\)</span> und <span class="math inline">\(b_0 = b_2 \neq 0\)</span> eine Bandsperre realisiert wird.</p>
-<p>Ein wesentlicher Vorteil des Biquad-Konzepts liegt in seiner Modularität. Durch die serielle oder parallele Verschaltung mehrerer identischer Biquad-Stufen lassen sich problemlos Filter höherer Ordnung aufbauen, ohne dass die Komplexität jeder einzelnen Stufe zunimmt. Zudem ermöglicht die separate Kalibrierbarkeit jeder Stufe eine exakte Justierung von Gütefaktor und Grenzfrequenz, wodurch Fertigungstoleranzen gezielt kompensiert werden können. Aufgrund dieser Flexibilität und der vergleichsweise einfachen Implementierung haben sich Biquad-Filter als Standardlösung in vielen Bereichen etabliert, etwa in der Audio- und Messtechnik sowie in der industriellen Signalverarbeitung.<span class="citation" data-cites="FILTERS07"><a href="#ref-FILTERS07" role="doc-biblioref">[2]</a></span></p>
+<p>Ein wesentlicher Vorteil des Biquad-Konzepts liegt in seiner Modularität. Durch die serielle oder parallele Verschaltung mehrerer identischer Biquad-Stufen lassen sich problemlos Filter höherer Ordnung aufbauen, ohne dass die Komplexität jeder einzelnen Stufe zunimmt. Zudem ermöglicht die separate Kalibrierbarkeit jeder Stufe eine exakte Justierung von Gütefaktor und Grenzfrequenz, wodurch Fertigungstoleranzen gezielt kompensiert werden können. Aufgrund dieser Flexibilität und der vergleichsweise einfachen Implementierung haben sich Biquad-Filter als Standardlösung in vielen Bereichen etabliert, etwa in der Audio- und Messtechnik sowie in der industriellen Signalverarbeitung.<span class="citation" data-cites="FILTERS07">(<a href="#ref-FILTERS07" role="doc-biblioref">Smith 2007</a>)</span></p>
 </section>
 <section id="gütefaktor-q-und-einfluss" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="gütefaktor-q-und-einfluss"><span class="header-section-number">2.4</span> Gütefaktor Q und Einfluss</h2>
@@ -383,7 +383,7 @@ H(s) \;=\; \frac{1}{1 + \frac{s}{\omega_{0} Q} + \left(\frac{s}{\omega_{0}}\righ
 <p><span class="math display">\[
 s_{1,2} \;=\; -\frac{\omega_{0}}{2Q} \;\pm\; j\,\omega_{0}\,\sqrt{\,1 - \frac{1}{4Q^{2}}\,}\;.
 \]</span></p>
-<p>Für den ideal „maximal flachen“ Butterworth-Fall wählt man <span class="math inline">\(Q = 1/\sqrt{2} \approx 0{,}707\)</span>, wodurch kein Durchtritts-Peaking auftritt und die Flankensteilheit <span class="math inline">\(-20\ \mathrm{dB/Dekade}\)</span> beträgt (das heißt: Eine Verzehnfachung der Frequenz führt zu einem Pegelabfall von 20 dB). <span class="citation" data-cites="lecture20"><a href="#ref-lecture20" role="doc-biblioref">[3]</a></span></p>
+<p>Für den ideal „maximal flachen“ Butterworth-Fall wählt man <span class="math inline">\(Q = 1/\sqrt{2} \approx 0{,}707\)</span>, wodurch kein Durchtritts-Peaking auftritt und die Flankensteilheit <span class="math inline">\(-20\ \mathrm{dB/Dekade}\)</span> beträgt (das heißt: Eine Verzehnfachung der Frequenz führt zu einem Pegelabfall von 20 dB). <span class="citation" data-cites="lecture20">(<a href="#ref-lecture20" role="doc-biblioref">Meiners 2025</a>)</span></p>
 <p>In der KHN-Biquad-Topologie wird der Gütefaktor jedes Teilpfads (Tiefpass, Bandpass, Hochpass, Bandsperre) direkt über das Verhältnis ausgewählter Widerstände eingestellt. Durch Variation dieser Widerstandsrelation lässt sich <span class="math inline">\(Q\)</span> unabhängig von der Eckfrequenz <span class="math inline">\(\omega_0\)</span> justieren – man gewinnt also Kontrolle über die Schärfe der Filtercharakteristik, ohne die Mittenfrequenz zu verändern. Ein niedriger <span class="math inline">\(Q\)</span>-Wert führt zu einem breiten, sanft abfallenden Übergang, während ein hoher <span class="math inline">\(Q\)</span>-Wert die Flanken steiler macht und bei Bandpass- oder Bandsperre-Ausgängen zusätzlich einen ausgeprägten Resonanzbuckel erzeugt.</p>
 <p>In diesem Versuch wurden die Gütefaktoren <span class="math inline">\(Q = 1\)</span> und <span class="math inline">\(Q = 10\)</span> eingestellt und das jeweilige Verhalten der Filterausgänge entsprechend beobachtet.</p>
 </section>
@@ -401,7 +401,7 @@ s_{1,2} \;=\; -\frac{\omega_{0}}{2Q} \;\pm\; j\,\omega_{0}\,\sqrt{\,1 - \frac{1}
 <a href="images/invopamp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Abbildung&nbsp;3: Invertierender Verstärker [@reisch2007]"><img src="images/invopamp.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:50.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-invopamp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Invertierender Verstärker <span class="citation" data-cites="reisch2007"><a href="#ref-reisch2007" role="doc-biblioref">[4]</a></span>
+Abbildung&nbsp;3: Invertierender Verstärker <span class="citation" data-cites="reisch2007">(<a href="#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -427,7 +427,7 @@ Abbildung&nbsp;3: Invertierender Verstärker <span class="citation" data-cites="
 <p><span class="math display">\[
 H_{\text{inv}}(s) = \frac{V_{2}(s)}{V_{1}(s)} \approx -\frac{R_{2}}{R_{1}}.
 \]</span></p>
-<p>Das Minuszeichen veranschaulicht, dass die Ausgangsspannung eine entgegengesetzte Polarität zur Eingangsspannung aufweist. Diese Schaltungskonfiguration wird daher als invertierender Verstärker oder als Umkehrverstärker bezeichnet. <span class="citation" data-cites="reisch2007"><a href="#ref-reisch2007" role="doc-biblioref">[4]</a></span></p>
+<p>Das Minuszeichen veranschaulicht, dass die Ausgangsspannung eine entgegengesetzte Polarität zur Eingangsspannung aufweist. Diese Schaltungskonfiguration wird daher als invertierender Verstärker oder als Umkehrverstärker bezeichnet. <span class="citation" data-cites="reisch2007">(<a href="#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span></p>
 <hr>
 </section>
 <section id="der-addierer" class="level3 unnumbered">
@@ -439,7 +439,7 @@ H_{\text{inv}}(s) = \frac{V_{2}(s)}{V_{1}(s)} \approx -\frac{R_{2}}{R_{1}}.
 <a href="images/addopamp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Abbildung&nbsp;4: Summierverstärker [@reisch2007]"><img src="images/addopamp.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:50.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-addopamp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: Summierverstärker <span class="citation" data-cites="reisch2007"><a href="#ref-reisch2007" role="doc-biblioref">[4]</a></span>
+Abbildung&nbsp;4: Summierverstärker <span class="citation" data-cites="reisch2007">(<a href="#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -479,7 +479,7 @@ V_{\text{out}} = - \bigl(V_1 + V_2 + \dots + V_m \bigr).
 <a href="images/intopamp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Abbildung&nbsp;5: Der Integrierer [@reisch2007]"><img src="images/intopamp.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:50.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-intopamp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5: Der Integrierer <span class="citation" data-cites="reisch2007"><a href="#ref-reisch2007" role="doc-biblioref">[4]</a></span>
+Abbildung&nbsp;5: Der Integrierer <span class="citation" data-cites="reisch2007">(<a href="#ref-reisch2007" role="doc-biblioref">Reisch 2007</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -536,7 +536,7 @@ H_{\mathrm{int}}(s) = \frac{V_2(s)}{V_1(s)} = - \frac{1}{s R C}.
 <a href="images/biquad_aslk_exp4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Abbildung&nbsp;6: Zweiter Ordnung Universeller Aktiver Filter.[@aslk]"><img src="images/biquad_aslk_exp4.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-biquadfilter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6: Zweiter Ordnung Universeller Aktiver Filter.<span class="citation" data-cites="aslk"><a href="#ref-aslk" role="doc-biblioref">[5]</a></span>
+Abbildung&nbsp;6: Zweiter Ordnung Universeller Aktiver Filter.<span class="citation" data-cites="aslk">(<a href="#ref-aslk" role="doc-biblioref">Pretl, Koefinger, und Dorrer 2024</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -564,7 +564,7 @@ Abbildung&nbsp;6: Zweiter Ordnung Universeller Aktiver Filter.<span class="citat
 <a href="images/Güte_Faktor.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Abbildung&nbsp;7: Gütefaktor und zuständige Widerstand[@aslk]"><img src="images/Güte_Faktor.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gütewiderstand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;7: Gütefaktor und zuständige Widerstand<span class="citation" data-cites="aslk"><a href="#ref-aslk" role="doc-biblioref">[5]</a></span>
+Abbildung&nbsp;7: Gütefaktor und zuständige Widerstand<span class="citation" data-cites="aslk">(<a href="#ref-aslk" role="doc-biblioref">Pretl, Koefinger, und Dorrer 2024</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -628,7 +628,7 @@ Tabelle&nbsp;1: Dimensionierung der Bauteile
 <a href="images/Kicad_Schaltung_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Abbildung&nbsp;8: Simulationsaufbau für den aktiven Biquad-Filter in KiCad.[@kicad]"><img src="images/Kicad_Schaltung_2.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Kicad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;8: Simulationsaufbau für den aktiven Biquad-Filter in KiCad.<span class="citation" data-cites="kicad"><a href="#ref-kicad" role="doc-biblioref">[6]</a></span>
+Abbildung&nbsp;8: Simulationsaufbau für den aktiven Biquad-Filter in KiCad.<span class="citation" data-cites="kicad">(<a href="#ref-kicad" role="doc-biblioref">KiCad Development Team 2024</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -668,7 +668,7 @@ Abbildung&nbsp;10: Bode-Plot der simulierten Biquad-Schaltung für <span class="
 <a href="images/theorie_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Abbildung&nbsp;11: Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual [@aslk]"><img src="images/theorie_plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bodetheori-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;11: Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual <span class="citation" data-cites="aslk"><a href="#ref-aslk" role="doc-biblioref">[5]</a></span>
+Abbildung&nbsp;11: Theoretische Amplituden- und Phasengänge aus dem ASLK Pro Manual <span class="citation" data-cites="aslk">(<a href="#ref-aslk" role="doc-biblioref">Pretl, Koefinger, und Dorrer 2024</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -779,7 +779,7 @@ Abbildung&nbsp;14: Butterworth Filter 3. Ordnung Simulation
 <div id="fig-dämpfung" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-dämpfung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Mess_Sim_Vergleich\Q10\Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Abbildung&nbsp;15: Bode-Plot des Tiefpassfilters, der eine Dämpfung von 20 dB aufweist."><img src="Mess_Sim_Vergleich\Q10\Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich/Q10/Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Abbildung&nbsp;15: Bode-Plot des Tiefpassfilters, der eine Dämpfung von 20 dB aufweist."><img src="Mess_Sim_Vergleich/Q10/Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dämpfung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;15: Bode-Plot des Tiefpassfilters, der eine Dämpfung von 20 dB aufweist.
@@ -795,8 +795,8 @@ Abbildung&nbsp;15: Bode-Plot des Tiefpassfilters, der eine Dämpfung von 20 dB
 <section id="messung-und-analyse" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Messung und Analyse</h1>
 <p>Nachdem wir die Biquad-Filter-Schaltung bereits erfolgreich auf dem ASLK Pro Board aufgebaut haben, lag der Fokus dieses Abschnitts auf der Durchführung der Messungen und der anschließenden Auswertung der Ergebnisse. Ziel war es, die realen Frequenzgänge der verschiedenen Filtertypen experimentell zu erfassen und diese mit den zuvor durchgeführten Simulationen zu vergleichen.</p>
-<section id="messungsschritte" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="messungsschritte">Messungsschritte</h3>
+<section id="messungsschritte" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="messungsschritte">Messungsschritte</h2>
 <p>Für die experimentelle Ermittlung des Frequenzgangs wurde die Schaltung mithilfe der grafischen Oberfläche des Red Pitaya vermessen.</p>
 <p>Die so gewonnenen Messdaten wurden im Anschluss exportiert und zur weiteren Analyse mit einem eigens entwickelten Python-Skript ausgewertet. Dadurch war es möglich, die Amplituden- und Phasengänge der real aufgebauten Schaltung systematisch mit den Simulationskurven zu vergleichen.</p>
 </section>
@@ -811,7 +811,7 @@ Abbildung&nbsp;15: Bode-Plot des Tiefpassfilters, der eine Dämpfung von 20 dB
 <div id="fig-bpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Mess_Sim_Vergleich\Q1\Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Abbildung&nbsp;16: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich/Q1/Bandpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Abbildung&nbsp;16: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für Q = 1."><img src="Mess_Sim_Vergleich/Q1/Bandpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;16: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für <span class="math inline">\(Q = 1\)</span>.
@@ -825,7 +825,7 @@ Abbildung&nbsp;16: Bode-Plot Vergleich des simulierten- und des auf dem Board Ba
 <div id="fig-bsf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bsf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Abbildung&nbsp;17: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Bandstop_richtig_R6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich/Q1/Bandstop_richtig_R6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Abbildung&nbsp;17: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für Q = 1."><img src="Mess_Sim_Vergleich/Q1/Bandstop_richtig_R6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bsf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;17: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für <span class="math inline">\(Q = 1\)</span>.
@@ -839,7 +839,7 @@ Abbildung&nbsp;17: Bode-Plot Vergleich des simulierten- und des auf dem Board Ba
 <div id="fig-hpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Mess_Sim_Vergleich\Q1\Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Abbildung&nbsp;18: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich/Q1/Hochpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Abbildung&nbsp;18: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für Q = 1."><img src="Mess_Sim_Vergleich/Q1/Hochpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;18: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für <span class="math inline">\(Q = 1\)</span>.
@@ -853,7 +853,7 @@ Abbildung&nbsp;18: Bode-Plot Vergleich des simulierten- und des auf dem Board Ho
 <div id="fig-tpf1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Mess_Sim_Vergleich\Q1\Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Abbildung&nbsp;19: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für Q = 1."><img src="Mess_Sim_Vergleich\Q1\Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich/Q1/Tiefpass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Abbildung&nbsp;19: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für Q = 1."><img src="Mess_Sim_Vergleich/Q1/Tiefpass.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tpf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;19: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für <span class="math inline">\(Q = 1\)</span>.
@@ -870,7 +870,7 @@ Abbildung&nbsp;19: Bode-Plot Vergleich des simulierten- und des auf dem Board Ti
 <div id="fig-bpf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Mess_Sim_Vergleich\Q10\Bandpass_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Abbildung&nbsp;20: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für Q = 10."><img src="Mess_Sim_Vergleich\Q10\Bandpass_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich/Q10/Bandpass_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Abbildung&nbsp;20: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für Q = 10."><img src="Mess_Sim_Vergleich/Q10/Bandpass_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;20: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandpassfilters für <span class="math inline">\(Q = 10\)</span>.
@@ -884,7 +884,7 @@ Abbildung&nbsp;20: Bode-Plot Vergleich des simulierten- und des auf dem Board Ba
 <div id="fig-bsf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bsf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Mess_Sim_Vergleich\Q10\Bandstop_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Abbildung&nbsp;21: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für Q = 10."><img src="Mess_Sim_Vergleich\Q10\Bandstop_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich/Q10/Bandstop_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Abbildung&nbsp;21: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für Q = 10."><img src="Mess_Sim_Vergleich/Q10/Bandstop_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bsf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;21: Bode-Plot Vergleich des simulierten- und des auf dem Board Bandstopfilters für <span class="math inline">\(Q = 10\)</span>.
@@ -898,7 +898,7 @@ Abbildung&nbsp;21: Bode-Plot Vergleich des simulierten- und des auf dem Board Ba
 <div id="fig-hpf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Mess_Sim_Vergleich\Q10\Hochpass_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Abbildung&nbsp;22: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für Q = 10."><img src="Mess_Sim_Vergleich\Q10\Hochpass_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich/Q10/Hochpass_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Abbildung&nbsp;22: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für Q = 10."><img src="Mess_Sim_Vergleich/Q10/Hochpass_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;22: Bode-Plot Vergleich des simulierten- und des auf dem Board Hochpassfilters für <span class="math inline">\(Q = 10\)</span>.
@@ -912,7 +912,7 @@ Abbildung&nbsp;22: Bode-Plot Vergleich des simulierten- und des auf dem Board Ho
 <div id="fig-tpf10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Mess_Sim_Vergleich\Q10\Tiefpass_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Abbildung&nbsp;23: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für Q = 10."><img src="Mess_Sim_Vergleich\Q10\Tiefpass_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
+<a href="Mess_Sim_Vergleich/Q10/Tiefpass_ohne_Dämpfung.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Abbildung&nbsp;23: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für Q = 10."><img src="Mess_Sim_Vergleich/Q10/Tiefpass_ohne_Dämpfung.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tpf10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;23: Bode-Plot Vergleich des simulierten- und des auf dem Board Tiefpassfilters für <span class="math inline">\(Q = 10\)</span>.
@@ -1321,24 +1321,24 @@ Die PCB-Messdaten folgen dem idealen Simulationsverlauf sehr eng, lediglich klei
 </section>
 <section id="literaturverzeichnis" class="level1 unnumbered">
 <h1 class="unnumbered">Literaturverzeichnis</h1>
-<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-RCSchaltung" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline"><span>„RCSchaltung“</span>. Verfügbar unter: <a href="https://www.rahner-edu.de/s/cc_images/cache_4775273.jpg?t=1523436560">https://www.rahner-edu.de/s/cc_images/cache_4775273.jpg?t=1523436560</a></div>
-</div>
-<div id="ref-FILTERS07" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">J. O. Smith, <em>Introduction to Digital Filters with Audio Applications</em>. : W3K Publishing, 2007.</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-kicad" class="csl-entry" role="listitem">
+KiCad Development Team. 2024. <span>„KiCad EDA 9.0“</span>. <a href="https://www.kicad.org/">https://www.kicad.org/</a>.
 </div>
 <div id="ref-lecture20" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">M. Meiners, <span>„Analoge Filter Design“</span>. Vorlesungsskript: Lecture-20, Hochschule Bremen, 2025.</div>
-</div>
-<div id="ref-reisch2007" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[4] </div><div class="csl-right-inline">M. Reisch, <em>Elektronische Bauelemente</em>. Springer, 2007.</div>
+Meiners, Mirco. 2025. <span>„Analoge Filter Design“</span>. Vorlesungsskript: Lecture-20, Hochschule Bremen.
 </div>
 <div id="ref-aslk" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[5] </div><div class="csl-right-inline">H. Pretl, M. Koefinger, und S. Dorrer, <em>ASLK Pro Experiment 4: Zweiter Ordnung Universeller Aktiver Filter</em>. Johannes Kepler University Linz, 2024. doi: <a href="https://doi.org/10.5281/zenodo.14387234">10.5281/zenodo.14387234</a>. Verfügbar unter: <a href="https://iic-jku.github.io/aslk-pro-exp-4/">https://iic-jku.github.io/aslk-pro-exp-4/</a></div>
+Pretl, Harald, Michael Koefinger, und Simon Dorrer. 2024. <em>ASLK Pro Experiment 4: Zweiter Ordnung Universeller Aktiver Filter</em>. Johannes Kepler University Linz. <a href="https://doi.org/10.5281/zenodo.14387234">https://doi.org/10.5281/zenodo.14387234</a>.
 </div>
-<div id="ref-kicad" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[6] </div><div class="csl-right-inline">KiCad Development Team, <span>„KiCad EDA 9.0“</span>. 2024. Verfügbar unter: <a href="https://www.kicad.org/">https://www.kicad.org/</a></div>
+<div id="ref-RCSchaltung" class="csl-entry" role="listitem">
+<span>„RCSchaltung“</span>. o.&nbsp;J. <a href="https://www.rahner-edu.de/s/cc_images/cache_4775273.jpg?t=1523436560">https://www.rahner-edu.de/s/cc_images/cache_4775273.jpg?t=1523436560</a>.
+</div>
+<div id="ref-reisch2007" class="csl-entry" role="listitem">
+Reisch, Michael. 2007. <em>Elektronische Bauelemente</em>. Springer.
+</div>
+<div id="ref-FILTERS07" class="csl-entry" role="listitem">
+Smith, Julius O. 2007. <em>Introduction to Digital Filters with Audio Applications</em>. : W3K Publishing.
 </div>
 </div>
 </section>
