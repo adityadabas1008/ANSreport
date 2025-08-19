@@ -22,6 +22,8 @@ Another question would be, were we able to successfully cascade the second order
 
 Run the report to find out!
 
+Please note that the report is in German, as it was a project for a German course.
+
 ## How to run the report
 1. Clone the repository as it is.
 2. Choose the editor of your choice, e.g. [VSCode](https://code.visualstudio.com/).
