@@ -2,7 +2,7 @@
 
 Hello there! Welcome to the ANSreport repository.
 
-This repository is a combined work of the students of the course "Analoge Schaltungen" from the Hochschule Bremen, under the mentorship of Prof. Dr. Mirco Meiners.
+This repository is a combined work of the students of the course "Analoge Schaltungen" from the Hochschule Bremen, under the mentorship of **Prof. Dr. Mirco Meiners**.
 
 The contributors are:
 - Aditya Dabas
@@ -27,6 +27,7 @@ Run the report to find out!
 2. Choose the editor of your choice, e.g. [VSCode](https://code.visualstudio.com/).
 3. Make sure you have [quarto](https://quarto.org/docs/get-started/) installed.
 4. Just render the index.qmd file in the editor.
+
 Voila! You should see the report in your browser.
 
 Thank you for your interest in our project!
