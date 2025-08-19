@@ -4,9 +4,9 @@ Hello there! Welcome to the ANSreport repository.
 
 This repository is a combined work of the students of the course "Analoge Schaltungen" from the Hochschule Bremen.
 The contributors are:
-- [Aditya]
-- [Adrian]
-- [Mohamad]
+- Aditya Dabas
+- Adrian Jauch
+- Mohamad Wehbi
 
 What you see here is a quarto report of a project from the 'Texas Instruments Analog Circuits Lab Kit' manual.
 
