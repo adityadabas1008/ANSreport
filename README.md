@@ -2,7 +2,8 @@
 
 Hello there! Welcome to the ANSreport repository.
 
-This repository is a combined work of the students of the course "Analoge Schaltungen" from the Hochschule Bremen.
+This repository is a combined work of the students of the course "Analoge Schaltungen" from the Hochschule Bremen, under the mentorship of Prof. Dr. Mirco Meiners.
+
 The contributors are:
 - Aditya Dabas
 - Adrian Jauch
